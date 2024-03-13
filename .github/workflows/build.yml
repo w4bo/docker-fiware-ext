@@ -43,6 +43,6 @@ jobs:
       - name: Release
         run: |
           npm install
-          npx semantic-release main
+          npx semantic-release --branches main
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
