@@ -1,0 +1,83 @@
+version: "3.9"
+services:
+  # Orion is the context broker
+  orion:
+    init: true
+    restart: always
+    image: fiware/orion:3.10.1              # This variable `${ORION_VERSION}` is drawn from the `.env` file
+    hostname: orion                        # Container's name within the network (e.g., `ping orion` is a valid command)
+    container_name: orion                  # Name of the created container (e.g., `docker exec -it orion /bin/bash` or `docker logs orion`)
+    depends_on:
+      - mongo-db                           # Create the `mongo-db` before this container
+    networks:
+      - default                            # Name of the Docker network
+    expose:
+      - "${ORION_PORT_INT}"                    # Port that is accessible from outside the container
+    ports:
+      - "${ORION_PORT_EXT}:${ORION_PORT_INT}"  # Map a local port to a container's port (e.g., `IP:8082` to `IP:1026`)
+    command: -corsOrigin __ALL -dbhost mongo-db -inReqPayloadMaxSize ${ORION_MAX_PAYLOAD}
+    healthcheck: # Every 5seconds do a request to the OCB to ensure that the OCB is running
+      test: curl --fail -s http://${ORION_IP}:${ORION_PORT_EXT}/v2/entities?options=keyValues&limit=1 #
+      interval: 5s
+      timeout: 10s
+
+  # Database (orion + persistence)
+  mongo-db:
+    init: true
+    restart: always
+    image: mongo:6.0
+    hostname: mongo-db
+    container_name: mongo-db
+    ports:
+      - "${MONGO_DB_PERS_PORT_EXT}:27017"
+    networks:
+      - default
+    volumes: # Specify that the `/data` folder **inside** the container is mapped to the volume `mongo-db`
+      - ./mounts/mongodb:/data/db
+    healthcheck:
+      test: |
+        host=`hostname --ip-address || echo '127.0.0.1'`;
+        mongo --quiet $${host}/test --eval 'quit(db.runCommand({ ping: 1 }).ok ? 0 : 2)' && echo 0 || echo 1
+      interval: 5s
+      timeout: 10s
+
+  etl:
+    init: true
+    restart: always
+    hostname: etl
+    build: ./etl
+    container_name: etl
+    expose:
+      - "${DRACO_PORT_EXT}"
+    ports:
+      - "${DRACO_PORT_EXT}:${DRACO_PORT_EXT}"
+    networks:
+      - default
+    env_file:
+      - .env
+    healthcheck:
+      test: |
+        curl --fail -H 'Content-Type: application/json' -d '{"heartbeat": ""}' -s http://${DRACO_IP}:${DRACO_PORT_EXT}
+      interval: 5s
+      timeout: 10s
+
+  writetomongo:
+    init: true
+    restart: always
+    hostname: writetomongo
+    build:
+      context: ./devices
+      dockerfile: writetomongo.Dockerfile
+    container_name: writetomongo
+    networks:
+      - default
+    env_file:
+      - .env
+    depends_on:
+      mongo-db:
+        condition: service_healthy
+
+networks:
+  default_net:
+    name: host
+    external: true
