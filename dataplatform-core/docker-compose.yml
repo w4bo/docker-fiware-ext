@@ -4,14 +4,10 @@ services:
     init: true
     restart: always
     hostname: etl
-    build: ./etl
     container_name: etl
-    expose:
-      - "${DRACO_PORT_EXT}"
+    build: ./etl
     ports:
       - "${DRACO_PORT_EXT}:${DRACO_PORT_EXT}"
-    networks:
-      - default
     env_file:
       - .env
     healthcheck:
@@ -24,15 +20,10 @@ services:
     init: true
     restart: always
     hostname: writetomongo
+    container_name: writetomongo
     build:
       context: ./devices
       dockerfile: writetomongo.Dockerfile
-    container_name: writetomongo
-    networks:
-      - default
     env_file:
       - .env
-    depends_on:
-      mongo-db:
-        condition: service_healthy
 
