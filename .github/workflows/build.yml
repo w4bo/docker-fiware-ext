@@ -22,6 +22,8 @@ jobs:
       - name: Launch and test
         run: |
           cd dataplatform-core
+          chmod +x *.sh
+          chmod +x scripts/*.sh
           for i in $(seq 2)
           do
             echo "Run $i"
