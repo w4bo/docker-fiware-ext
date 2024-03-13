@@ -1,21 +1,18 @@
 version: "3.9"
 services:
-  # Orion is the context broker
   orion:
     init: true
     restart: always
-    image: fiware/orion:3.10.1              # This variable `${ORION_VERSION}` is drawn from the `.env` file
-    hostname: orion                        # Container's name within the network (e.g., `ping orion` is a valid command)
-    container_name: orion                  # Name of the created container (e.g., `docker exec -it orion /bin/bash` or `docker logs orion`)
+    image: fiware/orion:3.10.1
+    hostname: orion 
+    container_name: orion
     depends_on:
-      - mongo-db                           # Create the `mongo-db` before this container
-    networks:
-      - default                            # Name of the Docker network
+      - mongo-db
     ports:
-      - "${ORION_PORT_EXT}:1026"  # Map a local port to a container's port (e.g., `IP:8082` to `IP:1026`)
+      - "${ORION_PORT_EXT}:1026"
     command: -corsOrigin __ALL -dbhost mongo-db -inReqPayloadMaxSize ${ORION_MAX_PAYLOAD}
-    healthcheck: # Every 5seconds do a request to the OCB to ensure that the OCB is running
-      test: curl --fail -s http://${ORION_IP}:${ORION_PORT_EXT}/v2/entities?options=keyValues&limit=1 #
+    healthcheck:
+      test: curl --fail -s http://${ORION_IP}:${ORION_PORT_EXT}/v2/entities?options=keyValues&limit=1
       interval: 5s
       timeout: 10s
 
@@ -27,10 +24,6 @@ services:
     container_name: mongo-db
     ports:
       - "${MONGO_DB_PERS_PORT_EXT}:27017"
-    networks:
-      - default
-    volumes: # Specify that the `/data` folder **inside** the container is mapped to the volume `mongo-db`
-      - ./mounts/mongodb:/data/db
     healthcheck:
       test: |
         host=`hostname --ip-address || echo '127.0.0.1'`;
@@ -39,16 +32,15 @@ services:
       timeout: 10s
 
   zookeeper:
+    init: true
     hostname: zookeeper
     container_name: zookeeper
-    init: true
     image: wurstmeister/zookeeper
     ports:
       - ${ZOOKEEPER_PORT_EXT}:2181
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
 
   kafka:
+    init: true
     hostname: kafka
     container_name: kafka
     image: docker.io/bitnami/kafka:3.7
