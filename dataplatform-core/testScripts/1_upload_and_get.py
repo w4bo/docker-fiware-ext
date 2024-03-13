@@ -60,3 +60,4 @@ while i < 50 and count1 == 0:
     count1 = len(list(client[conf["MONGO_DB_PERS_DB"]][domain].find()))
     i += 1
 assert count1 > 0, "No document found"
+print("OK: persitence found")
