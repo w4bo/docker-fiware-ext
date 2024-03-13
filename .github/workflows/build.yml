@@ -21,13 +21,12 @@ jobs:
           python-version: 3.11
       - name: Launch and test
         run: |
-          cd welaser
+          cd dataplatform-core
           for i in $(seq 2)
           do
             echo "Run $i"
             scripts/config.sh
             ./launch.sh -cst
-            scripts/mongodb-dump.sh
             ./stop.sh
           done
   release:
