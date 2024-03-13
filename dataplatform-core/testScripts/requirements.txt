@@ -1,0 +1,9 @@
+kafka-python==2.0.2
+python-dotenv==1.0.0
+requests==2.31.0
+urllib3==2.0.4
+matplotlib==3.7.2
+notebook==7.0.2
+pandas==2.0.3
+requests==2.31.0
+pymongo==4.4.1
