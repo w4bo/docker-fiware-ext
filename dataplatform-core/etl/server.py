@@ -57,10 +57,7 @@ class S(BaseHTTPRequestHandler):
             def get(k, domain):
                 return d[k] if k in d else domain
 
-            if "type" in d and d["type"] == "AgriFarm":
-                d["domain"] = d["id"]
-            else:
-                d["domain"] = get("domain", get("areaServed", get("hasFarm", "undefined-domain")))
+            d["domain"] = get("domain", get("areaServed", get("hasFarm", "undefined-domain")))
             d["timestamp_subscription"] = round(time.time() * 1000)  # time in ms
             producer.send(RAW_TOPIC + '.' + re.sub(r"[-:_]", "", d["domain"]), value=d)
 

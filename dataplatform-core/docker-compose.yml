@@ -11,10 +11,8 @@ services:
       - mongo-db                           # Create the `mongo-db` before this container
     networks:
       - default                            # Name of the Docker network
-    expose:
-      - "${ORION_PORT_INT}"                    # Port that is accessible from outside the container
     ports:
-      - "${ORION_PORT_EXT}:${ORION_PORT_INT}"  # Map a local port to a container's port (e.g., `IP:8082` to `IP:1026`)
+      - "${ORION_PORT_EXT}:1026"  # Map a local port to a container's port (e.g., `IP:8082` to `IP:1026`)
     command: -corsOrigin __ALL -dbhost mongo-db -inReqPayloadMaxSize ${ORION_MAX_PAYLOAD}
     healthcheck: # Every 5seconds do a request to the OCB to ensure that the OCB is running
       test: curl --fail -s http://${ORION_IP}:${ORION_PORT_EXT}/v2/entities?options=keyValues&limit=1 #
@@ -77,7 +75,3 @@ services:
       mongo-db:
         condition: service_healthy
 
-networks:
-  default_net:
-    name: host
-    external: true

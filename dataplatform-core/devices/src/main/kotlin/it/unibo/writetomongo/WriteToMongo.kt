@@ -79,6 +79,7 @@ fun main() {
                 val filename = ftpImageName(data, IMAGE_URL, getExt(data.getString(IMAGE_URL)))
                 data.put(IMAGE_URL, "http://${dotenv["IMAGESERVER_IP"]}:${dotenv["IMAGESERVER_PORT_HTTP_EXT"]}/${filename}")
             }
+	    println("Inserting new data...")
             mongoClient
                     .getDatabase(dotenv["MONGO_DB_PERS_DB"])
                     .getCollection(data.getString(DOMAIN))
