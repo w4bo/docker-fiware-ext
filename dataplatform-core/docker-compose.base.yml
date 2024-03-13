@@ -1,5 +1,43 @@
 version: "3.9"
 services:
+  # Orion is the context broker
+  orion:
+    init: true
+    restart: always
+    image: fiware/orion:3.10.1              # This variable `${ORION_VERSION}` is drawn from the `.env` file
+    hostname: orion                        # Container's name within the network (e.g., `ping orion` is a valid command)
+    container_name: orion                  # Name of the created container (e.g., `docker exec -it orion /bin/bash` or `docker logs orion`)
+    depends_on:
+      - mongo-db                           # Create the `mongo-db` before this container
+    networks:
+      - default                            # Name of the Docker network
+    ports:
+      - "${ORION_PORT_EXT}:1026"  # Map a local port to a container's port (e.g., `IP:8082` to `IP:1026`)
+    command: -corsOrigin __ALL -dbhost mongo-db -inReqPayloadMaxSize ${ORION_MAX_PAYLOAD}
+    healthcheck: # Every 5seconds do a request to the OCB to ensure that the OCB is running
+      test: curl --fail -s http://${ORION_IP}:${ORION_PORT_EXT}/v2/entities?options=keyValues&limit=1 #
+      interval: 5s
+      timeout: 10s
+
+  mongo-db:
+    init: true
+    restart: always
+    image: mongo:6.0
+    hostname: mongo-db
+    container_name: mongo-db
+    ports:
+      - "${MONGO_DB_PERS_PORT_EXT}:27017"
+    networks:
+      - default
+    volumes: # Specify that the `/data` folder **inside** the container is mapped to the volume `mongo-db`
+      - ./mounts/mongodb:/data/db
+    healthcheck:
+      test: |
+        host=`hostname --ip-address || echo '127.0.0.1'`;
+        mongo --quiet $${host}/test --eval 'quit(db.runCommand({ ping: 1 }).ok ? 0 : 2)' && echo 0 || echo 1
+      interval: 5s
+      timeout: 10s
+
   zookeeper:
     hostname: zookeeper
     container_name: zookeeper
@@ -9,27 +47,6 @@ services:
       - ${ZOOKEEPER_PORT_EXT}:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-
-#  kafka:
-#    hostname: kafka
-#    container_name: kafka
-#    init: true
-#    image:  docker.io/bitnami/kafka:3.7
-#    # depends_on:
-#    #   - zookeeper
-#    ports:
-#      - ${KAFKA_PORT_EXT}:49092
-#      # - 9093:9093
-#      # - 49092:49092
-#    environment:
-#      KAFKA_CFG_ZOOKEEPER_CONNECT: zookeeper:2181
-#      KAFKA_CFG_LISTENERS: INTERNAL://kafka:9092,OUTSIDE://0.0.0.0:49092
-#      KAFKA_CFG_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,OUTSIDE://172.17.32.1:49092
-#      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,OUTSIDE:PLAINTEXT
-#      KAFKA_CFG_INTER_BROKER_LISTENER_NAME: INTERNAL
-#      KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: true
-#    volumes:
-#      - /var/run/docker.sock:/var/run/docker.sock
 
   kafka:
     hostname: kafka
