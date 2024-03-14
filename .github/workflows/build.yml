@@ -70,7 +70,7 @@ jobs:
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0
         with:
           context: ./dataplatform-core/fiware2kafka
-          file: ./Dockerfile
+          # file: ./Dockerfile
           push: true
           tags: ${{ steps.meta1.outputs.tags }}
           labels: ${{ steps.meta1.outputs.labels }}
@@ -88,7 +88,7 @@ jobs:
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0
         with:
           context: ./dataplatform-core/kafka2mongo
-          file: ./Dockerfile
+          # file: ./Dockerfile
           push: true
           tags: ${{ steps.meta2.outputs.tags }}
           labels: ${{ steps.meta2.outputs.labels }}
