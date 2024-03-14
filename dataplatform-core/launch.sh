@@ -26,6 +26,6 @@ curl -iX POST \
   "notification": { "http": { "url": "http://'${FIWARE2KAFKA_IP}':'${FIWARE2KAFKA_PORT_EXT}'/v2/notify" }, "attrsFormat" : "keyValues" }
 }'
 
-devices/gradlew -p devices --stacktrace --scan
+kafka2mongo/gradlew -p kafka2mongo --stacktrace --scan
 
 ((run_tests)) && scripts/runTests.sh

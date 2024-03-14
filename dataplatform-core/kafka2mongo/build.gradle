@@ -72,9 +72,9 @@ test {
 }
 
 task runWriteToMongo(type: JavaExec) {
-    description = "Run the WriteToMongo service"
+    description = "Run the kafka2mongo service"
     classpath = sourceSets.main.runtimeClasspath
-    main = 'it.unibo.writetomongo.WriteToMongo'
+    main = 'it.unibo.kafka2mongo.WriteToMongo'
 }
 
 if (hasProperty('buildScan')) {

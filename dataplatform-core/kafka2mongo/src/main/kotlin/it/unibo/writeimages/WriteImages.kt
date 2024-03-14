@@ -6,7 +6,7 @@ import io.github.cdimascio.dotenv.Dotenv
 import it.unibo.AREA_SERVED
 import it.unibo.DOMAIN
 import it.unibo.IMAGE_URL
-import it.unibo.writetomongo.consumeFromKafka
+import it.unibo.kafka2mongo.consumeFromKafka
 import org.apache.commons.net.ftp.FTP
 import org.apache.commons.net.ftp.FTPClient
 import org.json.JSONObject

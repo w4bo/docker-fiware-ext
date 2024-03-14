@@ -24,7 +24,7 @@ jobs:
           cd dataplatform-core
           chmod +x *.sh
           chmod +x scripts/*.sh
-          chmod +x devices/gradlew
+          chmod +x kafka2mongo/gradlew
           for i in $(seq 2)
           do
             echo "Run $i"

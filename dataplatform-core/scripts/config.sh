@@ -16,4 +16,4 @@ fi
 . scripts/loadEnv.sh
 
 # Copy the .env file where needed
-ln .env devices/.env
+ln .env kafka2mongo/.env

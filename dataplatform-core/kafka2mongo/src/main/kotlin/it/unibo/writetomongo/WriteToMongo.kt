@@ -1,6 +1,6 @@
-@file:JvmName("WriteToMongo")
+@file:JvmName("Kafka2Mongo")
 
-package it.unibo.writetomongo
+package it.unibo.kafka2mongo
 
 import com.mongodb.client.MongoClients
 import io.github.cdimascio.dotenv.Dotenv
@@ -72,7 +72,7 @@ fun main() {
     // create a mongodb client
     val mongoClient = MongoClients.create("mongodb://${dotenv["MONGO_DB_PERS_IP"]}:${dotenv["MONGO_DB_PERS_PORT_EXT"]}")
     val executor = Executors.newFixedThreadPool(5) // .newCachedThreadPool() Need this to limit the connections
-    consumeFromKafka("writetomongo") { data ->
+    consumeFromKafka("kafka2mongo") { data ->
         executor.submit {
             // if the object has an imageSnapshot, replace it in the historic data
             if (data.has(IMAGE_URL)) {
