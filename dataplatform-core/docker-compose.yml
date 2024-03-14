@@ -1,18 +1,18 @@
 version: "3.9"
 services:
-  etl:
+  fiware2kafka:
     init: true
     restart: always
-    hostname: etl
-    container_name: etl
-    build: ./etl
+    hostname: fiware2kafka
+    container_name: fiware2kafka
+    build: ./fiware2kafka
     ports:
-      - "${DRACO_PORT_EXT}:${DRACO_PORT_EXT}"
+      - "${FIWARE2KAFKA_PORT_EXT}:${FIWARE2KAFKA_PORT_EXT}"
     env_file:
       - .env
     healthcheck:
       test: |
-        curl --fail -H 'Content-Type: application/json' -d '{"heartbeat": ""}' -s http://${DRACO_IP}:${DRACO_PORT_EXT}
+        curl --fail -H 'Content-Type: application/json' -d '{"heartbeat": ""}' -s http://${FIWARE2KAFKA_IP}:${FIWARE2KAFKA_PORT_EXT}
       interval: 5s
       timeout: 10s
 

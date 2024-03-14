@@ -7,7 +7,6 @@ from datetime import datetime
 from dotenv import load_dotenv
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from kafka import KafkaProducer
-import urllib.parse
 
 
 path1 = "../.env"
@@ -16,7 +15,7 @@ if os.path.isfile(path1):
 
 KAFKA_IP = os.getenv("KAFKA_IP")
 KAFKA_PORT = int(os.getenv("KAFKA_PORT_EXT"))
-DRACO_PORT = int(os.getenv("DRACO_PORT_EXT"))
+FIWARE2KAFKA_PORT = int(os.getenv("FIWARE2KAFKA_PORT_EXT"))
 RAW_TOPIC = os.getenv("RAW_TOPIC")
 ORION_PORT_EXT = int(os.getenv("ORION_PORT_EXT"))
 ORION_IP = os.getenv("ORION_IP")
@@ -36,7 +35,6 @@ class S(BaseHTTPRequestHandler):
             old_id = subscription["id"]
             old_description = subscription["description"] if "description" in subscription else ""
             old_url = subscription["notification"]["http"]["url"]
-            # if ((new_description == "ETL" or new_description == "IoTAgent") and new_description == old_description)
             if new_description == old_description or new_url == old_url:  # the subscription already existed
                 x = requests.delete(url=ORION_URL + "/subscriptions/" + old_id)  # delete it
                 print("Replacing subscription:")
@@ -46,7 +44,7 @@ class S(BaseHTTPRequestHandler):
         x = requests.post(url=ORION_URL + "/subscriptions", data=json.dumps(data), headers={'Content-type': 'application/json'})
         assert x.status_code == 201
 
-    def do_etl(self, data):
+    def do_fiware2kafka(self, data):
         now = datetime.now()
         if "heartbeat" in data:
             print("Alive at " + now.strftime("%m/%d/%Y, %H:%M:%S"))
@@ -85,12 +83,12 @@ class S(BaseHTTPRequestHandler):
         if self.path == '/v2/subscriptions':
             self.do_register_subscription(post_data)
         else:
-            self.do_etl(post_data)
+            self.do_fiware2kafka(post_data)
 
         # print("Done at " + datetime.now().strftime("%m/%d/%Y, %H:%M:%S"))
 
 
-def run(server_class=ThreadingHTTPServer, handler_class=S, port=DRACO_PORT):
+def run(server_class=ThreadingHTTPServer, handler_class=S, port=FIWARE2KAFKA_PORT):
     server_address = ('0.0.0.0', port)
     httpd = server_class(server_address, handler_class)
     try:
