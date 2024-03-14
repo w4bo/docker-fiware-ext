@@ -50,7 +50,7 @@ dependencies {
     implementation 'io.github.microutils:kotlin-logging-jvm:3.0.5'
     implementation 'khttp:khttp:1.0.0'
     implementation 'io.ktor:ktor-server-core:2.3.3'
-    implementation 'io.ktor:ktor-server-netty:2.3.3'
+    implementation 'io.ktor:ktor-server-netty:2.3.9'
     implementation 'org.slf4j:slf4j-api:2.0.7'
     implementation 'org.json:json:20230618'
     implementation 'io.github.cdimascio:dotenv-kotlin:6.4.1'
