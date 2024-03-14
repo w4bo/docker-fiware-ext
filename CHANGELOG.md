@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/w4bo/dataplatform-core/compare/1.0.2...1.0.3) (2024-03-14)
+
+
+### Bug Fixes
+
+* **ci:** add release to dockerhub ([d125a85](https://github.com/w4bo/dataplatform-core/commit/d125a8556077328be846d1562d742ca915bc5ce6))
+
 ## [1.0.2](https://github.com/w4bo/dataplatform-core/compare/1.0.1...1.0.2) (2024-03-14)
 
 
