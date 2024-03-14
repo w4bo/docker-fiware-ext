@@ -16,6 +16,7 @@ if os.path.isfile(path1):
 KAFKA_IP = os.getenv("KAFKA_IP")
 KAFKA_PORT = int(os.getenv("KAFKA_PORT_EXT"))
 FIWARE2KAFKA_PORT = int(os.getenv("FIWARE2KAFKA_PORT_EXT"))
+FIWARE2KAFKA_IP = os.getenv("FIWARE2KAFKA_IP")
 RAW_TOPIC = os.getenv("RAW_TOPIC")
 ORION_PORT_EXT = int(os.getenv("ORION_PORT_EXT"))
 ORION_IP = os.getenv("ORION_IP")
@@ -38,6 +39,9 @@ def do_register_subscription(data):
             print("--- New: " + str(data))
             assert x.status_code == 204
     x = requests.post(url=ORION_URL + "/subscriptions", data=json.dumps(data), headers={'Content-type': 'application/json'})
+    if x.status_code != 201:
+        print("Failed to register subscription. Status code: " + str(x.status_code))
+        print("Error response: " + x.text)
     return x.status_code
     
 class S(BaseHTTPRequestHandler):
@@ -97,12 +101,13 @@ def run(server_class=ThreadingHTTPServer, handler_class=S, port=FIWARE2KAFKA_POR
     #     }'
     res = 400
     while res != 201:
-        print("Trying to register subscription to FIWARE... current status code: " + str(res) + "...")
+        print("Trying to register subscription to FIWARE...", end=" ")
         res = do_register_subscription({
             "description": "fiware2kafka",
             "subject": { "entities": [{ "idPattern": ".*" } ] },
-            "notification": { "http": { "url": "http://'${FIWARE2KAFKA_IP}':'${FIWARE2KAFKA_PORT_EXT}'/v2/notify" }, "attrsFormat" : "keyValues" }
+            "notification": { "http": { "url": f"http://{FIWARE2KAFKA_IP}:{FIWARE2KAFKA_PORT}/v2/notify" }, "attrsFormat" : "keyValues" }
         })
+        print("current status code: " + str(res) + "...")
         time.sleep(1)
     
     server_address = ('0.0.0.0', port)
