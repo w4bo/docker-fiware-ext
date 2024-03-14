@@ -7,8 +7,6 @@ import io.github.cdimascio.dotenv.Dotenv
 import it.unibo.DOMAIN
 import it.unibo.IMAGE_URL
 import it.unibo.TIMESTAMP_KAFKA
-import it.unibo.writeimages.ftpImageName
-import it.unibo.writeimages.getExt
 import org.apache.kafka.clients.consumer.Consumer
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.clients.consumer.KafkaConsumer
@@ -19,10 +17,40 @@ import java.time.Duration
 import java.util.*
 import java.util.concurrent.Executors
 import java.util.regex.Pattern
+import it.unibo.AREA_SERVED
+import it.unibo.DOMAIN
+import it.unibo.IMAGE_URL
+import it.unibo.kafka2mongo.consumeFromKafka
+import org.apache.commons.net.ftp.FTP
+import org.apache.commons.net.ftp.FTPClient
+import org.json.JSONObject
+import java.net.URL
+import java.text.SimpleDateFormat
+import java.util.*
+import java.util.concurrent.Executors
 
 // NB: comments from the dotenv file will be loaded as strings as well! Be careful!
 val dotenv: Dotenv = Dotenv.configure().directory("./.env").load()
 const val GIVE_UP = 30
+
+/**
+ * Return the extension if known
+ * E.g., it should return no extension for URLs like http://81.60.229.210:12356/snapshot?topic%3D/front_camera_rgb
+ */
+fun getExt(curUrl: String): String {
+    val knownExts = listOf("jpg", "png", "tif", "svg", "gif")
+    val ext = curUrl.substring(curUrl.lastIndexOf(".") + 1)
+    return if (knownExts.contains(ext)) ".$ext" else ""
+}
+
+fun ftpImageName(obj: JSONObject, attr: String, ext: String): String {
+    val id = obj.getString("id")
+    val domain = if (obj.has(DOMAIN)) obj.getString(DOMAIN) else obj.getString(AREA_SERVED)
+    val date = Date(System.currentTimeMillis())
+    val jdf = SimpleDateFormat("yyyy-MM-dd")
+    val jdf2 = SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSSZ")
+    return "${domain}/${id}/" + jdf.format(date) + "/" + jdf2.format(date) + "_" + id + "_" + attr + ext
+}
 
 fun consumeFromKafka(group: String, consume: (JSONObject) -> Unit) {
     // configuring the kafka client
