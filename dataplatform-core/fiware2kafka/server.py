@@ -22,7 +22,7 @@ ORION_IP = os.getenv("ORION_IP")
 ORION_URL = "http://" + ORION_IP + ":" + str(ORION_PORT_EXT) + "/v2"
 producer = KafkaProducer(bootstrap_servers=[KAFKA_IP + ":" + str(KAFKA_PORT)], api_version=(0, 11, 5), value_serializer=lambda x: json.dumps(x).encode('utf-8'))
 
-def do_register_subscription(self, data):
+def do_register_subscription(data):
     r = requests.get(url=ORION_URL + "/subscriptions?limit=1000")
     subscriptions = json.loads(r.text)
     new_description = data["description"]
