@@ -1,3 +1,19 @@
+## [1.0.1](https://github.com/w4bo/dataplatform-core/compare/1.0.0...1.0.1) (2024-03-14)
+
+
+### Dependency updates
+
+* **deps:** update dependency matplotlib to v3.7.5 ([92f1324](https://github.com/w4bo/dataplatform-core/commit/92f13241937803e3a84b8d21b605d0f3f136b0e1))
+* **deps:** update dependency notebook to v7.0.8 ([aa83d58](https://github.com/w4bo/dataplatform-core/commit/aa83d5854b3c5a2106b56fa9c899f5613e183988))
+* **deps:** update dependency python-dotenv to v1.0.1 ([2f34a89](https://github.com/w4bo/dataplatform-core/commit/2f34a890db80d3f33d276950019e77a442c6ee8b))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.85 ([2e97db2](https://github.com/w4bo/dataplatform-core/commit/2e97db206ee750e7242ddb537515534ee2e71ced))
+* **deps:** update plugin org.jetbrains.kotlin.jvm to v1.9.23 ([db3a371](https://github.com/w4bo/dataplatform-core/commit/db3a371e6ed0ef447b67b4e3227cd87ea0e866ad))
+
+
+### Bug Fixes
+
+* **Dockerfile:** renaming the services and autoregistering fiware2kafka ([e0f0dd7](https://github.com/w4bo/dataplatform-core/commit/e0f0dd754e202d316298e61dd1a0c40e12cd156d))
+
 ## 1.0.0 (2024-03-14)
 
 
