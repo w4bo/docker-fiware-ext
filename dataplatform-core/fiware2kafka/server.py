@@ -38,7 +38,7 @@ def do_register_subscription(self, data):
             print("--- New: " + str(data))
             assert x.status_code == 204
     x = requests.post(url=ORION_URL + "/subscriptions", data=json.dumps(data), headers={'Content-type': 'application/json'})
-    assert x.status_code == 201
+    return x.status_code
     
 class S(BaseHTTPRequestHandler):
 
@@ -97,8 +97,8 @@ def run(server_class=ThreadingHTTPServer, handler_class=S, port=FIWARE2KAFKA_POR
     #     }'
     res = 400
     while res != 201:
-        print("Trying to register subscription to FIWARE...")
-        do_register_subscription({
+        print("Trying to register subscription to FIWARE... current status code: " + str(res) + "...")
+        res = do_register_subscription({
             "description": "fiware2kafka",
             "subject": { "entities": [{ "idPattern": ".*" } ] },
             "notification": { "http": { "url": "http://'${FIWARE2KAFKA_IP}':'${FIWARE2KAFKA_PORT_EXT}'/v2/notify" }, "attrsFormat" : "keyValues" }
