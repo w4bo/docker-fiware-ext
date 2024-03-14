@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/w4bo/dataplatform-core/compare/1.0.4...1.0.5) (2024-03-14)
+
+
+### Bug Fixes
+
+* **ci:** deploy to docker ([79811ff](https://github.com/w4bo/dataplatform-core/commit/79811ffda5f79396b7f5dfcb530fe24d8eac975e))
+
 ## [1.0.4](https://github.com/w4bo/dataplatform-core/compare/1.0.3...1.0.4) (2024-03-14)
 
 
