@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/w4bo/docker-fiware-ext/compare/1.0.6...1.0.7) (2024-03-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.apache.kafka:kafka-clients to v3.5.2 ([303dc71](https://github.com/w4bo/docker-fiware-ext/commit/303dc715cec73538b84afe1d977882824276970b))
+
 ## [1.0.6](https://github.com/w4bo/docker-fiware-ext/compare/1.0.5...1.0.6) (2024-03-14)
 
 
