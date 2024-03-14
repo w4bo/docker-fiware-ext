@@ -18,16 +18,8 @@ import java.util.*
 import java.util.concurrent.Executors
 import java.util.regex.Pattern
 import it.unibo.AREA_SERVED
-import it.unibo.DOMAIN
-import it.unibo.IMAGE_URL
-import it.unibo.kafka2mongo.consumeFromKafka
-import org.apache.commons.net.ftp.FTP
-import org.apache.commons.net.ftp.FTPClient
-import org.json.JSONObject
 import java.net.URL
 import java.text.SimpleDateFormat
-import java.util.*
-import java.util.concurrent.Executors
 
 // NB: comments from the dotenv file will be loaded as strings as well! Be careful!
 val dotenv: Dotenv = Dotenv.configure().directory("./.env").load()
