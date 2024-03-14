@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/w4bo/docker-fiware-ext/compare/1.0.5...1.0.6) (2024-03-14)
+
+
+### Bug Fixes
+
+* **ci:** deploy to docker ([74aa617](https://github.com/w4bo/docker-fiware-ext/commit/74aa617e26a95c254bd9b119288cb3c32979618a))
+
 ## [1.0.5](https://github.com/w4bo/dataplatform-core/compare/1.0.4...1.0.5) (2024-03-14)
 
 
