@@ -71,10 +71,10 @@ test {
     maxHeapSize = '1G'
 }
 
-task runWriteToMongo(type: JavaExec) {
+task runKafka2Mongo(type: JavaExec) {
     description = "Run the kafka2mongo service"
     classpath = sourceSets.main.runtimeClasspath
-    main = 'it.unibo.kafka2mongo.WriteToMongo'
+    main = 'it.unibo.kafka2mongo.Kafka2Mongo'
 }
 
 if (hasProperty('buildScan')) {
