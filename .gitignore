@@ -26,16 +26,16 @@ dump.txt
 .env
 core-site.xml
 hdfs-site.xml
-**/devices/src/main/resources/foo
+**/kafka2mongo/src/main/resources/foo
 **/conf/archive
 **/keys
 **/venv
 **/*.swp
 **/conf/archive/*
 **/service-missionplanner/*.json
-**/devices-python/*.json
-**/devices-python/*.png
-**/devices-python/*.jpg
+**/kafka2mongo-python/*.json
+**/kafka2mongo-python/*.png
+**/kafka2mongo-python/*.jpg
 
 # Created by https://www.toptal.com/developers/gitignore/api/venv,node,java,scala,macos,linux,gradle,python,windows,virtualenv,microsoftoffice,intellij,webstorm,pycharm
 # Edit at https://www.toptal.com/developers/gitignore?templates=venv,node,java,scala,macos,linux,gradle,python,windows,virtualenv,microsoftoffice,intellij,webstorm,pycharm

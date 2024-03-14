@@ -9,7 +9,7 @@ config.plugins.push(
     }],
     ["@semantic-release/github", {
         "assets": [
-            {"path": "welaser/testScripts/*.pdf", "label": "Charts"}
+           // {"path": "welaser/testScripts/*.pdf", "label": "Charts"}
         ]
     }],
     "@semantic-release/git",
