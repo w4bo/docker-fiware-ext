@@ -5,7 +5,9 @@ services:
     restart: always
     hostname: fiware2kafka
     container_name: fiware2kafka
-    build: ./fiware2kafka
+    build:
+      context: ./fiware2kafka
+      dockerfile: Dockerfile
     ports:
       - "${FIWARE2KAFKA_PORT_EXT}:${FIWARE2KAFKA_PORT_EXT}"
     env_file:
@@ -23,7 +25,7 @@ services:
     container_name: kafka2mongo
     build:
       context: ./kafka2mongo
-      dockerfile: kafka2mongo.Dockerfile
+      dockerfile: Dockerfile
     env_file:
       - .env
 
