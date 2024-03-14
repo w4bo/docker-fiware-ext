@@ -40,7 +40,6 @@ Execute all the containers
 
 ```sh
 ./launch.sh # launch the ecosystem (production mode)
-./launch.sh -s # also simulate a mission
 ./launch.sh -st # ... and run the tests
 ```
 

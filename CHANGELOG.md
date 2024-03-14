@@ -1,3 +1,16 @@
+## 1.0.0 (2024-03-14)
+
+
+### Bug Fixes
+
+* **docker-compose:** Integrating develop ([#1](https://github.com/w4bo/dataplatform-core/issues/1)) ([d463c0e](https://github.com/w4bo/dataplatform-core/commit/d463c0ec09d8bf5c66446e8e0fe53f20ecc28be9))
+
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.0.7 [security] ([0646f36](https://github.com/w4bo/dataplatform-core/commit/0646f364dc76a3b4f429c133a701f982b3298096))
+* **deps:** update dependency urllib3 to v2.0.7 [security] ([e4648ed](https://github.com/w4bo/dataplatform-core/commit/e4648ed8c238d4604afb18ce539ffa493d770acf))
+
 ## [1.1.166](https://github.com/w4bo/welaser/compare/1.1.165...1.1.166) (2023-08-04)
 
 
