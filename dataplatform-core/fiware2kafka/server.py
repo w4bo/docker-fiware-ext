@@ -20,29 +20,27 @@ RAW_TOPIC = os.getenv("RAW_TOPIC")
 ORION_PORT_EXT = int(os.getenv("ORION_PORT_EXT"))
 ORION_IP = os.getenv("ORION_IP")
 ORION_URL = "http://" + ORION_IP + ":" + str(ORION_PORT_EXT) + "/v2"
-print(KAFKA_IP + ":" + str(KAFKA_PORT))
 producer = KafkaProducer(bootstrap_servers=[KAFKA_IP + ":" + str(KAFKA_PORT)], api_version=(0, 11, 5), value_serializer=lambda x: json.dumps(x).encode('utf-8'))
 
-
+def do_register_subscription(self, data):
+    r = requests.get(url=ORION_URL + "/subscriptions?limit=1000")
+    subscriptions = json.loads(r.text)
+    new_description = data["description"]
+    new_url = data["notification"]["http"]["url"]
+    for subscription in subscriptions:
+        old_id = subscription["id"]
+        old_description = subscription["description"] if "description" in subscription else ""
+        old_url = subscription["notification"]["http"]["url"]
+        if new_description == old_description or new_url == old_url:  # the subscription already existed
+            x = requests.delete(url=ORION_URL + "/subscriptions/" + old_id)  # delete it
+            print("Replacing subscription:")
+            print("--- Old: " + str(subscription))
+            print("--- New: " + str(data))
+            assert x.status_code == 204
+    x = requests.post(url=ORION_URL + "/subscriptions", data=json.dumps(data), headers={'Content-type': 'application/json'})
+    assert x.status_code == 201
+    
 class S(BaseHTTPRequestHandler):
-
-    def do_register_subscription(self, data):
-        r = requests.get(url=ORION_URL + "/subscriptions?limit=1000")
-        subscriptions = json.loads(r.text)
-        new_description = data["description"]
-        new_url = data["notification"]["http"]["url"]
-        for subscription in subscriptions:
-            old_id = subscription["id"]
-            old_description = subscription["description"] if "description" in subscription else ""
-            old_url = subscription["notification"]["http"]["url"]
-            if new_description == old_description or new_url == old_url:  # the subscription already existed
-                x = requests.delete(url=ORION_URL + "/subscriptions/" + old_id)  # delete it
-                print("Replacing subscription:")
-                print("--- Old: " + str(subscription))
-                print("--- New: " + str(data))
-                assert x.status_code == 204
-        x = requests.post(url=ORION_URL + "/subscriptions", data=json.dumps(data), headers={'Content-type': 'application/json'})
-        assert x.status_code == 201
 
     def do_fiware2kafka(self, data):
         now = datetime.now()
@@ -81,7 +79,7 @@ class S(BaseHTTPRequestHandler):
         post_data = json.loads(post_data)  # get the subscription
 
         if self.path == '/v2/subscriptions':
-            self.do_register_subscription(post_data)
+            do_register_subscription(post_data)
         else:
             self.do_fiware2kafka(post_data)
 
@@ -89,6 +87,24 @@ class S(BaseHTTPRequestHandler):
 
 
 def run(server_class=ThreadingHTTPServer, handler_class=S, port=FIWARE2KAFKA_PORT):
+    # curl -iX POST \
+    #     "http://${FIWARE2KAFKA_IP}:${FIWARE2KAFKA_PORT_EXT}/v2/subscriptions" \
+    #     -H 'Content-Type: application/json' \
+    #     -d '{
+    #         "description": "fiware2kafka",
+    #         "subject": { "entities": [{ "idPattern": ".*" } ] },
+    #         "notification": { "http": { "url": "http://'${FIWARE2KAFKA_IP}':'${FIWARE2KAFKA_PORT_EXT}'/v2/notify" }, "attrsFormat" : "keyValues" }
+    #     }'
+    res = 400
+    while res != 201:
+        print("Trying to register subscription to FIWARE...")
+        do_register_subscription({
+            "description": "fiware2kafka",
+            "subject": { "entities": [{ "idPattern": ".*" } ] },
+            "notification": { "http": { "url": "http://'${FIWARE2KAFKA_IP}':'${FIWARE2KAFKA_PORT_EXT}'/v2/notify" }, "attrsFormat" : "keyValues" }
+        })
+        time.sleep(1)
+    
     server_address = ('0.0.0.0', port)
     httpd = server_class(server_address, handler_class)
     try:
