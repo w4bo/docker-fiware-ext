@@ -32,8 +32,10 @@ jobs:
             ./launch.sh -t
             ./stop.sh
           done
-      - name: Set up a swarm with a single node
-        run: docker swarm init
+      - name: Set up a swarm with a single node and create the docker network
+        run: |
+          docker swarm init
+          docker network create --driver overlay BIG-dataplatform-network
       - name: Set up a swarm with a single node
         run: |
           cd dataplatform-core
