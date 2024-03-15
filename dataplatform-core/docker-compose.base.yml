@@ -3,7 +3,7 @@ services:
   orion:
     init: true
     restart: always
-    image: fiware/orion:3.10.1
+    image: fiware/orion:3.11.0
     hostname: orion 
     container_name: orion
     depends_on:
