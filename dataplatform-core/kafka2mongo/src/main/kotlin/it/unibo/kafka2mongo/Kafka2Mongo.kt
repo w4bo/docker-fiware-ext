@@ -4,6 +4,7 @@ package it.unibo.kafka2mongo
 
 import com.mongodb.client.MongoClients
 import io.github.cdimascio.dotenv.Dotenv
+import it.unibo.AREA_SERVED
 import it.unibo.DOMAIN
 import it.unibo.IMAGE_URL
 import it.unibo.TIMESTAMP_KAFKA
@@ -13,16 +14,22 @@ import org.apache.kafka.clients.consumer.KafkaConsumer
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.bson.Document
 import org.json.JSONObject
+import java.io.File
+import java.text.SimpleDateFormat
 import java.time.Duration
 import java.util.*
 import java.util.concurrent.Executors
 import java.util.regex.Pattern
-import it.unibo.AREA_SERVED
-import java.net.URL
-import java.text.SimpleDateFormat
 
 // NB: comments from the dotenv file will be loaded as strings as well! Be careful!
-val dotenv: Dotenv = Dotenv.configure().directory("./.env").load()
+var KAFKA_IP: String? = null
+var KAFKA_PORT_EXT: String? = null
+var RAW_TOPIC: String? = null
+var MONGO_DB_PERS_IP: String? = null
+var MONGO_DB_PERS_PORT_EXT: String? = null
+var IMAGESERVER_IP: String? = null
+var IMAGESERVER_PORT_HTTP_EXT: String? = null
+var MONGO_DB_PERS_DB: String? = null
 const val GIVE_UP = 30
 
 /**
@@ -47,7 +54,7 @@ fun ftpImageName(obj: JSONObject, attr: String, ext: String): String {
 fun consumeFromKafka(group: String, consume: (JSONObject) -> Unit) {
     // configuring the kafka client
     val props = Properties()
-    props[ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG] = "${dotenv["KAFKA_IP"]}:${dotenv["KAFKA_PORT_EXT"]}"
+    props[ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG] = "${KAFKA_IP}:${KAFKA_PORT_EXT}"
     props[ConsumerConfig.GROUP_ID_CONFIG] = group
     props[ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG] = StringDeserializer::class.java.name
     props[ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG] = StringDeserializer::class.java.name
@@ -58,7 +65,7 @@ fun consumeFromKafka(group: String, consume: (JSONObject) -> Unit) {
     // create the kafka consumer
     val consumer: Consumer<Long, String> = KafkaConsumer(props)
     // listen to all topics beginning with the RAW_TOPIC
-    val pattern: Pattern = Pattern.compile("^${dotenv["RAW_TOPIC"]}.*")
+    val pattern: Pattern = Pattern.compile("^${RAW_TOPIC}.*")
     consumer.subscribe(pattern)
     var messageReceived = false
     var retry = 0
@@ -89,19 +96,29 @@ fun consumeFromKafka(group: String, consume: (JSONObject) -> Unit) {
 }
 
 fun main() {
+    val dotenv: Dotenv? = if (File(".env").exists()) Dotenv.configure().directory("./.env").load() else null
+    KAFKA_IP = dotenv?.get("KAFKA_IP") ?: System.getenv("KAFKA_IP")
+    KAFKA_PORT_EXT = dotenv?.get("KAFKA_PORT_EXT") ?: System.getenv("KAFKA_PORT_EXT")
+    RAW_TOPIC = dotenv?.get("RAW_TOPIC") ?: System.getenv("RAW_TOPIC")
+    MONGO_DB_PERS_IP = dotenv?.get("MONGO_DB_PERS_IP") ?: System.getenv("MONGO_DB_PERS_IP")
+    MONGO_DB_PERS_PORT_EXT = dotenv?.get("MONGO_DB_PERS_PORT_EXT") ?: System.getenv("MONGO_DB_PERS_PORT_EXT")
+    IMAGESERVER_IP = dotenv?.get("IMAGESERVER_IP") ?: System.getenv("IMAGESERVER_IP")
+    IMAGESERVER_PORT_HTTP_EXT = dotenv?.get("IMAGESERVER_PORT_HTTP_EXT") ?: System.getenv("IMAGESERVER_PORT_HTTP_EXT")
+    MONGO_DB_PERS_DB = dotenv?.get("MONGO_DB_PERS_DB") ?: System.getenv("MONGO_DB_PERS_DB")
+
     // create a mongodb client
-    val mongoClient = MongoClients.create("mongodb://${dotenv["MONGO_DB_PERS_IP"]}:${dotenv["MONGO_DB_PERS_PORT_EXT"]}")
+    val mongoClient = MongoClients.create("mongodb://${MONGO_DB_PERS_IP}:${MONGO_DB_PERS_PORT_EXT}")
     val executor = Executors.newFixedThreadPool(5) // .newCachedThreadPool() Need this to limit the connections
     consumeFromKafka("kafka2mongo") { data ->
         executor.submit {
             // if the object has an imageSnapshot, replace it in the historic data
             if (data.has(IMAGE_URL)) {
                 val filename = ftpImageName(data, IMAGE_URL, getExt(data.getString(IMAGE_URL)))
-                data.put(IMAGE_URL, "http://${dotenv["IMAGESERVER_IP"]}:${dotenv["IMAGESERVER_PORT_HTTP_EXT"]}/${filename}")
+                data.put(IMAGE_URL, "http://${IMAGESERVER_IP}:${IMAGESERVER_PORT_HTTP_EXT}/${filename}")
             }
 	    println("Inserting new data...")
             mongoClient
-                    .getDatabase(dotenv["MONGO_DB_PERS_DB"])
+                    .getDatabase(MONGO_DB_PERS_DB)
                     .getCollection(data.getString(DOMAIN))
                     .insertOne(Document.parse(data.toString()))
         }

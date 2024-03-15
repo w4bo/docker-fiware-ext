@@ -32,6 +32,14 @@ jobs:
             ./launch.sh -t
             ./stop.sh
           done
+      - name: Set up a swarm with a single node and create the docker network
+        run: |
+          docker swarm init
+          docker network create --driver overlay BIG-dataplatform-network
+      - name: Set up a swarm with a single node
+        run: |
+          cd dataplatform-core
+          docker stack deploy --compose-file docker-stack.yml FIWARE-ext
   release:
     needs:
       - build
@@ -46,17 +54,14 @@ jobs:
           npx semantic-release --branches main
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    
       - name: Log in to Docker Hub
         uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-
       - name: Retrieve version
         id: tag  
         run: echo "version=$(git describe --tags --abbrev=0)" >> $GITHUB_OUTPUT
-
       - name: Extract metadata (tags, labels) for fiware2kafka
         id: meta1
         uses: docker/metadata-action@75359341f62c2d990e0aa8543e545c74eec643ff
@@ -65,7 +70,6 @@ jobs:
           tags: |
             ${{steps.tag.outputs.version}}
             latest
-
       - name: Build and push fiware2kafka image
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0
         with:
@@ -74,7 +78,6 @@ jobs:
           push: true
           tags: ${{ steps.meta1.outputs.tags }}
           labels: ${{ steps.meta1.outputs.labels }}
-
       - name: Extract metadata (tags, labels) for kafka2mongo
         id: meta2
         uses: docker/metadata-action@75359341f62c2d990e0aa8543e545c74eec643ff
@@ -83,7 +86,6 @@ jobs:
           tags: |
             ${{steps.tag.outputs.version}}
             latest
-
       - name: Build and push kafka2mongo image
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0
         with:

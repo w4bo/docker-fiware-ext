@@ -7,21 +7,21 @@ services:
     hostname: orion 
     container_name: orion
     depends_on:
-      - mongo-db
+      - mongodb
     ports:
       - "${ORION_PORT_EXT}:1026"
-    command: -corsOrigin __ALL -dbhost mongo-db -inReqPayloadMaxSize ${ORION_MAX_PAYLOAD}
+    command: -corsOrigin __ALL -dbhost mongodb -inReqPayloadMaxSize ${ORION_MAX_PAYLOAD}
     healthcheck:
-      test: curl --fail -s http://${ORION_IP}:${ORION_PORT_EXT}/v2/entities?options=keyValues&limit=1
+      test: curl --fail -s http://127.0.0.1:1026/v2/entities?options=keyValues&limit=1
       interval: 5s
       timeout: 10s
 
-  mongo-db:
+  mongodb:
     init: true
     restart: always
     image: mongo:6.0
-    hostname: mongo-db
-    container_name: mongo-db
+    hostname: mongodb
+    container_name: mongodb
     ports:
       - "${MONGO_DB_PERS_PORT_EXT}:27017"
     healthcheck:
