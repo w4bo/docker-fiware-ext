@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  fiware2kafka:
+    init: true
+    restart: always
+    image: w4bo/fiware2kafka:latest
+    envionment:
+      # Kafka
+      - KAFKA_IP=kafka
+      - KAFKA_PORT=9092
+      # FIWARE2KAFKA variables
+      - FIWARE2KAFKA_IP=fiware2kafka
+      - FIWARE2KAFKA_PORT=5050
+      - RAW_TOPIC=raw
+      # FIWARE
+      - ORION_IP=orion
+      - ORION_PORT_EXT=1026
+
+  kafka2mongo:
+    init: true
+    restart: always
+    image: w4bo/kafka2mongo:latest
+    envionment:
+      # Persistence
+      - MONGO_DB_PERS_IP=mongo
+      - MONGO_DB_PERS_PORT_EXT=27017
+      - MONGO_DB_PERS_DB=persistence
+      # KAFKA
+      - KAFKA_IP=kafka
+      - KAFKA_PORT_EXT=9092
+      # FIWARE2KAFKA variables
+      - RAW_TOPIC=raw
+      # Image server (required to change the URLs of images)
+      - IMAGESERVER_IP=192.168.30.102
+      - IMAGESERVER_PORT_HTTP_EXT=49080
