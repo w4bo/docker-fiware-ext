@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/w4bo/docker-fiware-ext/compare/1.0.10...1.0.11) (2024-03-15)
+
+
+### Bug Fixes
+
+* **Dockerfile:** introducing swarm ([#44](https://github.com/w4bo/docker-fiware-ext/issues/44)) ([3616d4a](https://github.com/w4bo/docker-fiware-ext/commit/3616d4a75fafd9a1b5a0573180c8531af9a5b913))
+
 ## [1.0.10](https://github.com/w4bo/docker-fiware-ext/compare/1.0.9...1.0.10) (2024-03-15)
 
 
