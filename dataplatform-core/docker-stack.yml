@@ -26,7 +26,7 @@ services:
     image: w4bo/kafka2mongo:1.0.11
     environment:
       # Persistence
-      - MONGO_DB_PERS_IP=mongo
+      - MONGO_DB_PERS_IP=mongodb
       - MONGO_DB_PERS_PORT_EXT=27017
       - MONGO_DB_PERS_DB=persistence
       # KAFKA
