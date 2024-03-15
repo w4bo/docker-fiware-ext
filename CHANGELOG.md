@@ -1,3 +1,22 @@
+## [1.0.12](https://github.com/w4bo/docker-fiware-ext/compare/1.0.11...1.0.12) (2024-03-15)
+
+
+### Dependency updates
+
+* **deps:** update dependency pymongo to v4.6.2 ([2f743bf](https://github.com/w4bo/docker-fiware-ext/commit/2f743bf7d311fd93d6bd494b5c1ed8dbb51cb6ba))
+* **deps:** update fiware/orion docker tag to v3.11.0 ([63e8651](https://github.com/w4bo/docker-fiware-ext/commit/63e8651f46cb1250dd2fd546bfd6eed9bdd8cf80))
+* **deps:** update node.js to 18.19 ([674cd2f](https://github.com/w4bo/docker-fiware-ext/commit/674cd2fa00069ec6934eb98e995c3a5db6fe0f26))
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.apache.kafka:kafka-clients to v3.7.0 ([4586c7d](https://github.com/w4bo/docker-fiware-ext/commit/4586c7dfa5bda26a3eb819672a58221c27f46365))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.6.0 ([bd7482a](https://github.com/w4bo/docker-fiware-ext/commit/bd7482a9c0828206606d4c50f89082928a38c307))
+
 ## [1.0.11](https://github.com/w4bo/docker-fiware-ext/compare/1.0.10...1.0.11) (2024-03-15)
 
 
