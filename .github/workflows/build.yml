@@ -32,9 +32,17 @@ jobs:
             ./launch.sh -t
             ./stop.sh
           done
+<<<<<<< HEAD
       - name: Set up a swarm with a single node
         run: docker swarm init
       - name: Set up a swarm with a single node
+=======
+      - name: Set up a swarm with a single node and create the docker network
+        run: |
+          docker swarm init
+          docker network create --driver overlay BIG-dataplatform-network
+      - name: Check the deploy of the swarm
+>>>>>>> main
         run: |
           cd dataplatform-core
           docker stack deploy --compose-file docker-stack.yml FIWARE-ext

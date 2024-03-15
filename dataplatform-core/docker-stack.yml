@@ -2,7 +2,7 @@ version: "3.9"
 services:
   fiware2kafka:
     init: true
-    image: w4bo/fiware2kafka:1.0.11
+    image: w4bo/fiware2kafka:latest
     environment:
       # Kafka
       - KAFKA_IP=kafka
@@ -23,7 +23,7 @@ services:
 
   kafka2mongo:
     init: true
-    image: w4bo/kafka2mongo:1.0.11
+    image: w4bo/kafka2mongo:latest
     environment:
       # Persistence
       - MONGO_DB_PERS_IP=mongodb
