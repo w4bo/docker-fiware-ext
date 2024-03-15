@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/w4bo/docker-fiware-ext/compare/1.0.8...1.0.9) (2024-03-15)
+
+
+### Bug Fixes
+
+* **deps:** update junit5 monorepo to v5.10.2 ([b581808](https://github.com/w4bo/docker-fiware-ext/commit/b581808ada399f7a7fb33564e456508c97a2aafb))
+
 ## [1.0.8](https://github.com/w4bo/docker-fiware-ext/compare/1.0.7...1.0.8) (2024-03-15)
 
 
