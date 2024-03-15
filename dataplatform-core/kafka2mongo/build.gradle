@@ -55,7 +55,7 @@ dependencies {
     testCompileOnly 'org.slf4j:slf4j-simple:2.0.12'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
-    implementation 'org.apache.kafka:kafka-clients:3.5.2'
+    implementation 'org.apache.kafka:kafka-clients:3.7.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-cli:0.3.6'
     implementation 'org.mongodb:mongo-java-driver:3.12.14'
 }
