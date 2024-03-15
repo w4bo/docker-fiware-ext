@@ -9,7 +9,7 @@ services:
       - KAFKA_PORT_EXT=9092
       # FIWARE2KAFKA variables
       - FIWARE2KAFKA_IP=fiware2kafka
-      - FIWARE2KAFKA_PORT=5050
+      - FIWARE2KAFKA_PORT_EXT=5050
       - RAW_TOPIC=raw
       # FIWARE
       - ORION_IP=orion
