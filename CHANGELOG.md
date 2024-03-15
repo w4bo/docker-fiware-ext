@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/w4bo/docker-fiware-ext/compare/1.0.7...1.0.8) (2024-03-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.jetbrains.kotlinx:kotlinx-cli to v0.3.6 ([2efd5bd](https://github.com/w4bo/docker-fiware-ext/commit/2efd5bdbc519a21b018f112ba81c8569fe8c0cb5))
+
 ## [1.0.7](https://github.com/w4bo/docker-fiware-ext/compare/1.0.6...1.0.7) (2024-03-14)
 
 
