@@ -2,12 +2,11 @@ version: "3.9"
 services:
   fiware2kafka:
     init: true
-    restart: always
     image: w4bo/fiware2kafka:latest
-    envionment:
+    environment:
       # Kafka
       - KAFKA_IP=kafka
-      - KAFKA_PORT=9092
+      - KAFKA_PORT_EXT=9092
       # FIWARE2KAFKA variables
       - FIWARE2KAFKA_IP=fiware2kafka
       - FIWARE2KAFKA_PORT=5050
@@ -15,12 +14,17 @@ services:
       # FIWARE
       - ORION_IP=orion
       - ORION_PORT_EXT=1026
+    deploy:
+      placement:
+        constraints:
+          - node.role != manager 
+    networks:
+      - BIG-dataplatform-network
 
   kafka2mongo:
     init: true
-    restart: always
     image: w4bo/kafka2mongo:latest
-    envionment:
+    environment:
       # Persistence
       - MONGO_DB_PERS_IP=mongo
       - MONGO_DB_PERS_PORT_EXT=27017
@@ -33,3 +37,14 @@ services:
       # Image server (required to change the URLs of images)
       - IMAGESERVER_IP=192.168.30.102
       - IMAGESERVER_PORT_HTTP_EXT=49080
+    deploy:
+      placement:
+        constraints:
+          - node.role != manager 
+    networks:
+      - BIG-dataplatform-network
+
+networks:
+  BIG-dataplatform-network:
+    external: true
+    name: BIG-dataplatform-network
