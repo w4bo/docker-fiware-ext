@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/w4bo/docker-fiware-ext/compare/1.0.9...1.0.10) (2024-03-15)
+
+
+### Bug Fixes
+
+* **deps:** update slf4j monorepo to v2.0.12 ([2df497e](https://github.com/w4bo/docker-fiware-ext/commit/2df497e19d1e2f885cf05138bebe90a8fb2f7fd5))
+
 ## [1.0.9](https://github.com/w4bo/docker-fiware-ext/compare/1.0.8...1.0.9) (2024-03-15)
 
 
