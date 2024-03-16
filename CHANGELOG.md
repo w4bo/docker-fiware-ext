@@ -1,3 +1,23 @@
+## [1.0.13](https://github.com/w4bo/docker-fiware-ext/compare/1.0.12...1.0.13) (2024-03-16)
+
+
+### Dependency updates
+
+* **deps:** update mongo docker tag to v7 ([4915aef](https://github.com/w4bo/docker-fiware-ext/commit/4915aef9ffc61087ff445f19901059828163afc9))
+* **deps:** update node.js to v20 ([e377e44](https://github.com/w4bo/docker-fiware-ext/commit/e377e446d7992b232651670366f30e6b87b73970))
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.json:json to v20231013 ([64b6b71](https://github.com/w4bo/docker-fiware-ext/commit/64b6b71a9d88d2bef95ca84a440ea1ca50f65e3e))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4 ([8636923](https://github.com/w4bo/docker-fiware-ext/commit/8636923516b1030384ae7effb4d1c7420cfebfa9))
+* **deps:** update actions/setup-java action to v4 ([2a4fdf0](https://github.com/w4bo/docker-fiware-ext/commit/2a4fdf0cc1f9fd6a9602ce9437f2e68ef3b5ea4d))
+* **deps:** update actions/setup-python action to v5 ([fb55ca3](https://github.com/w4bo/docker-fiware-ext/commit/fb55ca34b19ede3cfe96b0625a8cc0504c2a53b7))
+
 ## [1.0.12](https://github.com/w4bo/docker-fiware-ext/compare/1.0.11...1.0.12) (2024-03-15)
 
 
