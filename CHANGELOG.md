@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/w4bo/docker-fiware-ext/compare/1.0.14...1.0.15) (2024-03-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.json:json to v20240303 ([41f29a5](https://github.com/w4bo/docker-fiware-ext/commit/41f29a533dcd103d25251504a6cbc7d4b25b4d75))
+
 ## [1.0.14](https://github.com/w4bo/docker-fiware-ext/compare/1.0.13...1.0.14) (2024-03-16)
 
 
