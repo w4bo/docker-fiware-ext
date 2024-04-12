@@ -1,3 +1,26 @@
+## [1.0.16](https://github.com/w4bo/docker-fiware-ext/compare/1.0.15...1.0.16) (2024-04-12)
+
+
+### Dependency updates
+
+* **deps:** update dependency pymongo to v4.6.3 ([41979d7](https://github.com/w4bo/docker-fiware-ext/commit/41979d75d951e9b444e768688053ad3505be18b0))
+* **deps:** update node.js to 20.12 ([9f4fee1](https://github.com/w4bo/docker-fiware-ext/commit/9f4fee16ecd98dcc133662719df5a6a933031936))
+
+
+### Bug Fixes
+
+* **deps:** update slf4j monorepo to v2.0.13 ([cc01e45](https://github.com/w4bo/docker-fiware-ext/commit/cc01e45f65d7d24e88f7a4468f4f78344b1d7060))
+
+
+### Build and continuous integration
+
+* **deps:** update docker/build-push-action digest to 090ca15 ([912b41c](https://github.com/w4bo/docker-fiware-ext/commit/912b41c8dc821859f5b11ce8ddae244a7ba1b9df))
+* **deps:** update docker/build-push-action digest to f8bc7f4 ([510de60](https://github.com/w4bo/docker-fiware-ext/commit/510de6001678ef68e3846476aa42e8d715f6a250))
+* **deps:** update docker/login-action digest to 5f4866a ([e28a2f6](https://github.com/w4bo/docker-fiware-ext/commit/e28a2f6e51d06c953434c61067ba9bdb780a7627))
+* **deps:** update docker/metadata-action digest to 1294d94 ([a1f7584](https://github.com/w4bo/docker-fiware-ext/commit/a1f75841f556bf00970fd5226404bec7582318ce))
+* **deps:** update docker/metadata-action digest to 38b3677 ([7c65180](https://github.com/w4bo/docker-fiware-ext/commit/7c65180d28352550a0bbf51c4aafbdcd6dafa3fd))
+* **deps:** update docker/metadata-action digest to c314eea ([3b62a21](https://github.com/w4bo/docker-fiware-ext/commit/3b62a218a0aeb27501185f5414621e61e7cded54))
+
 ## [1.0.15](https://github.com/w4bo/docker-fiware-ext/compare/1.0.14...1.0.15) (2024-03-17)
 
 
