@@ -48,11 +48,11 @@ idea {
 
 dependencies {
     implementation 'io.github.microutils:kotlin-logging-jvm:3.0.5'
-    implementation 'org.slf4j:slf4j-api:2.0.12'
+    implementation 'org.slf4j:slf4j-api:2.0.13'
     implementation 'org.json:json:20240303'
     implementation 'io.github.cdimascio:dotenv-kotlin:6.4.1'
     implementation 'org.junit.jupiter:junit-jupiter:5.10.2'
-    testCompileOnly 'org.slf4j:slf4j-simple:2.0.12'
+    testCompileOnly 'org.slf4j:slf4j-simple:2.0.13'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
     implementation 'org.apache.kafka:kafka-clients:3.7.0'
