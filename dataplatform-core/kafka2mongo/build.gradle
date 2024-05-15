@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'idea'
-    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.24'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
     id 'checkstyle'
 }
