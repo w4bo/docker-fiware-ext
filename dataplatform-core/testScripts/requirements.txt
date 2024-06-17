@@ -1,5 +1,5 @@
 kafka-python==2.0.2
 python-dotenv==1.0.0
 urllib3==2.0.4
-requests==2.31.0
+requests==2.32.2
 pymongo==4.7.3
