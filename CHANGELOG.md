@@ -1,3 +1,56 @@
+## [1.0.17](https://github.com/w4bo/docker-fiware-ext/compare/1.0.16...1.0.17) (2024-06-27)
+
+
+### Dependency updates
+
+* **deps:** update dependency pymongo to v4.7.0 ([edce6a3](https://github.com/w4bo/docker-fiware-ext/commit/edce6a3567c702cc3070724de32ecb2405395e7d))
+* **deps:** update dependency pymongo to v4.7.1 ([31f89ff](https://github.com/w4bo/docker-fiware-ext/commit/31f89ff7374051bb89b14bfa6c148e3d6dfbabdf))
+* **deps:** update dependency pymongo to v4.7.2 ([0801e53](https://github.com/w4bo/docker-fiware-ext/commit/0801e53592304cbb48b32e18def340dbda423970))
+* **deps:** update dependency pymongo to v4.7.3 ([0419556](https://github.com/w4bo/docker-fiware-ext/commit/0419556842ea8ed0a0dd8e24d62c2a123b59637b))
+* **deps:** update dependency pymongo to v4.8.0 ([6373fc8](https://github.com/w4bo/docker-fiware-ext/commit/6373fc8586d03d39a0042a2f9bb45280e2a6f388))
+* **deps:** update dependency requests to v2.32.2 [security] ([349e769](https://github.com/w4bo/docker-fiware-ext/commit/349e7693d55751ed0738af7b866f17eb9a3e16bb))
+* **deps:** update dependency requests to v2.32.3 ([1baa2b1](https://github.com/w4bo/docker-fiware-ext/commit/1baa2b1ea8f05f6983c1a1a6c5977d3245a1f8b0))
+* **deps:** update dependency urllib3 to v2.2.2 [security] ([864bea3](https://github.com/w4bo/docker-fiware-ext/commit/864bea3ab362ed53a12ba2a8294c356d9299e28c))
+* **deps:** update fiware/orion docker tag to v3.12.0 ([05dc327](https://github.com/w4bo/docker-fiware-ext/commit/05dc3274cd6e32a26d02de07c1732b4323f6cc4a))
+* **deps:** update node.js to 20.13 ([51331f3](https://github.com/w4bo/docker-fiware-ext/commit/51331f369d1ea5bf34c75bbdd2c8fe95f431b2e5))
+* **deps:** update node.js to 20.14 ([f719bee](https://github.com/w4bo/docker-fiware-ext/commit/f719bee70000d6da61681363423ab7b68a2a30c8))
+* **deps:** update node.js to 20.15 ([72149af](https://github.com/w4bo/docker-fiware-ext/commit/72149af9a32b42d64f4edbdb22133e064f4824eb))
+* **deps:** update plugin org.jetbrains.kotlin.jvm to v1.9.24 ([943f576](https://github.com/w4bo/docker-fiware-ext/commit/943f576787046a2d0bb46dbf15e0f9ee171d7142))
+* **deps:** update plugin org.jetbrains.kotlin.jvm to v2 ([3e193e0](https://github.com/w4bo/docker-fiware-ext/commit/3e193e0d39673371280c6c15235dd53ce8e5d749))
+
+
+### Bug Fixes
+
+* **deps:** update junit5 monorepo to v5.10.3 ([6e055df](https://github.com/w4bo/docker-fiware-ext/commit/6e055dfe6a98953b8733c033c1b2f297f010e86a))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.1.3 ([46138f8](https://github.com/w4bo/docker-fiware-ext/commit/46138f82c5d3f5f038e641c4be0a374322e62f12))
+* **deps:** update actions/checkout action to v4.1.4 ([9e47a84](https://github.com/w4bo/docker-fiware-ext/commit/9e47a84de4510ef8d2c53f1991a92f7858801edb))
+* **deps:** update actions/checkout action to v4.1.6 ([31e22cf](https://github.com/w4bo/docker-fiware-ext/commit/31e22cf82b17ba480349d86659921b3c8b981c18))
+* **deps:** update actions/checkout action to v4.1.7 ([a1335bc](https://github.com/w4bo/docker-fiware-ext/commit/a1335bcd3ad48bc930de4c2653a304c5dd9babb0))
+* **deps:** update docker/build-push-action digest to 1556069 ([55b0ed5](https://github.com/w4bo/docker-fiware-ext/commit/55b0ed50aa0e57d97c5bd5a0c0447cc9bcd06116))
+* **deps:** update docker/build-push-action digest to 2a53c6c ([c906690](https://github.com/w4bo/docker-fiware-ext/commit/c906690fa92e26334c0304aada3b718a843c4437))
+* **deps:** update docker/build-push-action digest to 31159d4 ([2f6e8d1](https://github.com/w4bo/docker-fiware-ext/commit/2f6e8d16b675871568e1fd05f98c3060c735193b))
+* **deps:** update docker/build-push-action digest to 4367da9 ([d54a9a8](https://github.com/w4bo/docker-fiware-ext/commit/d54a9a881e182fe0f5994d6aa91172e614908d60))
+* **deps:** update docker/build-push-action digest to 729f7f4 ([6e1080a](https://github.com/w4bo/docker-fiware-ext/commit/6e1080a2885e77a2dcb408672aa9a936a6cd3cdc))
+* **deps:** update docker/build-push-action digest to 7e6f776 ([7e897a7](https://github.com/w4bo/docker-fiware-ext/commit/7e897a7f9640f19e3367059b4371a459a05f9696))
+* **deps:** update docker/build-push-action digest to 84354d3 ([f582b08](https://github.com/w4bo/docker-fiware-ext/commit/f582b08eeb0abb9e969bf49b24545b2fc42807a9))
+* **deps:** update docker/build-push-action digest to 86c2bd0 ([34be177](https://github.com/w4bo/docker-fiware-ext/commit/34be177f661c4bae3cc008c76fc3d26561bfb055))
+* **deps:** update docker/build-push-action digest to 94f8f8c ([7f369db](https://github.com/w4bo/docker-fiware-ext/commit/7f369dbb1321ad779cc10c5c07a9ce08f22e8b02))
+* **deps:** update docker/build-push-action digest to af64c4e ([3b435c7](https://github.com/w4bo/docker-fiware-ext/commit/3b435c7765493420797d9b756c00de83fb07737a))
+* **deps:** update docker/build-push-action digest to ca052bb ([351c202](https://github.com/w4bo/docker-fiware-ext/commit/351c202e77d44b90d72cb537fca6286add5ed368))
+* **deps:** update docker/build-push-action digest to cfed4e9 ([833ef0e](https://github.com/w4bo/docker-fiware-ext/commit/833ef0e6c6114b464c062507bd1938e17eba0ed8))
+* **deps:** update docker/build-push-action digest to df19a79 ([b503bd2](https://github.com/w4bo/docker-fiware-ext/commit/b503bd23fffa9b384ef844679b88fe99ec120fe5))
+* **deps:** update docker/build-push-action digest to eb539f4 ([e288bf4](https://github.com/w4bo/docker-fiware-ext/commit/e288bf4f83661facab0e68c3bf611a74e4098f0f))
+* **deps:** update docker/build-push-action digest to ef6cba3 ([99a5446](https://github.com/w4bo/docker-fiware-ext/commit/99a5446e7851c84395b7de4afbda55777c456f01))
+* **deps:** update docker/login-action digest to 0d4c9c5 ([8119f98](https://github.com/w4bo/docker-fiware-ext/commit/8119f98ceb53747c39754f83425494aadd1eb7b5))
+* **deps:** update docker/login-action digest to 70fccc7 ([114eeea](https://github.com/w4bo/docker-fiware-ext/commit/114eeea083cfae5db410bf964f882b06b598e82c))
+* **deps:** update docker/login-action digest to db77945 ([0be5f02](https://github.com/w4bo/docker-fiware-ext/commit/0be5f02360814a8163310e4ee5aa59bab6bf2078))
+* **deps:** update docker/metadata-action digest to 2ee3d30 ([38e0f26](https://github.com/w4bo/docker-fiware-ext/commit/38e0f2616af0211c558cac9bcf704a0e4181df2e))
+* **deps:** update docker/metadata-action digest to f7b4ed1 ([b53f224](https://github.com/w4bo/docker-fiware-ext/commit/b53f2241e0e00c5c67cbb1726b29a331235d3043))
+
 ## [1.0.16](https://github.com/w4bo/docker-fiware-ext/compare/1.0.15...1.0.16) (2024-04-12)
 
 
