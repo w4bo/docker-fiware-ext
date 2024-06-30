@@ -1,3 +1,15 @@
+## [1.0.18](https://github.com/w4bo/docker-fiware-ext/compare/1.0.17...1.0.18) (2024-06-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency org.apache.kafka:kafka-clients to v3.7.1 ([b762a5f](https://github.com/w4bo/docker-fiware-ext/commit/b762a5fcee4c58e8375eba7de9f6100b99d30178))
+
+
+### Build and continuous integration
+
+* **deps:** update docker/metadata-action digest to a64d048 ([6c6ad51](https://github.com/w4bo/docker-fiware-ext/commit/6c6ad5159426b769e7f270b810fb76f0f9f02b7e))
+
 ## [1.0.17](https://github.com/w4bo/docker-fiware-ext/compare/1.0.16...1.0.17) (2024-06-27)
 
 
