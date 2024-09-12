@@ -1,3 +1,56 @@
+## [1.0.19](https://github.com/w4bo/docker-fiware-ext/compare/1.0.18...1.0.19) (2024-09-12)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.101 ([54d66fd](https://github.com/w4bo/docker-fiware-ext/commit/54d66fda2b2106f663a9d9caa130986ffc126449))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.102 ([6a59bb3](https://github.com/w4bo/docker-fiware-ext/commit/6a59bb35923820e630f2378fb9678e6b4487dab9))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.103 ([44c19ba](https://github.com/w4bo/docker-fiware-ext/commit/44c19baa1dd90392edbb6298748ac78786a44cd2))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.104 ([c91686c](https://github.com/w4bo/docker-fiware-ext/commit/c91686c0fc4d71c69961aa8f57ee40dcc35cce4f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.105 ([900e240](https://github.com/w4bo/docker-fiware-ext/commit/900e240023cccb1798263577b2ceb681b495bc53))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.86 ([56e68f4](https://github.com/w4bo/docker-fiware-ext/commit/56e68f4b3430c12ed6ea6a46c2becb5b46852bdd))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.87 ([6a6736c](https://github.com/w4bo/docker-fiware-ext/commit/6a6736c6daa44ff543f053e72b721bdaee061e92))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.89 ([a75f91c](https://github.com/w4bo/docker-fiware-ext/commit/a75f91c235e9c901f6a706c4de4f1670c5409c2c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.90 ([87ba246](https://github.com/w4bo/docker-fiware-ext/commit/87ba246161845e536544e9c256f09d94846cb969))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.91 ([ab90fa3](https://github.com/w4bo/docker-fiware-ext/commit/ab90fa35808aed350433ed69022cf191ca03fa60))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.92 ([095858a](https://github.com/w4bo/docker-fiware-ext/commit/095858a596493d71198173ecca521f43428a3b33))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.93 ([847457e](https://github.com/w4bo/docker-fiware-ext/commit/847457ee077df18b21301dbae490caf2d605db83))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.94 ([9798019](https://github.com/w4bo/docker-fiware-ext/commit/979801978cf1ea16f2a0067e9dfd4a75a52654b0))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.95 ([1b60bba](https://github.com/w4bo/docker-fiware-ext/commit/1b60bba017bf752d2365e0d4cdb08ed6cd8b822a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.96 ([fadc752](https://github.com/w4bo/docker-fiware-ext/commit/fadc7528bf9bda01d751a155b0c2d0a5121b4bd7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.97 ([33d475a](https://github.com/w4bo/docker-fiware-ext/commit/33d475a0f0badf5dc4f4d5a370a289b4569e804a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.98 ([4747267](https://github.com/w4bo/docker-fiware-ext/commit/4747267618ee03a1ea2b12ca5bffc1f79304bad1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.99 ([5b8a793](https://github.com/w4bo/docker-fiware-ext/commit/5b8a7930bba0b3e1683154df46606131fab82393))
+* **deps:** update docker.io/bitnami/kafka docker tag to v3.8 ([0295a9e](https://github.com/w4bo/docker-fiware-ext/commit/0295a9e133ce8747230a490d44905a72fb229cff))
+* **deps:** update node.js to 20.16 ([8cc7f16](https://github.com/w4bo/docker-fiware-ext/commit/8cc7f1653e35574edc8b26814261c27b356f881a))
+* **deps:** update node.js to 20.17 ([d80ef5b](https://github.com/w4bo/docker-fiware-ext/commit/d80ef5b7b49bf7139868fdcf15887f7278eabfdc))
+* **deps:** update plugin org.jetbrains.kotlin.jvm to v2.0.10 ([82ef595](https://github.com/w4bo/docker-fiware-ext/commit/82ef5952b5cac62fbe62a01158644ddfa7b288b1))
+* **deps:** update plugin org.jetbrains.kotlin.jvm to v2.0.20 ([6dfab4d](https://github.com/w4bo/docker-fiware-ext/commit/6dfab4d9c45d1f4a9a438f3c687a0473457b0d2d))
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.cdimascio:dotenv-kotlin to v6.4.2 ([254f311](https://github.com/w4bo/docker-fiware-ext/commit/254f311ee72d73f968aa952a2ecd9dc11b4eed0c))
+* **deps:** update dependency org.apache.kafka:kafka-clients to v3.8.0 ([e0b7432](https://github.com/w4bo/docker-fiware-ext/commit/e0b7432025f188fae32b726362bb3f713c1e32b9))
+* **deps:** update junit5 monorepo to v5.11.0 ([44f2ebd](https://github.com/w4bo/docker-fiware-ext/commit/44f2ebdc6b8297a94461ad08ed4b0a8926cb91aa))
+* **deps:** update slf4j monorepo to v2.0.14 ([e0b91a7](https://github.com/w4bo/docker-fiware-ext/commit/e0b91a7b53d2d7bd0c8d85ced0810fa9055f4b29))
+* **deps:** update slf4j monorepo to v2.0.15 ([7907d2f](https://github.com/w4bo/docker-fiware-ext/commit/7907d2f05cee2348aa97fae9006d144c798eb0a0))
+* **deps:** update slf4j monorepo to v2.0.16 ([9675185](https://github.com/w4bo/docker-fiware-ext/commit/967518514fb77347b7e981087161615f6506fd59))
+
+### Build and continuous integration
+
+* **deps:** update docker/build-push-action digest to 16ebe77 ([a9083a1](https://github.com/w4bo/docker-fiware-ext/commit/a9083a1816e6ffa5de5a7aad854916e4b1eb71ea))
+* **deps:** update docker/build-push-action digest to 1a16264 ([5ba9604](https://github.com/w4bo/docker-fiware-ext/commit/5ba96043ef2d03921fb957e92b7d66449d59acd4))
+* **deps:** update docker/build-push-action digest to 1ca370b ([3daeca6](https://github.com/w4bo/docker-fiware-ext/commit/3daeca6fce0b7cb3799e871521e0f3b2a8880fa7))
+* **deps:** update docker/build-push-action digest to 2dbe91d ([b78dd47](https://github.com/w4bo/docker-fiware-ext/commit/b78dd478b8256a43ae9d9fdbb68d098913f00999))
+* **deps:** update docker/build-push-action digest to 4f7cdeb ([ace4c00](https://github.com/w4bo/docker-fiware-ext/commit/ace4c005c9aa6de2be3247225f2f350cab54799a))
+* **deps:** update docker/build-push-action digest to 5176d81 ([de405f6](https://github.com/w4bo/docker-fiware-ext/commit/de405f6599cb827965833db0de57d7c0c63e2653))
+* **deps:** update docker/build-push-action digest to 5cd11c3 ([352f45f](https://github.com/w4bo/docker-fiware-ext/commit/352f45f50ddd35d9e29b46175b1060619658d53c))
+* **deps:** update docker/build-push-action digest to 9552610 ([5842e25](https://github.com/w4bo/docker-fiware-ext/commit/5842e252a339f41a66f279febb99368d6df56023))
+* **deps:** update docker/build-push-action digest to a254f8c ([c2d92f5](https://github.com/w4bo/docker-fiware-ext/commit/c2d92f5a26bc21c69a49c2388f780915154015ed))
+* **deps:** update docker/build-push-action digest to a8d3541 ([30bca6b](https://github.com/w4bo/docker-fiware-ext/commit/30bca6b46df9d275570b5968a5c1318779ba9b42))
+* **deps:** update docker/build-push-action digest to e050dfa ([639badb](https://github.com/w4bo/docker-fiware-ext/commit/639badb5d88fdaae6059b18fd39695fb1e27d31a))
+* **deps:** update docker/login-action digest to 9780b0c ([1347f04](https://github.com/w4bo/docker-fiware-ext/commit/1347f04fac13b2649b52a3b89348330f1326aa0a))
+* **deps:** update docker/metadata-action digest to 60a0d34 ([3d7d33e](https://github.com/w4bo/docker-fiware-ext/commit/3d7d33e995237eb1e3550e85bd5030fe7396811a))
+
 ## [1.0.18](https://github.com/w4bo/docker-fiware-ext/compare/1.0.17...1.0.18) (2024-06-30)
 
 
