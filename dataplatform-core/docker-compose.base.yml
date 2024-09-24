@@ -19,7 +19,7 @@ services:
   mongodb:
     init: true
     restart: always
-    image: mongo:7.0
+    image: mongo:8.0
     hostname: mongodb
     container_name: mongodb
     ports:
