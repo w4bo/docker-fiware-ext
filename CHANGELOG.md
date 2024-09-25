@@ -1,3 +1,25 @@
+## [1.0.20](https://github.com/w4bo/docker-fiware-ext/compare/1.0.19...1.0.20) (2024-09-25)
+
+### Dependency updates
+
+* **deps:** update dependency pymongo to v4.9 ([4899bbe](https://github.com/w4bo/docker-fiware-ext/commit/4899bbe5038a4d646b60c0d486d30ade1cef3df5))
+* **deps:** update dependency pymongo to v4.9.1 ([9284bc2](https://github.com/w4bo/docker-fiware-ext/commit/9284bc2e013353a0fae85119f88de48a9de72f28))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.106 ([ebdab2e](https://github.com/w4bo/docker-fiware-ext/commit/ebdab2e0e343a1aa60c47066e7a0671822b0cc48))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.107 ([8b2c96f](https://github.com/w4bo/docker-fiware-ext/commit/8b2c96f2130ca83091015dcd323b38a4ae3ef9d1))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.108 ([a7150ba](https://github.com/w4bo/docker-fiware-ext/commit/a7150ba7135853a24a1f9307c8a28b57e269fe45))
+* **deps:** update dependency urllib3 to v2.2.3 ([8eb73c6](https://github.com/w4bo/docker-fiware-ext/commit/8eb73c63b5b48cb4564e31a7054a1c5fad4f7849))
+* **deps:** update mongo docker tag to v8 ([6883c8d](https://github.com/w4bo/docker-fiware-ext/commit/6883c8d7a264ab5a879999dc19f0fb6795aefe87))
+
+### Bug Fixes
+
+* **deps:** update junit5 monorepo to v5.11.1 ([37717a0](https://github.com/w4bo/docker-fiware-ext/commit/37717a0cec25809408ff9899815db1f69f7b7146))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.0.4 ([1fd1413](https://github.com/w4bo/docker-fiware-ext/commit/1fd14138ed1645c1b5058bb397512e27337839b6))
+* **deps:** update docker/login-action digest to 3b8fed7 ([b17dd9b](https://github.com/w4bo/docker-fiware-ext/commit/b17dd9b90216a961360a45cd296c549e1ca54036))
+* **deps:** update docker/metadata-action digest to 70b2cdc ([dd770dd](https://github.com/w4bo/docker-fiware-ext/commit/dd770dd133bb804272cc8744d2945302c516ab71))
+
 ## [1.0.19](https://github.com/w4bo/docker-fiware-ext/compare/1.0.18...1.0.19) (2024-09-12)
 
 ### Dependency updates
