@@ -1,3 +1,25 @@
+## [1.0.21](https://github.com/w4bo/docker-fiware-ext/compare/1.0.20...1.0.21) (2024-10-05)
+
+### Dependency updates
+
+* **deps:** update dependency pymongo to v4.10.0 ([0d9585f](https://github.com/w4bo/docker-fiware-ext/commit/0d9585fbb6697ac645d20848bb3ab5ff33a3ce1c))
+* **deps:** update dependency pymongo to v4.10.1 ([5dab9b4](https://github.com/w4bo/docker-fiware-ext/commit/5dab9b4f0cd8c43eb98297dd67ef5779296ad202))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.109 ([2ee61a6](https://github.com/w4bo/docker-fiware-ext/commit/2ee61a6fc7bdbd5d44955c2b9b38d768651e8cb3))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.110 ([fb7cd76](https://github.com/w4bo/docker-fiware-ext/commit/fb7cd76857c66ae9c78ea8fc56a916d091536ac6))
+* **deps:** update node.js to 20.18 ([6f22697](https://github.com/w4bo/docker-fiware-ext/commit/6f22697ddc256041327bb829684d4ebc612915d1))
+
+### Bug Fixes
+
+* **deps:** update junit5 monorepo to v5.11.2 ([1851154](https://github.com/w4bo/docker-fiware-ext/commit/18511549fc87333a8c896e575cf98db1dab2f5d6))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.2.0 ([fcee592](https://github.com/w4bo/docker-fiware-ext/commit/fcee5922a1bb037715cdb8dc2827ede1785f7fcc))
+* **deps:** update dependency ubuntu to v24 ([652c2f3](https://github.com/w4bo/docker-fiware-ext/commit/652c2f3a354a513b51e8e4fc974919125d9f0dac))
+* **deps:** update docker/build-push-action digest to 4f58ea7 ([d97ec7b](https://github.com/w4bo/docker-fiware-ext/commit/d97ec7bab2f00ca788c1362269ba429e84f21404))
+* **deps:** update docker/build-push-action digest to e44afff ([07043e9](https://github.com/w4bo/docker-fiware-ext/commit/07043e9ba79ae84913b074a505d88177144d5601))
+* **deps:** update docker/login-action digest to 29df2a9 ([e743b2f](https://github.com/w4bo/docker-fiware-ext/commit/e743b2f276c83cc8617e30e63fed2862d697b4af))
+
 ## [1.0.20](https://github.com/w4bo/docker-fiware-ext/compare/1.0.19...1.0.20) (2024-09-25)
 
 ### Dependency updates
