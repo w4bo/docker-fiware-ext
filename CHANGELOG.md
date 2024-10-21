@@ -1,3 +1,19 @@
+## [1.0.22](https://github.com/w4bo/docker-fiware-ext/compare/1.0.21...1.0.22) (2024-10-21)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.111 ([2ac5725](https://github.com/w4bo/docker-fiware-ext/commit/2ac57253c7360ed2e5f26a081063c2009751d372))
+* **deps:** update plugin org.jetbrains.kotlin.jvm to v2.0.21 ([3e0fb42](https://github.com/w4bo/docker-fiware-ext/commit/3e0fb4286540e1d6d9dc1e34e317ceb6d877ae1d))
+
+### Bug Fixes
+
+* **deps:** update junit5 monorepo to v5.11.3 ([a4379dc](https://github.com/w4bo/docker-fiware-ext/commit/a4379dc641dc29882da777cd0ed85d23dd5acd34))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.2.1 ([92a44b1](https://github.com/w4bo/docker-fiware-ext/commit/92a44b1d5a99f050d43cec76fe51feb6e53e57b1))
+* **deps:** update docker/login-action digest to 1f36f5b ([32c1688](https://github.com/w4bo/docker-fiware-ext/commit/32c1688650a801b34b00a695053fc38539fcf807))
+
 ## [1.0.21](https://github.com/w4bo/docker-fiware-ext/compare/1.0.20...1.0.21) (2024-10-05)
 
 ### Dependency updates
