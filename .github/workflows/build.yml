@@ -68,7 +68,7 @@ jobs:
         run: echo "version=$(git describe --tags --abbrev=0)" >> $GITHUB_OUTPUT
       - name: Extract metadata (tags, labels) for fiware2kafka
         id: meta1
-        uses: docker/metadata-action@70b2cdc6480c1a8b86edf1777157f8f437de2166
+        uses: docker/metadata-action@d31acd50653ded455ab8972a1eb9a656b0aef94a
         with:
           images: ${{ secrets.DOCKER_IMAGENAME1 }}
           tags: |
@@ -84,7 +84,7 @@ jobs:
           labels: ${{ steps.meta1.outputs.labels }}
       - name: Extract metadata (tags, labels) for kafka2mongo
         id: meta2
-        uses: docker/metadata-action@70b2cdc6480c1a8b86edf1777157f8f437de2166
+        uses: docker/metadata-action@d31acd50653ded455ab8972a1eb9a656b0aef94a
         with:
           images: ${{ secrets.DOCKER_IMAGENAME2 }}
           tags: |
