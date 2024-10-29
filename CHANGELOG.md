@@ -1,3 +1,23 @@
+## [1.0.23](https://github.com/w4bo/docker-fiware-ext/compare/1.0.22...1.0.23) (2024-10-29)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.112 ([98727f3](https://github.com/w4bo/docker-fiware-ext/commit/98727f36271680bea603c7ac98cce1dfee652490))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.113 ([5ee85c4](https://github.com/w4bo/docker-fiware-ext/commit/5ee85c468fed182d8d0974694c2963791275dd64))
+
+### Bug Fixes
+
+* **deps:** update dependency org.apache.kafka:kafka-clients to v3.8.1 ([521563f](https://github.com/w4bo/docker-fiware-ext/commit/521563f81556926f4ec7ef0c0d5aab621e395986))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.2.2 ([a519d53](https://github.com/w4bo/docker-fiware-ext/commit/a519d5302b54b2c574e54a4517ac522f53ecbacc))
+* **deps:** update actions/setup-node action to v4.1.0 ([8d64fc4](https://github.com/w4bo/docker-fiware-ext/commit/8d64fc499183f3d567178d573b0a18a46437839c))
+* **deps:** update docker/build-push-action digest to 5e99dac ([3a626ed](https://github.com/w4bo/docker-fiware-ext/commit/3a626edb1f54292f19ce66b5f2307cc0717d76dd))
+* **deps:** update docker/login-action digest to 0689575 ([2102697](https://github.com/w4bo/docker-fiware-ext/commit/210269761bba6752a17e0cf25e889ee9697830ed))
+* **deps:** update docker/login-action digest to 5d8785b ([eb0fac3](https://github.com/w4bo/docker-fiware-ext/commit/eb0fac36b86fc72596dea1c97745521ac0d3f758))
+* **deps:** update docker/metadata-action digest to d31acd5 ([f4dc471](https://github.com/w4bo/docker-fiware-ext/commit/f4dc47150d93385e6799f427f1829975443a439f))
+
 ## [1.0.22](https://github.com/w4bo/docker-fiware-ext/compare/1.0.21...1.0.22) (2024-10-21)
 
 ### Dependency updates
