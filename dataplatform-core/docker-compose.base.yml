@@ -43,7 +43,7 @@ services:
     init: true
     hostname: kafka
     container_name: kafka
-    image: docker.io/bitnami/kafka:3.8
+    image: docker.io/bitnami/kafka:3.9
     ports:
       - ${KAFKA_PORT_EXT}:49092
     environment:
