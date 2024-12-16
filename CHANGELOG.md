@@ -1,3 +1,31 @@
+## [1.0.25](https://github.com/w4bo/docker-fiware-ext/compare/1.0.24...1.0.25) (2024-12-16)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.115 ([#182](https://github.com/w4bo/docker-fiware-ext/issues/182)) ([73c0419](https://github.com/w4bo/docker-fiware-ext/commit/73c04190cd67ebfee8c11c47106d2815f037ab17))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.116 ([#195](https://github.com/w4bo/docker-fiware-ext/issues/195)) ([4498ae7](https://github.com/w4bo/docker-fiware-ext/commit/4498ae791d0f9645edf08bd0196c42f3349639a7))
+* **deps:** update docker.io/bitnami/kafka docker tag to v3.9 ([#184](https://github.com/w4bo/docker-fiware-ext/issues/184)) ([02fab38](https://github.com/w4bo/docker-fiware-ext/commit/02fab3891dfe38203fe3b00f9fea39f8d1650e0e))
+* **deps:** update node.js to 22.12 ([#194](https://github.com/w4bo/docker-fiware-ext/issues/194)) ([f101743](https://github.com/w4bo/docker-fiware-ext/commit/f10174321f6fd49b8ccf54393248749e0fab4dbf))
+* **deps:** update plugin org.jetbrains.kotlin.jvm to v2.1.0 ([#192](https://github.com/w4bo/docker-fiware-ext/issues/192)) ([ebe2089](https://github.com/w4bo/docker-fiware-ext/commit/ebe20896cd3e1965f7765e49506d33e9281c5a6d))
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.cdimascio:dotenv-kotlin to v6.5.0 ([#198](https://github.com/w4bo/docker-fiware-ext/issues/198)) ([e5094a2](https://github.com/w4bo/docker-fiware-ext/commit/e5094a2e84c85508ea632cb701f567cfa773b4b1))
+
+### Build and continuous integration
+
+* **deps:** update docker/build-push-action digest to 0259cb0 ([#190](https://github.com/w4bo/docker-fiware-ext/issues/190)) ([a023437](https://github.com/w4bo/docker-fiware-ext/commit/a023437b65c918874a8d31c89775ff382ce2b041))
+* **deps:** update docker/build-push-action digest to 11be14d ([#196](https://github.com/w4bo/docker-fiware-ext/issues/196)) ([95a4693](https://github.com/w4bo/docker-fiware-ext/commit/95a4693c685811a61350a303129153173ada534c))
+* **deps:** update docker/build-push-action digest to 48aba3b ([#191](https://github.com/w4bo/docker-fiware-ext/issues/191)) ([56b30f7](https://github.com/w4bo/docker-fiware-ext/commit/56b30f7e78a6e523d1af6f55f31702779cc7ea8e))
+* **deps:** update docker/build-push-action digest to 8796455 ([#193](https://github.com/w4bo/docker-fiware-ext/issues/193)) ([9960884](https://github.com/w4bo/docker-fiware-ext/commit/996088427126c0832bd6a6df9ae88070237c21ca))
+* **deps:** update docker/metadata-action digest to 1156622 ([#187](https://github.com/w4bo/docker-fiware-ext/issues/187)) ([921256e](https://github.com/w4bo/docker-fiware-ext/commit/921256efc58147794e089a279f95e006cde261ea))
+* **deps:** update docker/metadata-action digest to 32323e5 ([#185](https://github.com/w4bo/docker-fiware-ext/issues/185)) ([0a170d5](https://github.com/w4bo/docker-fiware-ext/commit/0a170d533831045f36f2ebd990e8d7b7f1750e0d))
+* **deps:** update docker/metadata-action digest to 369eb59 ([#188](https://github.com/w4bo/docker-fiware-ext/issues/188)) ([0cd135f](https://github.com/w4bo/docker-fiware-ext/commit/0cd135f846003efcf5420a3f4c369fa3105d5b1d))
+* **deps:** update docker/metadata-action digest to 44d81d6 ([#186](https://github.com/w4bo/docker-fiware-ext/issues/186)) ([e9e0c8e](https://github.com/w4bo/docker-fiware-ext/commit/e9e0c8e451ce8fd855a73ca832a4c83c9a4bf7f4))
+* **deps:** update docker/metadata-action digest to 906ecf0 ([#197](https://github.com/w4bo/docker-fiware-ext/issues/197)) ([28ae040](https://github.com/w4bo/docker-fiware-ext/commit/28ae040b4417283cf4fcfda62d2db887405ba004))
+* **deps:** update docker/metadata-action digest to b53be03 ([#189](https://github.com/w4bo/docker-fiware-ext/issues/189)) ([f3cca0d](https://github.com/w4bo/docker-fiware-ext/commit/f3cca0da6af67846334e9c5e8fbd81c463d5a957))
+* **deps:** update docker/metadata-action digest to bd26c98 ([#183](https://github.com/w4bo/docker-fiware-ext/issues/183)) ([6cc7072](https://github.com/w4bo/docker-fiware-ext/commit/6cc70723f86770211c2b887a4b4d65880f38b30d))
+
 ## [1.0.24](https://github.com/w4bo/docker-fiware-ext/compare/1.0.23...1.0.24) (2024-11-07)
 
 ### Dependency updates
