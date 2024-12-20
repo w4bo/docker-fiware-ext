@@ -3,11 +3,12 @@
 package it.unibo.kafka2mongo
 
 import com.mongodb.client.MongoClients
+import com.mongodb.client.model.Filters
+import com.mongodb.client.model.ReplaceOptions
 import io.github.cdimascio.dotenv.Dotenv
-import it.unibo.AREA_SERVED
-import it.unibo.DOMAIN
-import it.unibo.IMAGE_URL
-import it.unibo.TIMESTAMP_KAFKA
+import it.unibo.*
+import it.unibo.common.findPatternOccurrenceInJSONValues
+import it.unibo.common.setNestedValue
 import org.apache.kafka.clients.consumer.Consumer
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.clients.consumer.KafkaConsumer
@@ -27,28 +28,48 @@ var KAFKA_PORT_EXT: String? = null
 var RAW_TOPIC: String? = null
 var MONGO_DB_PERS_IP: String? = null
 var MONGO_DB_PERS_PORT_EXT: String? = null
+var IMAGESERVER_PROTOCOL: String? = null
 var IMAGESERVER_IP: String? = null
 var IMAGESERVER_PORT_HTTP_EXT: String? = null
 var MONGO_DB_PERS_DB: String? = null
+var MONGO_DB_CURRENT_STATE_DB: String? = null
+var MONGO_DB_CURRENT_STATE_COLLECTION: String? = null
 const val GIVE_UP = 30
+
+val imageExtension = listOf("jpg", "jpeg", "png", "svg", "gif", "bmp", "webp")
 
 /**
  * Return the extension if known
  * E.g., it should return no extension for URLs like http://81.60.229.210:12356/snapshot?topic%3D/front_camera_rgb
  */
 fun getExt(curUrl: String): String {
-    val knownExts = listOf("jpg", "png", "tif", "svg", "gif")
-    val ext = curUrl.substring(curUrl.lastIndexOf(".") + 1)
-    return if (knownExts.contains(ext)) ".$ext" else ""
+    val ext = curUrl.substring(curUrl.lastIndexOf(".") + 1).lowercase()
+    return if (imageExtension.contains(ext)) ".$ext" else ""
 }
 
-fun ftpImageName(obj: JSONObject, attr: String, ext: String): String {
-    val id = obj.getString("id")
+fun computeImageName(obj: JSONObject, attr: String, ext: String): String {
+    val baseUrl = "$IMAGESERVER_PROTOCOL://$IMAGESERVER_IP:$IMAGESERVER_PORT_HTTP_EXT"
+    val id = obj.getString(ID)
     val domain = if (obj.has(DOMAIN)) obj.getString(DOMAIN) else obj.getString(AREA_SERVED)
-    val date = Date(System.currentTimeMillis())
+    val date = Date(obj.getLong(TIMESTAMP_SUBSCRIPTION))
     val jdf = SimpleDateFormat("yyyy-MM-dd")
     val jdf2 = SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSSZ")
-    return "${domain}/${id}/" + jdf.format(date) + "/" + jdf2.format(date) + "_" + id + "_" + attr + ext
+    return "$baseUrl/$domain/$id/" + jdf.format(date) + "/" + jdf2.format(date) + "_" + id + "_" + attr.replace(
+        ".",
+        "_"
+    ) + ext
+}
+
+fun updateImageUrls(jsonObject: JSONObject): JSONObject {
+    // Regular expression pattern for image file extensions
+    val imagePattern =
+        Pattern.compile(".*\\.(${imageExtension.joinToString(separator = "|")})$", Pattern.CASE_INSENSITIVE)
+    val imageUrlKeyValues = findPatternOccurrenceInJSONValues(jsonObject, imagePattern, "")
+
+    for ((keyPath, value) in imageUrlKeyValues) {
+        jsonObject.setNestedValue(keyPath,computeImageName(jsonObject, keyPath, getExt(value.toString())))
+    }
+    return jsonObject
 }
 
 fun consumeFromKafka(group: String, consume: (JSONObject) -> Unit) {
@@ -102,9 +123,13 @@ fun main() {
     RAW_TOPIC = dotenv?.get("RAW_TOPIC") ?: System.getenv("RAW_TOPIC")
     MONGO_DB_PERS_IP = dotenv?.get("MONGO_DB_PERS_IP") ?: System.getenv("MONGO_DB_PERS_IP")
     MONGO_DB_PERS_PORT_EXT = dotenv?.get("MONGO_DB_PERS_PORT_EXT") ?: System.getenv("MONGO_DB_PERS_PORT_EXT")
+    MONGO_DB_PERS_DB = dotenv?.get("MONGO_DB_PERS_DB") ?: System.getenv("MONGO_DB_PERS_DB")
+    MONGO_DB_CURRENT_STATE_DB = dotenv?.get("MONGO_DB_CURRENT_STATE_DB") ?: System.getenv("MONGO_DB_CURRENT_STATE_DB")
+    IMAGESERVER_PROTOCOL = dotenv?.get("IMAGESERVER_PROTOCOL") ?: System.getenv("IMAGESERVER_PROTOCOL")
     IMAGESERVER_IP = dotenv?.get("IMAGESERVER_IP") ?: System.getenv("IMAGESERVER_IP")
     IMAGESERVER_PORT_HTTP_EXT = dotenv?.get("IMAGESERVER_PORT_HTTP_EXT") ?: System.getenv("IMAGESERVER_PORT_HTTP_EXT")
-    MONGO_DB_PERS_DB = dotenv?.get("MONGO_DB_PERS_DB") ?: System.getenv("MONGO_DB_PERS_DB")
+    MONGO_DB_CURRENT_STATE_COLLECTION =
+        dotenv?.get("MONGO_DB_CURRENT_STATE_COLLECTION") ?: System.getenv("MONGO_DB_CURRENT_STATE_COLLECTION")
 
     // create a mongodb client
     val mongoClient = MongoClients.create("mongodb://${MONGO_DB_PERS_IP}:${MONGO_DB_PERS_PORT_EXT}")
@@ -112,15 +137,22 @@ fun main() {
     consumeFromKafka("kafka2mongo") { data ->
         executor.submit {
             // if the object has an imageSnapshot, replace it in the historic data
-            if (data.has(IMAGE_URL)) {
-                val filename = ftpImageName(data, IMAGE_URL, getExt(data.getString(IMAGE_URL)))
-                data.put(IMAGE_URL, "http://${IMAGESERVER_IP}:${IMAGESERVER_PORT_HTTP_EXT}/${filename}")
-            }
-	    println("Inserting new data...")
+
+            val enrichedData: JSONObject = updateImageUrls(data)
+
+            println("Inserting new data...")
             mongoClient
-                    .getDatabase(MONGO_DB_PERS_DB)
-                    .getCollection(data.getString(DOMAIN))
-                    .insertOne(Document.parse(data.toString()))
+                .getDatabase(MONGO_DB_PERS_DB)
+                .getCollection(enrichedData.getString(DOMAIN))
+                .insertOne(Document.parse(enrichedData.toString()))
+
+            enrichedData.put("_id", enrichedData.get(ID))
+            mongoClient.getDatabase(MONGO_DB_CURRENT_STATE_DB).getCollection(MONGO_DB_CURRENT_STATE_COLLECTION)
+                .replaceOne(
+                    Filters.eq("_id", enrichedData.get(ID)),
+                    Document.parse(enrichedData.toString()),
+                    ReplaceOptions().upsert(true)
+                )
         }
     }
     mongoClient.close()
