@@ -29,14 +29,18 @@ services:
       - MONGO_DB_PERS_IP=mongodb
       - MONGO_DB_PERS_PORT_EXT=27017
       - MONGO_DB_PERS_DB=persistence
+      # Current State
+      - MONGO_DB_CURRENT_STATE_DB=currentState
+      - MONGO_DB_CURRENT_STATE_COLLECTION=entities
       # KAFKA
       - KAFKA_IP=kafka
       - KAFKA_PORT_EXT=9092
       # FIWARE2KAFKA variables
       - RAW_TOPIC=raw
       # Image server (required to change the URLs of images)
-      - IMAGESERVER_IP=192.168.30.102
-      - IMAGESERVER_PORT_HTTP_EXT=49080
+      - IMAGESERVER_PROTOCOL=https
+      - IMAGESERVER_IP=agritech-platform.campusfc.unibo.it
+      - IMAGESERVER_PORT_HTTP_EXT=443
     deploy:
       placement:
         constraints:
