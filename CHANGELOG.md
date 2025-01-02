@@ -1,3 +1,18 @@
+## [1.0.27](https://github.com/w4bo/docker-fiware-ext/compare/1.0.26...1.0.27) (2025-01-02)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.117 ([#201](https://github.com/w4bo/docker-fiware-ext/issues/201)) ([e73b704](https://github.com/w4bo/docker-fiware-ext/commit/e73b70441fb2ec4d5686329e2bd898eef74bc332))
+* **deps:** update dependency urllib3 to v2.3.0 ([#202](https://github.com/w4bo/docker-fiware-ext/issues/202)) ([24068ae](https://github.com/w4bo/docker-fiware-ext/commit/24068aef917645a9919ef4d085246b75f3c51016))
+
+### Bug Fixes
+
+* **deps:** update dependency org.json:json to v20241224 ([#203](https://github.com/w4bo/docker-fiware-ext/issues/203)) ([195b88e](https://github.com/w4bo/docker-fiware-ext/commit/195b88ed35f185435b306e8b070a1037660f4a69))
+
+### Build and continuous integration
+
+* **deps:** update docker/build-push-action digest to 7e09459 ([#200](https://github.com/w4bo/docker-fiware-ext/issues/200)) ([fb71431](https://github.com/w4bo/docker-fiware-ext/commit/fb7143139919352eb27e0c8e3ee725c8b7645f5a))
+
 ## [1.0.26](https://github.com/w4bo/docker-fiware-ext/compare/1.0.25...1.0.26) (2024-12-16)
 
 ### Bug Fixes
