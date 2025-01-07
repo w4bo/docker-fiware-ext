@@ -1,8 +1,5 @@
 package it.unibo.common
 
-import it.unibo.kafka2mongo.computeImageName
-import it.unibo.kafka2mongo.getExt
-import it.unibo.kafka2mongo.imageExtension
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.regex.Pattern

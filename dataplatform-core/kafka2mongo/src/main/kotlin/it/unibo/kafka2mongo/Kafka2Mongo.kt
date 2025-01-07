@@ -9,6 +9,7 @@ import io.github.cdimascio.dotenv.Dotenv
 import it.unibo.*
 import it.unibo.common.findPatternOccurrenceInJSONValues
 import it.unibo.common.setNestedValue
+import it.unibo.common.computeImagePath
 import org.apache.kafka.clients.consumer.Consumer
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.clients.consumer.KafkaConsumer
@@ -16,7 +17,6 @@ import org.apache.kafka.common.serialization.StringDeserializer
 import org.bson.Document
 import org.json.JSONObject
 import java.io.File
-import java.text.SimpleDateFormat
 import java.time.Duration
 import java.util.*
 import java.util.concurrent.Executors
@@ -47,17 +47,9 @@ fun getExt(curUrl: String): String {
     return if (imageExtension.contains(ext)) ".$ext" else ""
 }
 
-fun computeImageName(obj: JSONObject, attr: String, ext: String): String {
+fun computeImageUrl(obj: JSONObject, attr: String, ext: String): String {
     val baseUrl = "$IMAGESERVER_PROTOCOL://$IMAGESERVER_IP:$IMAGESERVER_PORT_HTTP_EXT"
-    val id = obj.getString(ID)
-    val domain = if (obj.has(DOMAIN)) obj.getString(DOMAIN) else obj.getString(AREA_SERVED)
-    val date = Date(obj.getLong(TIMESTAMP_SUBSCRIPTION))
-    val jdf = SimpleDateFormat("yyyy-MM-dd")
-    val jdf2 = SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSSZ")
-    return "$baseUrl/$domain/$id/" + jdf.format(date) + "/" + jdf2.format(date) + "_" + id + "_" + attr.replace(
-        ".",
-        "_"
-    ) + ext
+    return "$baseUrl${computeImagePath(obj, attr, ext)}"
 }
 
 fun updateImageUrls(jsonObject: JSONObject): JSONObject {
@@ -67,7 +59,7 @@ fun updateImageUrls(jsonObject: JSONObject): JSONObject {
     val imageUrlKeyValues = findPatternOccurrenceInJSONValues(jsonObject, imagePattern, "")
 
     for ((keyPath, value) in imageUrlKeyValues) {
-        jsonObject.setNestedValue(keyPath,computeImageName(jsonObject, keyPath, getExt(value.toString())))
+        jsonObject.setNestedValue(keyPath,computeImageUrl(jsonObject, keyPath, getExt(value.toString())))
     }
     return jsonObject
 }
