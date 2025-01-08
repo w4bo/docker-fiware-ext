@@ -51,9 +51,10 @@ fun main(){
         executor.submit {
 
             val imageUrlKeyValues = findPatternOccurrenceInJSONValues(data, imagePattern, "")
-
             for ((keyPath, value) in imageUrlKeyValues) {
-                downloadImage(value as String, "/mnt/data/"+computeImagePath(data, keyPath, getExt(value)))
+                val destinationPath = "/mnt/data/"+computeImagePath(data, keyPath, getExt(value as String))
+                downloadImage(value, destinationPath)
+                println("Image downloaded successfully to $destinationPath")
             }
         }
     }
