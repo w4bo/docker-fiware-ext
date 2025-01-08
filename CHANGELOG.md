@@ -1,3 +1,14 @@
+## [1.0.28](https://github.com/w4bo/docker-fiware-ext/compare/1.0.27...1.0.28) (2025-01-08)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.118 ([#204](https://github.com/w4bo/docker-fiware-ext/issues/204)) ([f2c3ce7](https://github.com/w4bo/docker-fiware-ext/commit/f2c3ce7c75a79bc2eefbe9bd3ddd4c1463e79012))
+* **deps:** update node.js to 22.13 ([#205](https://github.com/w4bo/docker-fiware-ext/issues/205)) ([0d32c69](https://github.com/w4bo/docker-fiware-ext/commit/0d32c69f850b9e3bfbb0bc1e45e1c2907f88c5de))
+
+### Bug Fixes
+
+* **deps:** update dependency org.json:json to v20250107 ([#206](https://github.com/w4bo/docker-fiware-ext/issues/206)) ([2d2fbd8](https://github.com/w4bo/docker-fiware-ext/commit/2d2fbd8edcae825d95542fe886a043380365bd3c))
+
 ## [1.0.27](https://github.com/w4bo/docker-fiware-ext/compare/1.0.26...1.0.27) (2025-01-02)
 
 ### Dependency updates
