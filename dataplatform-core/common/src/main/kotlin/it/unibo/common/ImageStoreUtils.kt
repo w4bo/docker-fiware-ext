@@ -25,6 +25,9 @@ fun computeImagePath(obj: JSONObject, attr: String, ext: String): String {
     val date = Date(obj.getLong(TIMESTAMP_SUBSCRIPTION))
     val jdf = SimpleDateFormat("yyyy-MM-dd")
     val jdf2 = SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSSZ")
+    jdf.timeZone = TimeZone.getTimeZone("Europe/Rome")
+    jdf2.timeZone = TimeZone.getTimeZone("Europe/Rome")
+
     return "/image-archive/$domain/$id/" + jdf.format(date) + "/" + jdf2.format(date) + "_" + id + "_" + attr.replace(
         ".",
         "_"
