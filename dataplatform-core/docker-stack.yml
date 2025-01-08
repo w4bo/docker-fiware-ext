@@ -48,6 +48,30 @@ services:
     networks:
       - BIG-dataplatform-network
 
+  persistImages:
+    init: true
+    image: w4bo/persist-images:1.0.1
+    environment:
+      # KAFKA
+      - KAFKA_IP=kafka
+      - KAFKA_PORT_EXT=9092
+      - RAW_TOPIC=raw
+    deploy:
+      placement:
+        constraints:
+          - node.role != manager
+    networks:
+      - BIG-dataplatform-network
+    volumes:
+      - pnrr-datalake-landing:/mnt/data
+
+volumes:
+  pnrr-datalake-landing:
+    driver_opts:
+      type: nfs
+      o: addr=${NFSADDRESS},rw,nfsvers=4
+      device: ":${NFSPATH}/pnrr_dataplatform/datalake/"
+
 networks:
   BIG-dataplatform-network:
     external: true
