@@ -1,4 +1,4 @@
-package it.unibo
+package it.unibo.common
 
 const val AGRI_FARM = "urn:ngsi-ld:AgriFarm:6991ac61-8db8-4a32-8fef-c462e2369055"
 const val AGRI_ROBOT = "AgriRobot"
