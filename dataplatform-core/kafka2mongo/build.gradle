@@ -35,7 +35,6 @@ shadowJar { zip64 = true }
 javadoc { failOnError true }
 
 repositories {
-    maven { url "https://jcenter.bintray.com" }
     mavenCentral()
 }
 
@@ -66,10 +65,10 @@ test {
     maxHeapSize = '1G'
 }
 
-task runKafka2Mongo(type: JavaExec) {
+tasks.register('runKafka2Mongo', JavaExec) {
     description = "Run the kafka2mongo service"
     classpath = sourceSets.main.runtimeClasspath
-    main = 'it.unibo.kafka2mongo.Kafka2Mongo'
+    mainClass = 'it.unibo.kafka2mongo.Kafka2Mongo'
 }
 
 if (hasProperty('buildScan')) {
