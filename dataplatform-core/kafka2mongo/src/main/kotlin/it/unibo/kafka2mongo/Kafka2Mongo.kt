@@ -11,7 +11,6 @@ import org.bson.Document
 import org.json.JSONObject
 import java.io.File
 import java.util.concurrent.Executors
-import java.util.regex.Pattern
 
 // NB: comments from the dotenv file will be loaded as strings as well! Be careful!
 var KAFKA_IP: String? = null
