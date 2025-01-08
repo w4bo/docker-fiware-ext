@@ -69,14 +69,14 @@ class UpdateImageUrlsTest {
                         44.878494556
                     ]
                 },
-                "imageSnapshot": "null://null:null/cnr/urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7/2024-07-03/2024-07-03-11-54-12-220+0200_urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7_imageSnapshot.jpg",
+                "imageSnapshot": "null://null:null/image-archive/cnr/urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7/2024-07-03/2024-07-03-11-54-12-220+0200_urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7_imageSnapshot.jpg",
                 "exampleObjectArray": [
-                    {"image": "null://null:null/cnr/urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7/2024-07-03/2024-07-03-11-54-12-220+0200_urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7_exampleObjectArray_0_image.jpg"},
-                    {"image": "null://null:null/cnr/urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7/2024-07-03/2024-07-03-11-54-12-220+0200_urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7_exampleObjectArray_1_image.jpg"}
+                    {"image": "null://null:null/image-archive/cnr/urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7/2024-07-03/2024-07-03-11-54-12-220+0200_urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7_exampleObjectArray_0_image.jpg"},
+                    {"image": "null://null:null/image-archive/cnr/urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7/2024-07-03/2024-07-03-11-54-12-220+0200_urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7_exampleObjectArray_1_image.jpg"}
                 ],
                 "exampleArray": [
-                    "null://null:null/cnr/urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7/2024-07-03/2024-07-03-11-54-12-220+0200_urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7_exampleArray_0.png",
-                    "null://null:null/cnr/urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7/2024-07-03/2024-07-03-11-54-12-220+0200_urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7_exampleArray_1.png"
+                    "null://null:null/image-archive/cnr/urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7/2024-07-03/2024-07-03-11-54-12-220+0200_urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7_exampleArray_0.png",
+                    "null://null:null/image-archive/cnr/urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7/2024-07-03/2024-07-03-11-54-12-220+0200_urn:ngsi-ld:Camera:cnr:32cde24e-3f00-4623-bb4a-1e6e0824eeb7_exampleArray_1.png"
                 ],
                 "namespace": "cnr."
             }
