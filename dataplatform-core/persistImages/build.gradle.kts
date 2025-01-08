@@ -15,6 +15,12 @@ dependencies {
     testImplementation(kotlin("test"))
 }
 
+tasks.register<JavaExec>("persistImages") {
+    description = "Run the persistImages service"
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("it.unibo.persistImages.PersistImages")
+}
+
 tasks.test {
     useJUnitPlatform()
 }
