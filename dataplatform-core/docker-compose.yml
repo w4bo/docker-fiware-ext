@@ -24,8 +24,8 @@ services:
     hostname: kafka2mongo
     container_name: kafka2mongo
     build:
-      context: ./kafka2mongo
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./kafka2mongo/Dockerfile
     env_file:
       - .env
 
