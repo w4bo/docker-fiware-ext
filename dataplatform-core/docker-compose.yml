@@ -29,3 +29,16 @@ services:
     env_file:
       - .env
 
+  persistImages:
+    init: true
+    restart: always
+    hostname: persistImages
+    container_name: persistImages
+    build:
+      context: .
+      dockerfile: ./persistImages/Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./testVolume:/mnt/data
+
