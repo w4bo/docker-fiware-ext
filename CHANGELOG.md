@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.1...1.0.2) (2025-01-09)
+
+### Bug Fixes
+
+* image url computation ([a859556](https://github.com/alexbaiardi/docker-fiware-ext/commit/a859556d7406d565016813e3d25ffbb1b6fd9080))
+
 ## [1.0.1](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.0...1.0.1) (2025-01-09)
 
 ### Bug Fixes
