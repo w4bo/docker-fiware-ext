@@ -86,7 +86,7 @@ time.sleep(5)
 
 currentState = []
 i = 0
-while i < 50 and count1 == 0:
+while i < 50 and len(currentState) == 0:
     time.sleep(1)
     currentState = list(client[conf["MONGO_DB_CURRENT_STATE_DB"]][conf["MONGO_DB_CURRENT_STATE_COLLECTION"]].find({"id":id}))
     i += 1
