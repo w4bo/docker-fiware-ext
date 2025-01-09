@@ -101,7 +101,7 @@ newName = data["name"] + "Updated"
 data["name"] = newName
 update_body = {"actionType": "append", "entities": [data]}
 response = requests.post(orion_url + "op/update?options=keyValues", json=update_body, headers=headers)
-assert response.status_code == 201, f"Failed to write data to Orion. Status code {response.status_code}"
+assert response.status_code == 204, f"Failed to write data to Orion. Status code {response.status_code}"
 
 time.sleep(5)
 count1 = 0
