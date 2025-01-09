@@ -61,3 +61,58 @@ while i < 50 and count1 == 0:
     i += 1
 assert count1 > 0, "No document found"
 print("OK: persitence found")
+
+###############################################################################
+# Check mongodb currentState
+###############################################################################
+#Write an entity and check it is stored on currentState
+id = f"urn:ngsi-ld:Camera:{domain}:32cde24e-3f00-4623-bb4a-1e6e0824eeb1"
+imageSnapshot = "http://picsum.photos/200.jpg"
+data = {
+    "id": id,
+    "type": "Camera",
+    "name": "DroneCam1",
+    "domain": domain,
+    "location": {
+        "type": "Point",
+        "coordinates": [10.1234, 20.5678]
+    },
+    "imageSnapshot": imageSnapshot
+}
+headers = {"Content-Type": "application/json"}
+response = requests.post(orion_url + "entities?options=keyValues", json=data, headers=headers)
+assert response.status_code == 201, f"Failed to write data to Orion. Status code {response.status_code}"
+time.sleep(5)
+
+currentState = []
+i = 0
+while i < 50 and count1 == 0:
+    time.sleep(1)
+    currentState = list(client[conf["MONGO_DB_CURRENT_STATE_DB"]][conf["MONGO_DB_CURRENT_STATE_COLLECTION"]].find({"id":id}))
+    i += 1
+assert len(currentState) == 1, "Invalid current state document found"
+print("OK: currentState found")
+
+assert currentState[0]["imageSnapshot"] != imageSnapshot, "Data are not enriched"
+print("OK: data enriched")
+
+#Update entity and check it is updated on currentState
+newName = data["name"] + "Updated"
+data["name"] = newName
+response = requests.post(orion_url + "entities?options=keyValues", json=data, headers=headers)
+assert response.status_code == 201, f"Failed to write data to Orion. Status code {response.status_code}"
+
+time.sleep(5)
+count1 = 0
+i = 0
+updated = False
+while i < 50 and not updated:
+    time.sleep(1)
+    currentState = list(client[conf["MONGO_DB_CURRENT_STATE_DB"]][conf["MONGO_DB_CURRENT_STATE_COLLECTION"]].find({"id":id}))
+    if len(currentState) > 0
+        assert len(currentState) == 1, "Failed currentState updated"
+        entity = currentState[0]
+        updated = entity["name"] == newName
+    i += 1
+assert updated, "No current state update found"
+print("OK: currentState updated")
