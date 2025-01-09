@@ -12,7 +12,7 @@ domain = "foo-domain"
 image_archive_path = "../testVolume/"
 
 print([os.path.join(root, file) 
-            for root, _, files in os.walk("../")
+            for root, _, files in os.walk(image_archive_path)
             for file in files])
 
 if os.path.exists(image_archive_path):
