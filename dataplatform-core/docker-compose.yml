@@ -29,11 +29,11 @@ services:
     env_file:
       - .env
 
-  persistImages:
+  persist-images:
     init: true
     restart: always
-    hostname: persistImages
-    container_name: persistImages
+    hostname: persist-images
+    container_name: persist-images
     build:
       context: .
       dockerfile: ./persistImages/Dockerfile

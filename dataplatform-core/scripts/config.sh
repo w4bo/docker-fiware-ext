@@ -20,3 +20,4 @@ sed -i 's+/path/to/code/here+'$(pwd)'+g' "$f"
 
 # Copy the .env file where needed
 ln .env kafka2mongo/.env
+ln .env persistImages/.env
