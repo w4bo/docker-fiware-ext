@@ -27,7 +27,7 @@ var MONGO_DB_CURRENT_STATE_COLLECTION: String? = null
 const val GIVE_UP = 30
 
 fun computeImageUrl(obj: JSONObject, attr: String, ext: String): String {
-    val baseUrl = "$IMAGESERVER_PROTOCOL://$IMAGESERVER_IP:$IMAGESERVER_PORT_HTTP_EXT"
+    val baseUrl = "$IMAGESERVER_PROTOCOL://$IMAGESERVER_IP:$IMAGESERVER_PORT_HTTP_EXT/files"
     return "$baseUrl${computeImagePath(obj, attr, ext)}"
 }
 

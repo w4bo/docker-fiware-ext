@@ -28,7 +28,7 @@ fun computeImagePath(obj: JSONObject, attr: String, ext: String): String {
     jdf.timeZone = TimeZone.getTimeZone("Europe/Rome")
     jdf2.timeZone = TimeZone.getTimeZone("Europe/Rome")
 
-    return "/files/image-archive/$domain/$id/" + jdf.format(date) + "/" + jdf2.format(date) + "_" + id + "_" + attr.replace(
+    return "/image-archive/$domain/$id/" + jdf.format(date) + "/" + jdf2.format(date) + "_" + id + "_" + attr.replace(
         ".",
         "_"
     ) + ext
