@@ -42,6 +42,7 @@ response = requests.post(orion_url + "entities?options=keyValues", json=data, he
 assert response.status_code == 201, f"Failed to write data to Orion. Status code {response.status_code}"
 time.sleep(10)
 
+countFiles = 0
 i = 0
 while i < 50 and countFiles == 0:
     time.sleep(1)
