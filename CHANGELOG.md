@@ -1,3 +1,21 @@
+## [1.0.1](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.0...1.0.1) (2025-01-09)
+
+### Bug Fixes
+
+* syntax error ([c226b76](https://github.com/alexbaiardi/docker-fiware-ext/commit/c226b765038bcb82d8971e85da1305f02d6b5dd7))
+* test error ([83b8d5b](https://github.com/alexbaiardi/docker-fiware-ext/commit/83b8d5b21df804bce692a9ae7c622ac19cba894a))
+* test error ([70322b9](https://github.com/alexbaiardi/docker-fiware-ext/commit/70322b9d3289a20773a536279b2bac2f776210f1))
+* test error ([cc94ec5](https://github.com/alexbaiardi/docker-fiware-ext/commit/cc94ec533ade17c40651b97764dd31671c59bc5c))
+* test error ([6421521](https://github.com/alexbaiardi/docker-fiware-ext/commit/6421521d38c87704b265820253ef14df5a6939f2))
+
+### Tests
+
+* add current State test ([d10e1e8](https://github.com/alexbaiardi/docker-fiware-ext/commit/d10e1e8f689d476cca29638b5b9089b57e2cb266))
+
+### General maintenance
+
+* update images path ([ba0def0](https://github.com/alexbaiardi/docker-fiware-ext/commit/ba0def03d7df147a06b5f2cdccc7b50361936cc9))
+
 ## 1.0.0 (2025-01-08)
 
 ### Features
