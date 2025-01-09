@@ -1,5 +1,9 @@
 plugins {
-    kotlin("jvm") version "2.0.21"
+    `java-library`
+    idea
+    checkstyle
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+    kotlin("jvm") version "2.1.0"
 }
 
 group = "it.unibo"
