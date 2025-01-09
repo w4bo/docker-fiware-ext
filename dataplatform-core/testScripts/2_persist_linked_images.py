@@ -48,8 +48,9 @@ while i < 50 and countFiles == 0:
     time.sleep(1)
     countFiles = len([file for _, _, files in os.walk(image_archive_path) for file in files if file.lower().endswith('.jpg')])
     i += 1
-assert countFiles > 0, "Image is not saved in archive"
-print("OK: image saved successfully")
+
 print([os.path.join(root, file) 
             for root, _, files in os.walk(image_archive_path) 
-            for file in files if file.lower().endswith('.jpg')])
+            for file in files])
+assert countFiles > 0, "Image is not saved in archive"
+print("OK: image saved successfully")
