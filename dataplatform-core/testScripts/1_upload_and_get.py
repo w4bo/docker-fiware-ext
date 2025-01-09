@@ -99,7 +99,7 @@ print("OK: data enriched")
 #Update entity and check it is updated on currentState
 newName = data["name"] + "Updated"
 data["name"] = newName
-response = requests.post(orion_url + "entities?options=keyValues", json=data, headers=headers)
+response = requests.post(orion_url + "op/update?options=keyValues", json=data, headers=headers)
 assert response.status_code == 201, f"Failed to write data to Orion. Status code {response.status_code}"
 
 time.sleep(5)
