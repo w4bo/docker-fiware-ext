@@ -12,8 +12,8 @@ domain = "foo-domain"
 image_archive_path = "../testVolume/"
 
 print([os.path.join(root, file) 
-            for root, _, files in os.walk(image_archive_path) 
-            for file in files if file.lower().endswith('.jpg')])
+            for root, _, files in os.walk("../")
+            for file in files])
 
 if os.path.exists(image_archive_path):
     for item in os.listdir(image_archive_path):
@@ -24,12 +24,12 @@ if os.path.exists(image_archive_path):
 # Check persistence of images linked in entities
 ###############################################################################
 
-id = f"urn:ngsi-ld:Camera:{domain}:32cde24e-3f00-4623-bb4a-1e6e0824eeb1"
+id = f"urn:ngsi-ld:Camera:{domain}:32cde24e-3f00-4623-bb4a-1e6e2224eeb1"
 imageSnapshot = "http://picsum.photos/200.jpg"
 data = {
     "id": id,
     "type": "Camera",
-    "name": "DroneCam1",
+    "name": "DroneCam",
     "domain": domain,
     "location": {
         "type": "Point",
