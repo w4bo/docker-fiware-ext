@@ -109,7 +109,7 @@ updated = False
 while i < 50 and not updated:
     time.sleep(1)
     currentState = list(client[conf["MONGO_DB_CURRENT_STATE_DB"]][conf["MONGO_DB_CURRENT_STATE_COLLECTION"]].find({"id":id}))
-    if len(currentState) > 0
+    if len(currentState) > 0:
         assert len(currentState) == 1, "Failed currentState updated"
         entity = currentState[0]
         updated = entity["name"] == newName
