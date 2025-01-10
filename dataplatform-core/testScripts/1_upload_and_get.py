@@ -117,8 +117,3 @@ while i < 50 and not updated:
     i += 1
 assert updated, "No current state update found"
 print("OK: currentState updated")
-
-import os
-print([os.path.join(root, file) 
-            for root, _, files in os.walk("../testVolume/") 
-            for file in files])

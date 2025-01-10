@@ -17,7 +17,7 @@ print([os.path.join(root, file)
             for file in files])
 
 if os.path.exists(image_archive_path):
-    subprocess.run(["sudo", "rm", "-rf", image_archive_path], check=True)
+    subprocess.run(["sudo", "rm", "-rf", image_archive_path + "*"], check=True)
 
 ###############################################################################
 # Check persistence of images linked in entities
