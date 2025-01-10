@@ -67,7 +67,7 @@ print("OK: persitence found")
 ###############################################################################
 #Write an entity and check it is stored on currentState
 id = f"urn:ngsi-ld:Camera:{domain}:32cde24e-3f00-4623-bb4a-1e6e0824eeb1"
-imageSnapshot = "http://picsum.photos/200.jpg"
+imageSnapshot = "https://dummyimage.com/600x400/000/aaa.png"
 data = {
     "id": id,
     "type": "Camera",
