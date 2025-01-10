@@ -1,3 +1,39 @@
+## [1.0.3](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.2...1.0.3) (2025-01-10)
+
+### Bug Fixes
+
+* add privileges to work on test image folder ([45eda6e](https://github.com/alexbaiardi/docker-fiware-ext/commit/45eda6e6a0b89fd3a98ae3640b6d0213337e417c))
+* add push of multiple entity ([4343fa4](https://github.com/alexbaiardi/docker-fiware-ext/commit/4343fa4c9fabc199d4a7f4fc6edb24ee42190c45))
+* ci error ([b0e006f](https://github.com/alexbaiardi/docker-fiware-ext/commit/b0e006f48dedcdf391285f1e60666a696ce2d8a0))
+* delete old image archive content ([e5bb2c3](https://github.com/alexbaiardi/docker-fiware-ext/commit/e5bb2c37d95a7d7bccd15670b17fdacf0e7d37f7))
+* image extension ([a0f1a7c](https://github.com/alexbaiardi/docker-fiware-ext/commit/a0f1a7c96d8be61578388e5be5b9411b3f3e74ec))
+* test and ci setup ([6757924](https://github.com/alexbaiardi/docker-fiware-ext/commit/6757924a569ae73e91faf13685e4775377bfd764))
+* test errors ([c704b8a](https://github.com/alexbaiardi/docker-fiware-ext/commit/c704b8ae5c69542fdd8ebb13f9b07899a498e5f4))
+* test errors ([5ca206a](https://github.com/alexbaiardi/docker-fiware-ext/commit/5ca206ac332123591f4f1f903effee3baa138e0b))
+* test failure ([10d6dc7](https://github.com/alexbaiardi/docker-fiware-ext/commit/10d6dc720a952dda9517f78bd1e455b364010b72))
+* test folder files permission ([db69600](https://github.com/alexbaiardi/docker-fiware-ext/commit/db696008df9b66f67ebb552eedef3d7d95045828))
+* test image folder permission ([b586093](https://github.com/alexbaiardi/docker-fiware-ext/commit/b586093351738f88a7d249ce0b8f66652f4fb562))
+* test image url reference ([5282cf7](https://github.com/alexbaiardi/docker-fiware-ext/commit/5282cf77b0ae6e87adea93ca5d9b285d28c52bbc))
+* test script execution ([fd17b52](https://github.com/alexbaiardi/docker-fiware-ext/commit/fd17b5202cb8f46e2f48b76734060dd87fe1e7cf))
+
+### Tests
+
+* add test for image download on archive ([e9fd517](https://github.com/alexbaiardi/docker-fiware-ext/commit/e9fd5177fa3dcccebfc71cad61bd427e9d574619))
+
+### Build and continuous integration
+
+* update plugins ([1b8023a](https://github.com/alexbaiardi/docker-fiware-ext/commit/1b8023a7cc420e5d286a58bb75e53a91d00800d1))
+* update plugins ([d5293a8](https://github.com/alexbaiardi/docker-fiware-ext/commit/d5293a8747ced218047c55280abbe9599538a941))
+* update structure ([202d3a5](https://github.com/alexbaiardi/docker-fiware-ext/commit/202d3a5786de777fa70f86a6098137cafa8b4b6d))
+
+### General maintenance
+
+* add dummy image example ([aec8713](https://github.com/alexbaiardi/docker-fiware-ext/commit/aec87131d592df2f3298375a87af770bf2995cdc))
+
+### Refactoring
+
+* rename service ([ec82fbe](https://github.com/alexbaiardi/docker-fiware-ext/commit/ec82fbea31dd70afe402c3931aa70909fca4a768))
+
 ## [1.0.2](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.1...1.0.2) (2025-01-09)
 
 ### Bug Fixes
