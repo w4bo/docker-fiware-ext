@@ -6,7 +6,8 @@ source venv/bin/activate
 # for FILE in *.py; do echo "$FILE"; python "$FILE"; done
 # for FILE in *.sh; do echo "$FILE"; source "./$FILE"; done
 for FILE in *; do
-  ls -ld ../testVolume/image-archive
+  ls -ld ../testVolume/image-archive/
+  chmod -R 777 testVolume/
   if [[ "$FILE" =~ .*".py".* ]]
   then
 	  python "$FILE"
