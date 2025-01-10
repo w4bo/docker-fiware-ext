@@ -30,7 +30,7 @@ jobs:
           do
             echo "Run $i"
             scripts/config.sh
-            sudo ./launch.sh -t
+            ./launch.sh -t
             ./stop.sh
           done
       - name: Set up a swarm with a single node and create the docker network

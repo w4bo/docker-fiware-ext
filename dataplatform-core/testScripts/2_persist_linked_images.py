@@ -3,6 +3,7 @@ import time
 from dotenv import dotenv_values
 import os
 import shutil
+import subprocess
 
 conf = dotenv_values("../.env")
 orion_url = "http://{}:{}/v2/".format(conf["ORION_IP"], conf["ORION_PORT_EXT"])
@@ -16,9 +17,7 @@ print([os.path.join(root, file)
             for file in files])
 
 if os.path.exists(image_archive_path):
-    for item in os.listdir(image_archive_path):
-        path = os.path.join(image_archive_path, item)
-        shutil.rmtree(path) if os.path.isdir(path) else os.unlink(path)
+    subprocess.run(["sudo", "rm", "-rf", image_archive_path], check=True)
 
 ###############################################################################
 # Check persistence of images linked in entities
