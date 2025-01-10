@@ -8,7 +8,7 @@ source venv/bin/activate
 for FILE in *; do
   if [[ "$FILE" =~ .*".py".* ]]
   then
-	  sudo -E python "$FILE"
+	  python "$FILE"
   elif [[ "$FILE" =~ .*".sh".* ]]
   then
 	  source "./$FILE"
