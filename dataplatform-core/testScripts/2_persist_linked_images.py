@@ -18,6 +18,7 @@ print([os.path.join(root, file)
 if os.path.exists(image_archive_path):
     for item in os.listdir(image_archive_path):
         path = os.path.join(image_archive_path, item)
+        os.chmod(path,0o777)
         shutil.rmtree(path) if os.path.isdir(path) else os.unlink(path)
 
 ###############################################################################
