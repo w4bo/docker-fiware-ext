@@ -2,7 +2,6 @@ import requests
 import time
 from dotenv import dotenv_values
 import os
-import shutil
 import subprocess
 
 conf = dotenv_values("../.env")
@@ -23,8 +22,8 @@ if os.path.exists(image_archive_path):
 # Check persistence of images linked in entities
 ###############################################################################
 
-id = f"urn:ngsi-ld:Camera:{domain}:32cde24e-3f00-4623-bb4a-1e6e2224eeb1"
-imageSnapshot = "https://dummyimage.com/600x400/000/999.png"
+id = f"urn:ngsi-ld:Camera:{domain}:12cde24e-3e00-4b23-b99a-5e6e2224eeb1"
+imageSnapshot = "https://dummyimage.com/600x400/000/999.jpg"
 data = {
     "id": id,
     "type": "Camera",
@@ -39,7 +38,7 @@ data = {
 headers = {"Content-Type": "application/json"}
 response = requests.post(orion_url + "entities?options=keyValues", json=data, headers=headers)
 assert response.status_code == 201, f"Failed to write data to Orion. Status code {response.status_code}"
-time.sleep(10)
+time.sleep(20)
 
 countFiles = 0
 i = 0
