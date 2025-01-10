@@ -10,10 +10,10 @@ orion_url = "http://{}:{}/v2/".format(conf["ORION_IP"], conf["ORION_PORT_EXT"])
 domain = "foo-domain"
 
 # Clean image archive folder from previous tests
-image_archive_path = "../testVolume/"
+image_archive_path = "../testVolume/image-archive/"
 
 if os.path.exists(image_archive_path):
-    subprocess.run(["sudo", "rm", "-rf", image_archive_path + "*"], check=True)
+    subprocess.run(["sudo", "rm", "-rf", image_archive_path], check=True)
 
 ###############################################################################
 # Check persistence of images linked in entities
