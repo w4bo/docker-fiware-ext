@@ -32,6 +32,7 @@ fun downloadImage(imageUrl: String, destinationPath: String) {
 
         FileOutputStream(file).use { outputStream ->
             inputStream.copyTo(outputStream)
+            outputStream.close()
         }
 
         println("Image downloaded successfully to $destinationPath")
