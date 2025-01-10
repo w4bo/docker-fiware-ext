@@ -49,7 +49,6 @@ fun main(){
     val executor = Executors.newFixedThreadPool(5) // .newCachedThreadPool() Need this to limit the connections
     consumeFromKafka("$KAFKA_IP:$KAFKA_PORT_EXT","persistImages", RAW_TOPIC.toString(), GIVE_UP) { data ->
         executor.submit {
-
             val imageUrlKeyValues = findPatternOccurrenceInJSONValues(data, imagePattern, "")
             for ((keyPath, value) in imageUrlKeyValues) {
                 val destinationPath = "/mnt/data"+computeImagePath(data, keyPath, getExt(value as String))
