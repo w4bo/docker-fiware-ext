@@ -26,6 +26,7 @@ jobs:
           chmod +x scripts/*.sh
           chmod +x kafka2mongo/gradlew
           chmod +x persistImages/gradlew
+          chmod -R 777 testVolume/
           for i in $(seq 1)
           do
             echo "Run $i"
