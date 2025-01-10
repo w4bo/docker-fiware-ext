@@ -12,10 +12,6 @@ domain = "foo-domain"
 # Clean image archive folder from previous tests
 image_archive_path = "../testVolume/"
 
-print([os.path.join(root, file) 
-            for root, _, files in os.walk(image_archive_path)
-            for file in files])
-
 if os.path.exists(image_archive_path):
     subprocess.run(["sudo", "rm", "-rf", image_archive_path + "*"], check=True)
 
@@ -24,27 +20,22 @@ if os.path.exists(image_archive_path):
 ###############################################################################
 
 id = f"urn:ngsi-ld:Camera:{domain}:12cde24e-3e00-4b23-b99a-5e6e2224eeb1"
-for _ in range(20):
-    imageSnapshot = "https://dummyimage.com/600x400/000/999.jpg"
-    data = {
-        "id": f"urn:ngsi-ld:Camera:{domain}:{uuid.uuid4()}",
-        "type": "Camera",
-        "name": "DroneCam",
-        "domain": domain,
-        "location": {
-            "type": "Point",
-            "coordinates": [10.1234, 20.5678]
-        },
-        "imageSnapshot": imageSnapshot
-    }
-    headers = {"Content-Type": "application/json"}
-    response = requests.post(orion_url + "entities?options=keyValues", json=data, headers=headers)
-    assert response.status_code == 201, f"Failed to write data to Orion. Status code {response.status_code}"
-time.sleep(20)
-
-print([os.path.join(root, file) 
-            for root, _, files in os.walk(image_archive_path) 
-            for file in files])
+imageSnapshot = "https://dummyimage.com/600x400/000/999.jpg"
+data = {
+    "id": id,
+    "type": "Camera",
+    "name": "DroneCam",
+    "domain": domain,
+    "location": {
+        "type": "Point",
+        "coordinates": [10.1234, 20.5678]
+    },
+    "imageSnapshot": imageSnapshot
+}
+headers = {"Content-Type": "application/json"}
+response = requests.post(orion_url + "entities?options=keyValues", json=data, headers=headers)
+assert response.status_code == 201, f"Failed to write data to Orion. Status code {response.status_code}"
+time.sleep(10)
 
 countFiles = 0
 i = 0
