@@ -26,12 +26,11 @@ jobs:
           chmod +x scripts/*.sh
           chmod +x kafka2mongo/gradlew
           chmod +x persistImages/gradlew
-          chmod -R 777 testVolume/
           for i in $(seq 1)
           do
             echo "Run $i"
             scripts/config.sh
-            ./launch.sh -t
+            sudo ./launch.sh -t
             ./stop.sh
           done
       - name: Set up a swarm with a single node and create the docker network
