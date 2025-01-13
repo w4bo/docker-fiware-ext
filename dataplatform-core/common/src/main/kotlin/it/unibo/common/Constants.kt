@@ -1,4 +1,4 @@
-package it.unibo
+package it.unibo.common
 
 const val AGRI_FARM = "urn:ngsi-ld:AgriFarm:6991ac61-8db8-4a32-8fef-c462e2369055"
 const val AGRI_ROBOT = "AgriRobot"
@@ -25,6 +25,7 @@ const val TEMPERATURE = "temperature"
 const val TIMESTAMP = "timestamp"
 const val TIMESTAMP_IOTA = "timestamp_iota"
 const val TIMESTAMP_KAFKA = "timestamp_kafka"
+const val TIMESTAMP_SUBSCRIPTION = "timestamp_subscription"
 const val TYPE = "type"
 const val ROBOT_CMD_PAUSE = "pause"
 const val ROBOT_CMD_RESUME = "resume"

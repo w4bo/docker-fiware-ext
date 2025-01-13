@@ -24,8 +24,21 @@ services:
     hostname: kafka2mongo
     container_name: kafka2mongo
     build:
-      context: ./kafka2mongo
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./kafka2mongo/Dockerfile
     env_file:
       - .env
+
+  persist-images:
+    init: true
+    restart: always
+    hostname: persist-images
+    container_name: persist-images
+    build:
+      context: .
+      dockerfile: ./persistImages/Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./testVolume:/mnt/data
 

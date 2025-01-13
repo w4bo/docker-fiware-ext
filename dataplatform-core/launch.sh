@@ -19,5 +19,6 @@ done
 ./scripts/setup.sh
 
 kafka2mongo/gradlew -p kafka2mongo --stacktrace --scan
+persistImages/gradlew -p persistImages --stacktrace --scan
 
 ((run_tests)) && scripts/runTests.sh

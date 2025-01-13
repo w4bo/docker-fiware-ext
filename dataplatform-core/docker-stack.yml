@@ -2,7 +2,7 @@ version: "3.9"
 services:
   fiware2kafka:
     init: true
-    image: w4bo/fiware2kafka:1.0.11
+    image: w4bo/fiware2kafka:1.0.12
     environment:
       # Kafka
       - KAFKA_IP=kafka
@@ -23,26 +23,54 @@ services:
 
   kafka2mongo:
     init: true
-    image: w4bo/kafka2mongo:1.0.11
+    image: w4bo/kafka2mongo:1.0.12
     environment:
       # Persistence
-      - MONGO_DB_PERS_IP=mongodb
+      - MONGO_DB_PERS_IP=137.204.74.10
       - MONGO_DB_PERS_PORT_EXT=27017
       - MONGO_DB_PERS_DB=persistence
+      # Current State
+      - MONGO_DB_CURRENT_STATE_DB=currentState
+      - MONGO_DB_CURRENT_STATE_COLLECTION=entities
       # KAFKA
       - KAFKA_IP=kafka
       - KAFKA_PORT_EXT=9092
       # FIWARE2KAFKA variables
       - RAW_TOPIC=raw
       # Image server (required to change the URLs of images)
-      - IMAGESERVER_IP=192.168.30.102
-      - IMAGESERVER_PORT_HTTP_EXT=49080
+      - IMAGESERVER_PROTOCOL=https
+      - IMAGESERVER_IP=agritech-platform.campusfc.unibo.it
+      - IMAGESERVER_PORT_HTTP_EXT=
     deploy:
       placement:
         constraints:
           - node.role != manager 
     networks:
       - BIG-dataplatform-network
+
+  persistImages:
+    init: true
+    image: w4bo/persist-images:1.0.0
+    environment:
+      # KAFKA
+      - KAFKA_IP=kafka
+      - KAFKA_PORT_EXT=9092
+      - RAW_TOPIC=raw
+    deploy:
+      placement:
+        constraints:
+          - node.role != manager
+    networks:
+      - BIG-dataplatform-network
+    volumes:
+      - pnrr-datalake:/mnt/data
+
+volumes:
+  pnrr-datalake:
+    driver_opts:
+      type: nfs
+      o: addr=192.168.30.249,rw,nfsvers=4,nolock,hard
+      device: ":/nfsshare/pnrr_dataplatform/datalake/"
 
 networks:
   BIG-dataplatform-network:

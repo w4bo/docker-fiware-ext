@@ -35,7 +35,6 @@ shadowJar { zip64 = true }
 javadoc { failOnError true }
 
 repositories {
-    maven { url "https://jcenter.bintray.com" }
     mavenCentral()
 }
 
@@ -47,15 +46,13 @@ idea {
 }
 
 dependencies {
+    implementation project(':common')
     implementation 'io.github.microutils:kotlin-logging-jvm:3.0.5'
     implementation 'org.slf4j:slf4j-api:2.0.16'
     implementation 'org.json:json:20250107'
     implementation 'io.github.cdimascio:dotenv-kotlin:6.5.0'
     implementation 'org.junit.jupiter:junit-jupiter:5.11.4'
     testCompileOnly 'org.slf4j:slf4j-simple:2.0.16'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.4'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.4'
-    implementation 'org.apache.kafka:kafka-clients:3.9.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-cli:0.3.6'
     implementation 'org.mongodb:mongo-java-driver:3.12.14'
 }
@@ -65,10 +62,10 @@ test {
     maxHeapSize = '1G'
 }
 
-task runKafka2Mongo(type: JavaExec) {
+tasks.register('runKafka2Mongo', JavaExec) {
     description = "Run the kafka2mongo service"
     classpath = sourceSets.main.runtimeClasspath
-    main = 'it.unibo.kafka2mongo.Kafka2Mongo'
+    mainClass = 'it.unibo.kafka2mongo.Kafka2Mongo'
 }
 
 if (hasProperty('buildScan')) {
