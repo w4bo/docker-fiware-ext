@@ -1,3 +1,20 @@
+## [1.0.29](https://github.com/w4bo/docker-fiware-ext/compare/1.0.28...1.0.29) (2025-01-13)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.119 ([#211](https://github.com/w4bo/docker-fiware-ext/issues/211)) ([d4ad7f6](https://github.com/w4bo/docker-fiware-ext/commit/d4ad7f6b2247e4bfcec4d568451c291dfb490ba0))
+
+### Bug Fixes
+
+* add storage of current state enriched entities and persist images service ([#212](https://github.com/w4bo/docker-fiware-ext/issues/212)) ([a41b7f2](https://github.com/w4bo/docker-fiware-ext/commit/a41b7f23adb2032c502a902d4ec71f30b3a5e2cb))
+
+### Build and continuous integration
+
+* **deps:** update docker/build-push-action digest to 31ca4e5 ([#208](https://github.com/w4bo/docker-fiware-ext/issues/208)) ([873db41](https://github.com/w4bo/docker-fiware-ext/commit/873db41e4b1bb4569913f9c15772ea5b7f7c7041))
+* **deps:** update docker/build-push-action digest to b32b51a ([#207](https://github.com/w4bo/docker-fiware-ext/issues/207)) ([7c740e4](https://github.com/w4bo/docker-fiware-ext/commit/7c740e4dd39119a98993ade551b20dcb851d48eb))
+* **deps:** update docker/login-action digest to 327cd5a ([#209](https://github.com/w4bo/docker-fiware-ext/issues/209)) ([60d2bc8](https://github.com/w4bo/docker-fiware-ext/commit/60d2bc8d9fa035fd4b076b4fc3cc2da70ed6c7f8))
+* **deps:** update docker/metadata-action digest to 8e1d546 ([#210](https://github.com/w4bo/docker-fiware-ext/issues/210)) ([37b8175](https://github.com/w4bo/docker-fiware-ext/commit/37b8175ebc6798b3253509ecb6eb4956c3ec2088))
+
 ## [1.0.4](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.3...1.0.4) (2025-01-10)
 
 ### Dependency updates
