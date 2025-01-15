@@ -76,7 +76,7 @@ jobs:
             ${{steps.tag.outputs.version}}
             latest
       - name: Build and push fiware2kafka image
-        uses: docker/build-push-action@31ca4e5d51253d7e4a2317bfe74699cbe3a398a9
+        uses: docker/build-push-action@67a2d409c0a876cbe6b11854e3e25193efe4e62d
         with:
           context: ./dataplatform-core/fiware2kafka
           # file: ./Dockerfile
@@ -92,7 +92,7 @@ jobs:
             ${{steps.tag.outputs.version}}
             latest
       - name: Build and push kafka2mongo image
-        uses: docker/build-push-action@31ca4e5d51253d7e4a2317bfe74699cbe3a398a9
+        uses: docker/build-push-action@67a2d409c0a876cbe6b11854e3e25193efe4e62d
         with:
           context: ./dataplatform-core/
           file: ./dataplatform-core/kafka2mongo/Dockerfile
@@ -108,7 +108,7 @@ jobs:
             ${{steps.tag.outputs.version}}
             latest
       - name: Build and push persist-images image
-        uses: docker/build-push-action@11be14d908760a0756f045980728ec5fb7880f74
+        uses: docker/build-push-action@67a2d409c0a876cbe6b11854e3e25193efe4e62d
         with:
           context: ./dataplatform-core/
           file: ./dataplatform-core/persistImages/Dockerfile
