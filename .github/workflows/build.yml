@@ -101,7 +101,7 @@ jobs:
           labels: ${{ steps.meta2.outputs.labels }}
       - name: Extract metadata (tags, labels) for persist-images
         id: meta3
-        uses: docker/metadata-action@906ecf0fc0a80f9110f79d9e6c04b1080f4a2621
+        uses: docker/metadata-action@8e1d5461f02b7886d3c1a774bfbd873650445aa2
         with:
           images: w4bo/persist-images
           tags: |
