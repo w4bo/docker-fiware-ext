@@ -1,316 +1,79 @@
-## [1.0.3](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.2...1.0.3) (2025-01-10)
-
-### Bug Fixes
-
-* add privileges to work on test image folder ([45eda6e](https://github.com/alexbaiardi/docker-fiware-ext/commit/45eda6e6a0b89fd3a98ae3640b6d0213337e417c))
-* add push of multiple entity ([4343fa4](https://github.com/alexbaiardi/docker-fiware-ext/commit/4343fa4c9fabc199d4a7f4fc6edb24ee42190c45))
-* ci error ([b0e006f](https://github.com/alexbaiardi/docker-fiware-ext/commit/b0e006f48dedcdf391285f1e60666a696ce2d8a0))
-* delete old image archive content ([e5bb2c3](https://github.com/alexbaiardi/docker-fiware-ext/commit/e5bb2c37d95a7d7bccd15670b17fdacf0e7d37f7))
-* image extension ([a0f1a7c](https://github.com/alexbaiardi/docker-fiware-ext/commit/a0f1a7c96d8be61578388e5be5b9411b3f3e74ec))
-* test and ci setup ([6757924](https://github.com/alexbaiardi/docker-fiware-ext/commit/6757924a569ae73e91faf13685e4775377bfd764))
-* test errors ([c704b8a](https://github.com/alexbaiardi/docker-fiware-ext/commit/c704b8ae5c69542fdd8ebb13f9b07899a498e5f4))
-* test errors ([5ca206a](https://github.com/alexbaiardi/docker-fiware-ext/commit/5ca206ac332123591f4f1f903effee3baa138e0b))
-* test failure ([10d6dc7](https://github.com/alexbaiardi/docker-fiware-ext/commit/10d6dc720a952dda9517f78bd1e455b364010b72))
-* test folder files permission ([db69600](https://github.com/alexbaiardi/docker-fiware-ext/commit/db696008df9b66f67ebb552eedef3d7d95045828))
-* test image folder permission ([b586093](https://github.com/alexbaiardi/docker-fiware-ext/commit/b586093351738f88a7d249ce0b8f66652f4fb562))
-* test image url reference ([5282cf7](https://github.com/alexbaiardi/docker-fiware-ext/commit/5282cf77b0ae6e87adea93ca5d9b285d28c52bbc))
-* test script execution ([fd17b52](https://github.com/alexbaiardi/docker-fiware-ext/commit/fd17b5202cb8f46e2f48b76734060dd87fe1e7cf))
-
-### Tests
-
-* add test for image download on archive ([e9fd517](https://github.com/alexbaiardi/docker-fiware-ext/commit/e9fd5177fa3dcccebfc71cad61bd427e9d574619))
-
-### Build and continuous integration
-
-* update plugins ([1b8023a](https://github.com/alexbaiardi/docker-fiware-ext/commit/1b8023a7cc420e5d286a58bb75e53a91d00800d1))
-* update plugins ([d5293a8](https://github.com/alexbaiardi/docker-fiware-ext/commit/d5293a8747ced218047c55280abbe9599538a941))
-* update structure ([202d3a5](https://github.com/alexbaiardi/docker-fiware-ext/commit/202d3a5786de777fa70f86a6098137cafa8b4b6d))
-
-### General maintenance
-
-* add dummy image example ([aec8713](https://github.com/alexbaiardi/docker-fiware-ext/commit/aec87131d592df2f3298375a87af770bf2995cdc))
-
-### Refactoring
-
-* rename service ([ec82fbe](https://github.com/alexbaiardi/docker-fiware-ext/commit/ec82fbea31dd70afe402c3931aa70909fca4a768))
-
-## [1.0.2](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.1...1.0.2) (2025-01-09)
-
-### Bug Fixes
-
-* image url computation ([a859556](https://github.com/alexbaiardi/docker-fiware-ext/commit/a859556d7406d565016813e3d25ffbb1b6fd9080))
-
-## [1.0.1](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.0...1.0.1) (2025-01-09)
-
-### Bug Fixes
-
-* syntax error ([c226b76](https://github.com/alexbaiardi/docker-fiware-ext/commit/c226b765038bcb82d8971e85da1305f02d6b5dd7))
-* test error ([83b8d5b](https://github.com/alexbaiardi/docker-fiware-ext/commit/83b8d5b21df804bce692a9ae7c622ac19cba894a))
-* test error ([70322b9](https://github.com/alexbaiardi/docker-fiware-ext/commit/70322b9d3289a20773a536279b2bac2f776210f1))
-* test error ([cc94ec5](https://github.com/alexbaiardi/docker-fiware-ext/commit/cc94ec533ade17c40651b97764dd31671c59bc5c))
-* test error ([6421521](https://github.com/alexbaiardi/docker-fiware-ext/commit/6421521d38c87704b265820253ef14df5a6939f2))
-
-### Tests
-
-* add current State test ([d10e1e8](https://github.com/alexbaiardi/docker-fiware-ext/commit/d10e1e8f689d476cca29638b5b9089b57e2cb266))
-
-### General maintenance
-
-* update images path ([ba0def0](https://github.com/alexbaiardi/docker-fiware-ext/commit/ba0def03d7df147a06b5f2cdccc7b50361936cc9))
-
-## 1.0.0 (2025-01-08)
-
-### Features
-
-* add image url replacement and write of enriched entity on last state db ([ac43cc7](https://github.com/alexbaiardi/docker-fiware-ext/commit/ac43cc729a12fb25a25ffebc600949c5d0d66710))
-* defined image to run persistImages service ([3c58236](https://github.com/alexbaiardi/docker-fiware-ext/commit/3c58236ab400dbb065b18f82c792c73d432404b2))
-* defined service to persist images from kafka entities ([33b9579](https://github.com/alexbaiardi/docker-fiware-ext/commit/33b957951db456e90ce8f15aca2ec3521b6cc6bb))
+## [1.0.29](https://github.com/w4bo/docker-fiware-ext/compare/1.0.28...1.0.29) (2025-01-13)
 
 ### Dependency updates
 
-* **deps:** update dependency matplotlib to v3.7.5 ([92f1324](https://github.com/alexbaiardi/docker-fiware-ext/commit/92f13241937803e3a84b8d21b605d0f3f136b0e1))
-* **deps:** update dependency notebook to v7.0.7 [security] ([0646f36](https://github.com/alexbaiardi/docker-fiware-ext/commit/0646f364dc76a3b4f429c133a701f982b3298096))
-* **deps:** update dependency notebook to v7.0.8 ([aa83d58](https://github.com/alexbaiardi/docker-fiware-ext/commit/aa83d5854b3c5a2106b56fa9c899f5613e183988))
-* **deps:** update dependency pymongo to v4.10.0 ([0d9585f](https://github.com/alexbaiardi/docker-fiware-ext/commit/0d9585fbb6697ac645d20848bb3ab5ff33a3ce1c))
-* **deps:** update dependency pymongo to v4.10.1 ([5dab9b4](https://github.com/alexbaiardi/docker-fiware-ext/commit/5dab9b4f0cd8c43eb98297dd67ef5779296ad202))
-* **deps:** update dependency pymongo to v4.6.2 ([2f743bf](https://github.com/alexbaiardi/docker-fiware-ext/commit/2f743bf7d311fd93d6bd494b5c1ed8dbb51cb6ba))
-* **deps:** update dependency pymongo to v4.6.3 ([41979d7](https://github.com/alexbaiardi/docker-fiware-ext/commit/41979d75d951e9b444e768688053ad3505be18b0))
-* **deps:** update dependency pymongo to v4.7.0 ([edce6a3](https://github.com/alexbaiardi/docker-fiware-ext/commit/edce6a3567c702cc3070724de32ecb2405395e7d))
-* **deps:** update dependency pymongo to v4.7.1 ([31f89ff](https://github.com/alexbaiardi/docker-fiware-ext/commit/31f89ff7374051bb89b14bfa6c148e3d6dfbabdf))
-* **deps:** update dependency pymongo to v4.7.2 ([0801e53](https://github.com/alexbaiardi/docker-fiware-ext/commit/0801e53592304cbb48b32e18def340dbda423970))
-* **deps:** update dependency pymongo to v4.7.3 ([0419556](https://github.com/alexbaiardi/docker-fiware-ext/commit/0419556842ea8ed0a0dd8e24d62c2a123b59637b))
-* **deps:** update dependency pymongo to v4.8.0 ([6373fc8](https://github.com/alexbaiardi/docker-fiware-ext/commit/6373fc8586d03d39a0042a2f9bb45280e2a6f388))
-* **deps:** update dependency pymongo to v4.9 ([4899bbe](https://github.com/alexbaiardi/docker-fiware-ext/commit/4899bbe5038a4d646b60c0d486d30ade1cef3df5))
-* **deps:** update dependency pymongo to v4.9.1 ([9284bc2](https://github.com/alexbaiardi/docker-fiware-ext/commit/9284bc2e013353a0fae85119f88de48a9de72f28))
-* **deps:** update dependency python-dotenv to v1.0.1 ([2f34a89](https://github.com/alexbaiardi/docker-fiware-ext/commit/2f34a890db80d3f33d276950019e77a442c6ee8b))
-* **deps:** update dependency requests to v2.32.2 [security] ([349e769](https://github.com/alexbaiardi/docker-fiware-ext/commit/349e7693d55751ed0738af7b866f17eb9a3e16bb))
-* **deps:** update dependency requests to v2.32.3 ([1baa2b1](https://github.com/alexbaiardi/docker-fiware-ext/commit/1baa2b1ea8f05f6983c1a1a6c5977d3245a1f8b0))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.101 ([54d66fd](https://github.com/alexbaiardi/docker-fiware-ext/commit/54d66fda2b2106f663a9d9caa130986ffc126449))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.102 ([6a59bb3](https://github.com/alexbaiardi/docker-fiware-ext/commit/6a59bb35923820e630f2378fb9678e6b4487dab9))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.103 ([44c19ba](https://github.com/alexbaiardi/docker-fiware-ext/commit/44c19baa1dd90392edbb6298748ac78786a44cd2))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.104 ([c91686c](https://github.com/alexbaiardi/docker-fiware-ext/commit/c91686c0fc4d71c69961aa8f57ee40dcc35cce4f))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.105 ([900e240](https://github.com/alexbaiardi/docker-fiware-ext/commit/900e240023cccb1798263577b2ceb681b495bc53))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.106 ([ebdab2e](https://github.com/alexbaiardi/docker-fiware-ext/commit/ebdab2e0e343a1aa60c47066e7a0671822b0cc48))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.107 ([8b2c96f](https://github.com/alexbaiardi/docker-fiware-ext/commit/8b2c96f2130ca83091015dcd323b38a4ae3ef9d1))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.108 ([a7150ba](https://github.com/alexbaiardi/docker-fiware-ext/commit/a7150ba7135853a24a1f9307c8a28b57e269fe45))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.109 ([2ee61a6](https://github.com/alexbaiardi/docker-fiware-ext/commit/2ee61a6fc7bdbd5d44955c2b9b38d768651e8cb3))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.110 ([fb7cd76](https://github.com/alexbaiardi/docker-fiware-ext/commit/fb7cd76857c66ae9c78ea8fc56a916d091536ac6))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.111 ([2ac5725](https://github.com/alexbaiardi/docker-fiware-ext/commit/2ac57253c7360ed2e5f26a081063c2009751d372))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.112 ([98727f3](https://github.com/alexbaiardi/docker-fiware-ext/commit/98727f36271680bea603c7ac98cce1dfee652490))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.113 ([5ee85c4](https://github.com/alexbaiardi/docker-fiware-ext/commit/5ee85c468fed182d8d0974694c2963791275dd64))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.114 ([a77c655](https://github.com/alexbaiardi/docker-fiware-ext/commit/a77c655325c3f6eb76c2a6426c9275d50097045c))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.115 ([#182](https://github.com/alexbaiardi/docker-fiware-ext/issues/182)) ([73c0419](https://github.com/alexbaiardi/docker-fiware-ext/commit/73c04190cd67ebfee8c11c47106d2815f037ab17))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.116 ([#195](https://github.com/alexbaiardi/docker-fiware-ext/issues/195)) ([4498ae7](https://github.com/alexbaiardi/docker-fiware-ext/commit/4498ae791d0f9645edf08bd0196c42f3349639a7))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.85 ([2e97db2](https://github.com/alexbaiardi/docker-fiware-ext/commit/2e97db206ee750e7242ddb537515534ee2e71ced))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.86 ([56e68f4](https://github.com/alexbaiardi/docker-fiware-ext/commit/56e68f4b3430c12ed6ea6a46c2becb5b46852bdd))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.87 ([6a6736c](https://github.com/alexbaiardi/docker-fiware-ext/commit/6a6736c6daa44ff543f053e72b721bdaee061e92))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.89 ([a75f91c](https://github.com/alexbaiardi/docker-fiware-ext/commit/a75f91c235e9c901f6a706c4de4f1670c5409c2c))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.90 ([87ba246](https://github.com/alexbaiardi/docker-fiware-ext/commit/87ba246161845e536544e9c256f09d94846cb969))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.91 ([ab90fa3](https://github.com/alexbaiardi/docker-fiware-ext/commit/ab90fa35808aed350433ed69022cf191ca03fa60))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.92 ([095858a](https://github.com/alexbaiardi/docker-fiware-ext/commit/095858a596493d71198173ecca521f43428a3b33))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.93 ([847457e](https://github.com/alexbaiardi/docker-fiware-ext/commit/847457ee077df18b21301dbae490caf2d605db83))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.94 ([9798019](https://github.com/alexbaiardi/docker-fiware-ext/commit/979801978cf1ea16f2a0067e9dfd4a75a52654b0))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.95 ([1b60bba](https://github.com/alexbaiardi/docker-fiware-ext/commit/1b60bba017bf752d2365e0d4cdb08ed6cd8b822a))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.96 ([fadc752](https://github.com/alexbaiardi/docker-fiware-ext/commit/fadc7528bf9bda01d751a155b0c2d0a5121b4bd7))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.97 ([33d475a](https://github.com/alexbaiardi/docker-fiware-ext/commit/33d475a0f0badf5dc4f4d5a370a289b4569e804a))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.98 ([4747267](https://github.com/alexbaiardi/docker-fiware-ext/commit/4747267618ee03a1ea2b12ca5bffc1f79304bad1))
-* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.99 ([5b8a793](https://github.com/alexbaiardi/docker-fiware-ext/commit/5b8a7930bba0b3e1683154df46606131fab82393))
-* **deps:** update dependency urllib3 to v2.0.7 [security] ([e4648ed](https://github.com/alexbaiardi/docker-fiware-ext/commit/e4648ed8c238d4604afb18ce539ffa493d770acf))
-* **deps:** update dependency urllib3 to v2.2.2 [security] ([864bea3](https://github.com/alexbaiardi/docker-fiware-ext/commit/864bea3ab362ed53a12ba2a8294c356d9299e28c))
-* **deps:** update dependency urllib3 to v2.2.3 ([8eb73c6](https://github.com/alexbaiardi/docker-fiware-ext/commit/8eb73c63b5b48cb4564e31a7054a1c5fad4f7849))
-* **deps:** update docker.io/bitnami/kafka docker tag to v3.8 ([0295a9e](https://github.com/alexbaiardi/docker-fiware-ext/commit/0295a9e133ce8747230a490d44905a72fb229cff))
-* **deps:** update docker.io/bitnami/kafka docker tag to v3.9 ([#184](https://github.com/alexbaiardi/docker-fiware-ext/issues/184)) ([02fab38](https://github.com/alexbaiardi/docker-fiware-ext/commit/02fab3891dfe38203fe3b00f9fea39f8d1650e0e))
-* **deps:** update fiware/orion docker tag to v3.11.0 ([63e8651](https://github.com/alexbaiardi/docker-fiware-ext/commit/63e8651f46cb1250dd2fd546bfd6eed9bdd8cf80))
-* **deps:** update fiware/orion docker tag to v3.12.0 ([05dc327](https://github.com/alexbaiardi/docker-fiware-ext/commit/05dc3274cd6e32a26d02de07c1732b4323f6cc4a))
-* **deps:** update mongo docker tag to v7 ([4915aef](https://github.com/alexbaiardi/docker-fiware-ext/commit/4915aef9ffc61087ff445f19901059828163afc9))
-* **deps:** update mongo docker tag to v8 ([6883c8d](https://github.com/alexbaiardi/docker-fiware-ext/commit/6883c8d7a264ab5a879999dc19f0fb6795aefe87))
-* **deps:** update node.js to 18.19 ([674cd2f](https://github.com/alexbaiardi/docker-fiware-ext/commit/674cd2fa00069ec6934eb98e995c3a5db6fe0f26))
-* **deps:** update node.js to 20.12 ([9f4fee1](https://github.com/alexbaiardi/docker-fiware-ext/commit/9f4fee16ecd98dcc133662719df5a6a933031936))
-* **deps:** update node.js to 20.13 ([51331f3](https://github.com/alexbaiardi/docker-fiware-ext/commit/51331f369d1ea5bf34c75bbdd2c8fe95f431b2e5))
-* **deps:** update node.js to 20.14 ([f719bee](https://github.com/alexbaiardi/docker-fiware-ext/commit/f719bee70000d6da61681363423ab7b68a2a30c8))
-* **deps:** update node.js to 20.15 ([72149af](https://github.com/alexbaiardi/docker-fiware-ext/commit/72149af9a32b42d64f4edbdb22133e064f4824eb))
-* **deps:** update node.js to 20.16 ([8cc7f16](https://github.com/alexbaiardi/docker-fiware-ext/commit/8cc7f1653e35574edc8b26814261c27b356f881a))
-* **deps:** update node.js to 20.17 ([d80ef5b](https://github.com/alexbaiardi/docker-fiware-ext/commit/d80ef5b7b49bf7139868fdcf15887f7278eabfdc))
-* **deps:** update node.js to 20.18 ([6f22697](https://github.com/alexbaiardi/docker-fiware-ext/commit/6f22697ddc256041327bb829684d4ebc612915d1))
-* **deps:** update node.js to 22.12 ([#194](https://github.com/alexbaiardi/docker-fiware-ext/issues/194)) ([f101743](https://github.com/alexbaiardi/docker-fiware-ext/commit/f10174321f6fd49b8ccf54393248749e0fab4dbf))
-* **deps:** update node.js to v20 ([e377e44](https://github.com/alexbaiardi/docker-fiware-ext/commit/e377e446d7992b232651670366f30e6b87b73970))
-* **deps:** update node.js to v22 ([b5ca5d7](https://github.com/alexbaiardi/docker-fiware-ext/commit/b5ca5d7d7141191f454e7a9f746c6769006a321b))
-* **deps:** update plugin org.jetbrains.kotlin.jvm to v1.9.23 ([db3a371](https://github.com/alexbaiardi/docker-fiware-ext/commit/db3a371e6ed0ef447b67b4e3227cd87ea0e866ad))
-* **deps:** update plugin org.jetbrains.kotlin.jvm to v1.9.24 ([943f576](https://github.com/alexbaiardi/docker-fiware-ext/commit/943f576787046a2d0bb46dbf15e0f9ee171d7142))
-* **deps:** update plugin org.jetbrains.kotlin.jvm to v2 ([3e193e0](https://github.com/alexbaiardi/docker-fiware-ext/commit/3e193e0d39673371280c6c15235dd53ce8e5d749))
-* **deps:** update plugin org.jetbrains.kotlin.jvm to v2.0.10 ([82ef595](https://github.com/alexbaiardi/docker-fiware-ext/commit/82ef5952b5cac62fbe62a01158644ddfa7b288b1))
-* **deps:** update plugin org.jetbrains.kotlin.jvm to v2.0.20 ([6dfab4d](https://github.com/alexbaiardi/docker-fiware-ext/commit/6dfab4d9c45d1f4a9a438f3c687a0473457b0d2d))
-* **deps:** update plugin org.jetbrains.kotlin.jvm to v2.0.21 ([3e0fb42](https://github.com/alexbaiardi/docker-fiware-ext/commit/3e0fb4286540e1d6d9dc1e34e317ceb6d877ae1d))
-* **deps:** update plugin org.jetbrains.kotlin.jvm to v2.1.0 ([#192](https://github.com/alexbaiardi/docker-fiware-ext/issues/192)) ([ebe2089](https://github.com/alexbaiardi/docker-fiware-ext/commit/ebe20896cd3e1965f7765e49506d33e9281c5a6d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.119 ([#211](https://github.com/w4bo/docker-fiware-ext/issues/211)) ([d4ad7f6](https://github.com/w4bo/docker-fiware-ext/commit/d4ad7f6b2247e4bfcec4d568451c291dfb490ba0))
 
 ### Bug Fixes
 
-* add gradle scripts ([ebe3f26](https://github.com/alexbaiardi/docker-fiware-ext/commit/ebe3f26477d702ab08e225e486af550bdafbbb30))
-* **ci:** add release to dockerhub ([75a3cf4](https://github.com/alexbaiardi/docker-fiware-ext/commit/75a3cf440014b375a76ea0de568c3ed8304191a4))
-* **ci:** add release to dockerhub ([d125a85](https://github.com/alexbaiardi/docker-fiware-ext/commit/d125a8556077328be846d1562d742ca915bc5ce6))
-* **ci:** add release to dockerhub ([3e0b546](https://github.com/alexbaiardi/docker-fiware-ext/commit/3e0b546f81a28e602ef7efe9a041fd644db5a14f))
-* **ci:** add release to dockerhub ([ccd657e](https://github.com/alexbaiardi/docker-fiware-ext/commit/ccd657ee25b18751d8e5ef2c46ebf349095e557e))
-* **ci:** deploy to docker ([74aa617](https://github.com/alexbaiardi/docker-fiware-ext/commit/74aa617e26a95c254bd9b119288cb3c32979618a))
-* **ci:** deploy to docker ([79811ff](https://github.com/alexbaiardi/docker-fiware-ext/commit/79811ffda5f79396b7f5dfcb530fe24d8eac975e))
-* correct images context ([451c21c](https://github.com/alexbaiardi/docker-fiware-ext/commit/451c21ca01d3118d3e17eab6cf157a5fc3ed888c))
-* **deps:** update dependency io.github.cdimascio:dotenv-kotlin to v6.4.2 ([254f311](https://github.com/alexbaiardi/docker-fiware-ext/commit/254f311ee72d73f968aa952a2ecd9dc11b4eed0c))
-* **deps:** update dependency io.github.cdimascio:dotenv-kotlin to v6.5.0 ([#198](https://github.com/alexbaiardi/docker-fiware-ext/issues/198)) ([e5094a2](https://github.com/alexbaiardi/docker-fiware-ext/commit/e5094a2e84c85508ea632cb701f567cfa773b4b1))
-* **deps:** update dependency org.apache.kafka:kafka-clients to v3.5.2 ([303dc71](https://github.com/alexbaiardi/docker-fiware-ext/commit/303dc715cec73538b84afe1d977882824276970b))
-* **deps:** update dependency org.apache.kafka:kafka-clients to v3.7.0 ([4586c7d](https://github.com/alexbaiardi/docker-fiware-ext/commit/4586c7dfa5bda26a3eb819672a58221c27f46365))
-* **deps:** update dependency org.apache.kafka:kafka-clients to v3.7.1 ([b762a5f](https://github.com/alexbaiardi/docker-fiware-ext/commit/b762a5fcee4c58e8375eba7de9f6100b99d30178))
-* **deps:** update dependency org.apache.kafka:kafka-clients to v3.8.0 ([e0b7432](https://github.com/alexbaiardi/docker-fiware-ext/commit/e0b7432025f188fae32b726362bb3f713c1e32b9))
-* **deps:** update dependency org.apache.kafka:kafka-clients to v3.8.1 ([521563f](https://github.com/alexbaiardi/docker-fiware-ext/commit/521563f81556926f4ec7ef0c0d5aab621e395986))
-* **deps:** update dependency org.apache.kafka:kafka-clients to v3.9.0 ([ec5ce34](https://github.com/alexbaiardi/docker-fiware-ext/commit/ec5ce34cd2065d05e847473c32ab0e705f58b934))
-* **deps:** update dependency org.jetbrains.kotlinx:kotlinx-cli to v0.3.6 ([2efd5bd](https://github.com/alexbaiardi/docker-fiware-ext/commit/2efd5bdbc519a21b018f112ba81c8569fe8c0cb5))
-* **deps:** update dependency org.json:json to v20231013 ([64b6b71](https://github.com/alexbaiardi/docker-fiware-ext/commit/64b6b71a9d88d2bef95ca84a440ea1ca50f65e3e))
-* **deps:** update dependency org.json:json to v20240205 ([5bc4d95](https://github.com/alexbaiardi/docker-fiware-ext/commit/5bc4d95f7543db50cdd0dfb11aeaf4424355f9be))
-* **deps:** update dependency org.json:json to v20240303 ([41f29a5](https://github.com/alexbaiardi/docker-fiware-ext/commit/41f29a533dcd103d25251504a6cbc7d4b25b4d75))
-* **deps:** update junit5 monorepo to v5.10.2 ([b581808](https://github.com/alexbaiardi/docker-fiware-ext/commit/b581808ada399f7a7fb33564e456508c97a2aafb))
-* **deps:** update junit5 monorepo to v5.10.3 ([6e055df](https://github.com/alexbaiardi/docker-fiware-ext/commit/6e055dfe6a98953b8733c033c1b2f297f010e86a))
-* **deps:** update junit5 monorepo to v5.11.0 ([44f2ebd](https://github.com/alexbaiardi/docker-fiware-ext/commit/44f2ebdc6b8297a94461ad08ed4b0a8926cb91aa))
-* **deps:** update junit5 monorepo to v5.11.1 ([37717a0](https://github.com/alexbaiardi/docker-fiware-ext/commit/37717a0cec25809408ff9899815db1f69f7b7146))
-* **deps:** update junit5 monorepo to v5.11.2 ([1851154](https://github.com/alexbaiardi/docker-fiware-ext/commit/18511549fc87333a8c896e575cf98db1dab2f5d6))
-* **deps:** update junit5 monorepo to v5.11.3 ([a4379dc](https://github.com/alexbaiardi/docker-fiware-ext/commit/a4379dc641dc29882da777cd0ed85d23dd5acd34))
-* **deps:** update junit5 monorepo to v5.11.4 ([#199](https://github.com/alexbaiardi/docker-fiware-ext/issues/199)) ([d406c10](https://github.com/alexbaiardi/docker-fiware-ext/commit/d406c10dee0932d5b659ac15ce02b221de0ddcbd))
-* **deps:** update slf4j monorepo to v2.0.12 ([2df497e](https://github.com/alexbaiardi/docker-fiware-ext/commit/2df497e19d1e2f885cf05138bebe90a8fb2f7fd5))
-* **deps:** update slf4j monorepo to v2.0.13 ([cc01e45](https://github.com/alexbaiardi/docker-fiware-ext/commit/cc01e45f65d7d24e88f7a4468f4f78344b1d7060))
-* **deps:** update slf4j monorepo to v2.0.14 ([e0b91a7](https://github.com/alexbaiardi/docker-fiware-ext/commit/e0b91a7b53d2d7bd0c8d85ced0810fa9055f4b29))
-* **deps:** update slf4j monorepo to v2.0.15 ([7907d2f](https://github.com/alexbaiardi/docker-fiware-ext/commit/7907d2f05cee2348aa97fae9006d144c798eb0a0))
-* **deps:** update slf4j monorepo to v2.0.16 ([9675185](https://github.com/alexbaiardi/docker-fiware-ext/commit/967518514fb77347b7e981087161615f6506fd59))
-* **docker-compose:** Integrating develop ([#1](https://github.com/alexbaiardi/docker-fiware-ext/issues/1)) ([d463c0e](https://github.com/alexbaiardi/docker-fiware-ext/commit/d463c0ec09d8bf5c66446e8e0fe53f20ecc28be9))
-* **Dockerfile:** introducing swarm ([#44](https://github.com/alexbaiardi/docker-fiware-ext/issues/44)) ([3616d4a](https://github.com/alexbaiardi/docker-fiware-ext/commit/3616d4a75fafd9a1b5a0573180c8531af9a5b913))
-* **Dockerfile:** renaming the services and autoregistering fiware2kafka ([e0f0dd7](https://github.com/alexbaiardi/docker-fiware-ext/commit/e0f0dd754e202d316298e61dd1a0c40e12cd156d))
-* removed double print ([1cd7e7f](https://github.com/alexbaiardi/docker-fiware-ext/commit/1cd7e7f7ba8d37c1aedaf263ddd73415cf52a69a))
-* test kafka2mongo image build ([2a42fa1](https://github.com/alexbaiardi/docker-fiware-ext/commit/2a42fa154d1b047a3f195c28cf8cf1a31f53bc2c))
-* time zone in image path ([594e004](https://github.com/alexbaiardi/docker-fiware-ext/commit/594e004c4aed6b56b9c21a94ae5a242913d5e21e))
-
-### Tests
-
-* add image url replacement test ([e1ea70d](https://github.com/alexbaiardi/docker-fiware-ext/commit/e1ea70d62dee8561114084328a3aa3e8f841c24e))
-* update image path ([a7dfb34](https://github.com/alexbaiardi/docker-fiware-ext/commit/a7dfb348369122bb87cb53d6f8da2d0cdd37cff4))
+* add storage of current state enriched entities and persist images service ([#212](https://github.com/w4bo/docker-fiware-ext/issues/212)) ([a41b7f2](https://github.com/w4bo/docker-fiware-ext/commit/a41b7f23adb2032c502a902d4ec71f30b3a5e2cb))
 
 ### Build and continuous integration
 
-* add Dotenv dependency ([8174acf](https://github.com/alexbaiardi/docker-fiware-ext/commit/8174acfdf7d19ea9a724a5ea4b93f7d593bdb6f5))
-* **deps:** update actions/checkout action to v3.6.0 ([bd7482a](https://github.com/alexbaiardi/docker-fiware-ext/commit/bd7482a9c0828206606d4c50f89082928a38c307))
-* **deps:** update actions/checkout action to v4 ([8636923](https://github.com/alexbaiardi/docker-fiware-ext/commit/8636923516b1030384ae7effb4d1c7420cfebfa9))
-* **deps:** update actions/checkout action to v4.1.3 ([46138f8](https://github.com/alexbaiardi/docker-fiware-ext/commit/46138f82c5d3f5f038e641c4be0a374322e62f12))
-* **deps:** update actions/checkout action to v4.1.4 ([9e47a84](https://github.com/alexbaiardi/docker-fiware-ext/commit/9e47a84de4510ef8d2c53f1991a92f7858801edb))
-* **deps:** update actions/checkout action to v4.1.6 ([31e22cf](https://github.com/alexbaiardi/docker-fiware-ext/commit/31e22cf82b17ba480349d86659921b3c8b981c18))
-* **deps:** update actions/checkout action to v4.1.7 ([a1335bc](https://github.com/alexbaiardi/docker-fiware-ext/commit/a1335bcd3ad48bc930de4c2653a304c5dd9babb0))
-* **deps:** update actions/checkout action to v4.2.0 ([fcee592](https://github.com/alexbaiardi/docker-fiware-ext/commit/fcee5922a1bb037715cdb8dc2827ede1785f7fcc))
-* **deps:** update actions/checkout action to v4.2.1 ([92a44b1](https://github.com/alexbaiardi/docker-fiware-ext/commit/92a44b1d5a99f050d43cec76fe51feb6e53e57b1))
-* **deps:** update actions/checkout action to v4.2.2 ([a519d53](https://github.com/alexbaiardi/docker-fiware-ext/commit/a519d5302b54b2c574e54a4517ac522f53ecbacc))
-* **deps:** update actions/setup-java action to v4 ([2a4fdf0](https://github.com/alexbaiardi/docker-fiware-ext/commit/2a4fdf0cc1f9fd6a9602ce9437f2e68ef3b5ea4d))
-* **deps:** update actions/setup-node action to v4.0.4 ([1fd1413](https://github.com/alexbaiardi/docker-fiware-ext/commit/1fd14138ed1645c1b5058bb397512e27337839b6))
-* **deps:** update actions/setup-node action to v4.1.0 ([8d64fc4](https://github.com/alexbaiardi/docker-fiware-ext/commit/8d64fc499183f3d567178d573b0a18a46437839c))
-* **deps:** update actions/setup-python action to v5 ([fb55ca3](https://github.com/alexbaiardi/docker-fiware-ext/commit/fb55ca34b19ede3cfe96b0625a8cc0504c2a53b7))
-* **deps:** update dependency ubuntu to v24 ([652c2f3](https://github.com/alexbaiardi/docker-fiware-ext/commit/652c2f3a354a513b51e8e4fc974919125d9f0dac))
-* **deps:** update docker/build-push-action digest to 0259cb0 ([#190](https://github.com/alexbaiardi/docker-fiware-ext/issues/190)) ([a023437](https://github.com/alexbaiardi/docker-fiware-ext/commit/a023437b65c918874a8d31c89775ff382ce2b041))
-* **deps:** update docker/build-push-action digest to 090ca15 ([912b41c](https://github.com/alexbaiardi/docker-fiware-ext/commit/912b41c8dc821859f5b11ce8ddae244a7ba1b9df))
-* **deps:** update docker/build-push-action digest to 11be14d ([#196](https://github.com/alexbaiardi/docker-fiware-ext/issues/196)) ([95a4693](https://github.com/alexbaiardi/docker-fiware-ext/commit/95a4693c685811a61350a303129153173ada534c))
-* **deps:** update docker/build-push-action digest to 1556069 ([55b0ed5](https://github.com/alexbaiardi/docker-fiware-ext/commit/55b0ed50aa0e57d97c5bd5a0c0447cc9bcd06116))
-* **deps:** update docker/build-push-action digest to 16ebe77 ([a9083a1](https://github.com/alexbaiardi/docker-fiware-ext/commit/a9083a1816e6ffa5de5a7aad854916e4b1eb71ea))
-* **deps:** update docker/build-push-action digest to 1a16264 ([5ba9604](https://github.com/alexbaiardi/docker-fiware-ext/commit/5ba96043ef2d03921fb957e92b7d66449d59acd4))
-* **deps:** update docker/build-push-action digest to 1ca370b ([3daeca6](https://github.com/alexbaiardi/docker-fiware-ext/commit/3daeca6fce0b7cb3799e871521e0f3b2a8880fa7))
-* **deps:** update docker/build-push-action digest to 2a53c6c ([c906690](https://github.com/alexbaiardi/docker-fiware-ext/commit/c906690fa92e26334c0304aada3b718a843c4437))
-* **deps:** update docker/build-push-action digest to 2dbe91d ([b78dd47](https://github.com/alexbaiardi/docker-fiware-ext/commit/b78dd478b8256a43ae9d9fdbb68d098913f00999))
-* **deps:** update docker/build-push-action digest to 31159d4 ([2f6e8d1](https://github.com/alexbaiardi/docker-fiware-ext/commit/2f6e8d16b675871568e1fd05f98c3060c735193b))
-* **deps:** update docker/build-push-action digest to 4367da9 ([d54a9a8](https://github.com/alexbaiardi/docker-fiware-ext/commit/d54a9a881e182fe0f5994d6aa91172e614908d60))
-* **deps:** update docker/build-push-action digest to 48aba3b ([#191](https://github.com/alexbaiardi/docker-fiware-ext/issues/191)) ([56b30f7](https://github.com/alexbaiardi/docker-fiware-ext/commit/56b30f7e78a6e523d1af6f55f31702779cc7ea8e))
-* **deps:** update docker/build-push-action digest to 4f58ea7 ([d97ec7b](https://github.com/alexbaiardi/docker-fiware-ext/commit/d97ec7bab2f00ca788c1362269ba429e84f21404))
-* **deps:** update docker/build-push-action digest to 4f7cdeb ([ace4c00](https://github.com/alexbaiardi/docker-fiware-ext/commit/ace4c005c9aa6de2be3247225f2f350cab54799a))
-* **deps:** update docker/build-push-action digest to 5176d81 ([de405f6](https://github.com/alexbaiardi/docker-fiware-ext/commit/de405f6599cb827965833db0de57d7c0c63e2653))
-* **deps:** update docker/build-push-action digest to 5cd11c3 ([352f45f](https://github.com/alexbaiardi/docker-fiware-ext/commit/352f45f50ddd35d9e29b46175b1060619658d53c))
-* **deps:** update docker/build-push-action digest to 5e99dac ([3a626ed](https://github.com/alexbaiardi/docker-fiware-ext/commit/3a626edb1f54292f19ce66b5f2307cc0717d76dd))
-* **deps:** update docker/build-push-action digest to 729f7f4 ([6e1080a](https://github.com/alexbaiardi/docker-fiware-ext/commit/6e1080a2885e77a2dcb408672aa9a936a6cd3cdc))
-* **deps:** update docker/build-push-action digest to 7e6f776 ([7e897a7](https://github.com/alexbaiardi/docker-fiware-ext/commit/7e897a7f9640f19e3367059b4371a459a05f9696))
-* **deps:** update docker/build-push-action digest to 84354d3 ([f582b08](https://github.com/alexbaiardi/docker-fiware-ext/commit/f582b08eeb0abb9e969bf49b24545b2fc42807a9))
-* **deps:** update docker/build-push-action digest to 86c2bd0 ([34be177](https://github.com/alexbaiardi/docker-fiware-ext/commit/34be177f661c4bae3cc008c76fc3d26561bfb055))
-* **deps:** update docker/build-push-action digest to 8796455 ([#193](https://github.com/alexbaiardi/docker-fiware-ext/issues/193)) ([9960884](https://github.com/alexbaiardi/docker-fiware-ext/commit/996088427126c0832bd6a6df9ae88070237c21ca))
-* **deps:** update docker/build-push-action digest to 94f8f8c ([7f369db](https://github.com/alexbaiardi/docker-fiware-ext/commit/7f369dbb1321ad779cc10c5c07a9ce08f22e8b02))
-* **deps:** update docker/build-push-action digest to 9552610 ([5842e25](https://github.com/alexbaiardi/docker-fiware-ext/commit/5842e252a339f41a66f279febb99368d6df56023))
-* **deps:** update docker/build-push-action digest to a254f8c ([c2d92f5](https://github.com/alexbaiardi/docker-fiware-ext/commit/c2d92f5a26bc21c69a49c2388f780915154015ed))
-* **deps:** update docker/build-push-action digest to a8d3541 ([30bca6b](https://github.com/alexbaiardi/docker-fiware-ext/commit/30bca6b46df9d275570b5968a5c1318779ba9b42))
-* **deps:** update docker/build-push-action digest to af64c4e ([3b435c7](https://github.com/alexbaiardi/docker-fiware-ext/commit/3b435c7765493420797d9b756c00de83fb07737a))
-* **deps:** update docker/build-push-action digest to ca052bb ([351c202](https://github.com/alexbaiardi/docker-fiware-ext/commit/351c202e77d44b90d72cb537fca6286add5ed368))
-* **deps:** update docker/build-push-action digest to cfed4e9 ([833ef0e](https://github.com/alexbaiardi/docker-fiware-ext/commit/833ef0e6c6114b464c062507bd1938e17eba0ed8))
-* **deps:** update docker/build-push-action digest to df19a79 ([b503bd2](https://github.com/alexbaiardi/docker-fiware-ext/commit/b503bd23fffa9b384ef844679b88fe99ec120fe5))
-* **deps:** update docker/build-push-action digest to e050dfa ([639badb](https://github.com/alexbaiardi/docker-fiware-ext/commit/639badb5d88fdaae6059b18fd39695fb1e27d31a))
-* **deps:** update docker/build-push-action digest to e44afff ([07043e9](https://github.com/alexbaiardi/docker-fiware-ext/commit/07043e9ba79ae84913b074a505d88177144d5601))
-* **deps:** update docker/build-push-action digest to eb539f4 ([e288bf4](https://github.com/alexbaiardi/docker-fiware-ext/commit/e288bf4f83661facab0e68c3bf611a74e4098f0f))
-* **deps:** update docker/build-push-action digest to ef6cba3 ([99a5446](https://github.com/alexbaiardi/docker-fiware-ext/commit/99a5446e7851c84395b7de4afbda55777c456f01))
-* **deps:** update docker/build-push-action digest to f8bc7f4 ([510de60](https://github.com/alexbaiardi/docker-fiware-ext/commit/510de6001678ef68e3846476aa42e8d715f6a250))
-* **deps:** update docker/login-action digest to 0689575 ([2102697](https://github.com/alexbaiardi/docker-fiware-ext/commit/210269761bba6752a17e0cf25e889ee9697830ed))
-* **deps:** update docker/login-action digest to 0d4c9c5 ([8119f98](https://github.com/alexbaiardi/docker-fiware-ext/commit/8119f98ceb53747c39754f83425494aadd1eb7b5))
-* **deps:** update docker/login-action digest to 1f36f5b ([32c1688](https://github.com/alexbaiardi/docker-fiware-ext/commit/32c1688650a801b34b00a695053fc38539fcf807))
-* **deps:** update docker/login-action digest to 29df2a9 ([e743b2f](https://github.com/alexbaiardi/docker-fiware-ext/commit/e743b2f276c83cc8617e30e63fed2862d697b4af))
-* **deps:** update docker/login-action digest to 3b8fed7 ([b17dd9b](https://github.com/alexbaiardi/docker-fiware-ext/commit/b17dd9b90216a961360a45cd296c549e1ca54036))
-* **deps:** update docker/login-action digest to 5d8785b ([eb0fac3](https://github.com/alexbaiardi/docker-fiware-ext/commit/eb0fac36b86fc72596dea1c97745521ac0d3f758))
-* **deps:** update docker/login-action digest to 5f4866a ([e28a2f6](https://github.com/alexbaiardi/docker-fiware-ext/commit/e28a2f6e51d06c953434c61067ba9bdb780a7627))
-* **deps:** update docker/login-action digest to 70fccc7 ([114eeea](https://github.com/alexbaiardi/docker-fiware-ext/commit/114eeea083cfae5db410bf964f882b06b598e82c))
-* **deps:** update docker/login-action digest to 7ca3450 ([518437f](https://github.com/alexbaiardi/docker-fiware-ext/commit/518437faa7ae887d107ba78630990fe8517d2ead))
-* **deps:** update docker/login-action digest to 9780b0c ([1347f04](https://github.com/alexbaiardi/docker-fiware-ext/commit/1347f04fac13b2649b52a3b89348330f1326aa0a))
-* **deps:** update docker/login-action digest to db77945 ([0be5f02](https://github.com/alexbaiardi/docker-fiware-ext/commit/0be5f02360814a8163310e4ee5aa59bab6bf2078))
-* **deps:** update docker/metadata-action digest to 0de3687 ([161b336](https://github.com/alexbaiardi/docker-fiware-ext/commit/161b33679d46d980e77c04463e6fb5c3692a9b22))
-* **deps:** update docker/metadata-action digest to 1156622 ([#187](https://github.com/alexbaiardi/docker-fiware-ext/issues/187)) ([921256e](https://github.com/alexbaiardi/docker-fiware-ext/commit/921256efc58147794e089a279f95e006cde261ea))
-* **deps:** update docker/metadata-action digest to 1294d94 ([a1f7584](https://github.com/alexbaiardi/docker-fiware-ext/commit/a1f75841f556bf00970fd5226404bec7582318ce))
-* **deps:** update docker/metadata-action digest to 2ee3d30 ([38e0f26](https://github.com/alexbaiardi/docker-fiware-ext/commit/38e0f2616af0211c558cac9bcf704a0e4181df2e))
-* **deps:** update docker/metadata-action digest to 32323e5 ([#185](https://github.com/alexbaiardi/docker-fiware-ext/issues/185)) ([0a170d5](https://github.com/alexbaiardi/docker-fiware-ext/commit/0a170d533831045f36f2ebd990e8d7b7f1750e0d))
-* **deps:** update docker/metadata-action digest to 369eb59 ([#188](https://github.com/alexbaiardi/docker-fiware-ext/issues/188)) ([0cd135f](https://github.com/alexbaiardi/docker-fiware-ext/commit/0cd135f846003efcf5420a3f4c369fa3105d5b1d))
-* **deps:** update docker/metadata-action digest to 38b3677 ([7c65180](https://github.com/alexbaiardi/docker-fiware-ext/commit/7c65180d28352550a0bbf51c4aafbdcd6dafa3fd))
-* **deps:** update docker/metadata-action digest to 44d81d6 ([#186](https://github.com/alexbaiardi/docker-fiware-ext/issues/186)) ([e9e0c8e](https://github.com/alexbaiardi/docker-fiware-ext/commit/e9e0c8e451ce8fd855a73ca832a4c83c9a4bf7f4))
-* **deps:** update docker/metadata-action digest to 60a0d34 ([3d7d33e](https://github.com/alexbaiardi/docker-fiware-ext/commit/3d7d33e995237eb1e3550e85bd5030fe7396811a))
-* **deps:** update docker/metadata-action digest to 70b2cdc ([dd770dd](https://github.com/alexbaiardi/docker-fiware-ext/commit/dd770dd133bb804272cc8744d2945302c516ab71))
-* **deps:** update docker/metadata-action digest to 906ecf0 ([#197](https://github.com/alexbaiardi/docker-fiware-ext/issues/197)) ([28ae040](https://github.com/alexbaiardi/docker-fiware-ext/commit/28ae040b4417283cf4fcfda62d2db887405ba004))
-* **deps:** update docker/metadata-action digest to a64d048 ([6c6ad51](https://github.com/alexbaiardi/docker-fiware-ext/commit/6c6ad5159426b769e7f270b810fb76f0f9f02b7e))
-* **deps:** update docker/metadata-action digest to b53be03 ([#189](https://github.com/alexbaiardi/docker-fiware-ext/issues/189)) ([f3cca0d](https://github.com/alexbaiardi/docker-fiware-ext/commit/f3cca0da6af67846334e9c5e8fbd81c463d5a957))
-* **deps:** update docker/metadata-action digest to bd26c98 ([#183](https://github.com/alexbaiardi/docker-fiware-ext/issues/183)) ([6cc7072](https://github.com/alexbaiardi/docker-fiware-ext/commit/6cc70723f86770211c2b887a4b4d65880f38b30d))
-* **deps:** update docker/metadata-action digest to c314eea ([3b62a21](https://github.com/alexbaiardi/docker-fiware-ext/commit/3b62a218a0aeb27501185f5414621e61e7cded54))
-* **deps:** update docker/metadata-action digest to d31acd5 ([f4dc471](https://github.com/alexbaiardi/docker-fiware-ext/commit/f4dc47150d93385e6799f427f1829975443a439f))
-* **deps:** update docker/metadata-action digest to f7b4ed1 ([b53f224](https://github.com/alexbaiardi/docker-fiware-ext/commit/b53f2241e0e00c5c67cbb1726b29a331235d3043))
-* fix persistImages deps ([d265477](https://github.com/alexbaiardi/docker-fiware-ext/commit/d26547720b230ff0b427969ae94b154c86cccae0))
-* remove unused dependency ([16169d2](https://github.com/alexbaiardi/docker-fiware-ext/commit/16169d26df272a820c8b41751395b72e5dea155f))
-* update project structure to extract a common module with utils ([584aa86](https://github.com/alexbaiardi/docker-fiware-ext/commit/584aa86b424dfad029f839b28e98853ec4c80e69))
+* **deps:** update docker/build-push-action digest to 31ca4e5 ([#208](https://github.com/w4bo/docker-fiware-ext/issues/208)) ([873db41](https://github.com/w4bo/docker-fiware-ext/commit/873db41e4b1bb4569913f9c15772ea5b7f7c7041))
+* **deps:** update docker/build-push-action digest to b32b51a ([#207](https://github.com/w4bo/docker-fiware-ext/issues/207)) ([7c740e4](https://github.com/w4bo/docker-fiware-ext/commit/7c740e4dd39119a98993ade551b20dcb851d48eb))
+* **deps:** update docker/login-action digest to 327cd5a ([#209](https://github.com/w4bo/docker-fiware-ext/issues/209)) ([60d2bc8](https://github.com/w4bo/docker-fiware-ext/commit/60d2bc8d9fa035fd4b076b4fc3cc2da70ed6c7f8))
+* **deps:** update docker/metadata-action digest to 8e1d546 ([#210](https://github.com/w4bo/docker-fiware-ext/issues/210)) ([37b8175](https://github.com/w4bo/docker-fiware-ext/commit/37b8175ebc6798b3253509ecb6eb4956c3ec2088))
+
+## [1.0.4](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.3...1.0.4) (2025-01-10)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.117 ([#201](https://github.com/alexbaiardi/docker-fiware-ext/issues/201)) ([e73b704](https://github.com/alexbaiardi/docker-fiware-ext/commit/e73b70441fb2ec4d5686329e2bd898eef74bc332))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.118 ([#204](https://github.com/alexbaiardi/docker-fiware-ext/issues/204)) ([f2c3ce7](https://github.com/alexbaiardi/docker-fiware-ext/commit/f2c3ce7c75a79bc2eefbe9bd3ddd4c1463e79012))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.119 ([#211](https://github.com/alexbaiardi/docker-fiware-ext/issues/211)) ([d4ad7f6](https://github.com/alexbaiardi/docker-fiware-ext/commit/d4ad7f6b2247e4bfcec4d568451c291dfb490ba0))
+* **deps:** update dependency urllib3 to v2.3.0 ([#202](https://github.com/alexbaiardi/docker-fiware-ext/issues/202)) ([24068ae](https://github.com/alexbaiardi/docker-fiware-ext/commit/24068aef917645a9919ef4d085246b75f3c51016))
+* **deps:** update node.js to 22.13 ([#205](https://github.com/alexbaiardi/docker-fiware-ext/issues/205)) ([0d32c69](https://github.com/alexbaiardi/docker-fiware-ext/commit/0d32c69f850b9e3bfbb0bc1e45e1c2907f88c5de))
+
+### Bug Fixes
+
+* **deps:** update dependency org.json:json to v20241224 ([#203](https://github.com/alexbaiardi/docker-fiware-ext/issues/203)) ([195b88e](https://github.com/alexbaiardi/docker-fiware-ext/commit/195b88ed35f185435b306e8b070a1037660f4a69))
+* **deps:** update dependency org.json:json to v20250107 ([#206](https://github.com/alexbaiardi/docker-fiware-ext/issues/206)) ([2d2fbd8](https://github.com/alexbaiardi/docker-fiware-ext/commit/2d2fbd8edcae825d95542fe886a043380365bd3c))
+
+### Build and continuous integration
+
+* add persist-images docker image release ([83d1547](https://github.com/alexbaiardi/docker-fiware-ext/commit/83d1547f39f179995154ad394b93515ca3af3269))
+* **deps:** update docker/build-push-action digest to 31ca4e5 ([#208](https://github.com/alexbaiardi/docker-fiware-ext/issues/208)) ([873db41](https://github.com/alexbaiardi/docker-fiware-ext/commit/873db41e4b1bb4569913f9c15772ea5b7f7c7041))
+* **deps:** update docker/build-push-action digest to 7e09459 ([#200](https://github.com/alexbaiardi/docker-fiware-ext/issues/200)) ([fb71431](https://github.com/alexbaiardi/docker-fiware-ext/commit/fb7143139919352eb27e0c8e3ee725c8b7645f5a))
+* **deps:** update docker/build-push-action digest to b32b51a ([#207](https://github.com/alexbaiardi/docker-fiware-ext/issues/207)) ([7c740e4](https://github.com/alexbaiardi/docker-fiware-ext/commit/7c740e4dd39119a98993ade551b20dcb851d48eb))
+* **deps:** update docker/login-action digest to 327cd5a ([#209](https://github.com/alexbaiardi/docker-fiware-ext/issues/209)) ([60d2bc8](https://github.com/alexbaiardi/docker-fiware-ext/commit/60d2bc8d9fa035fd4b076b4fc3cc2da70ed6c7f8))
+* **deps:** update docker/metadata-action digest to 8e1d546 ([#210](https://github.com/alexbaiardi/docker-fiware-ext/issues/210)) ([37b8175](https://github.com/alexbaiardi/docker-fiware-ext/commit/37b8175ebc6798b3253509ecb6eb4956c3ec2088))
 
 ### General maintenance
 
-* add persist image service to stack ([5e66df5](https://github.com/alexbaiardi/docker-fiware-ext/commit/5e66df52282825f779ad4549f9937307eafdd45e))
-* add print on image download ([0a2559d](https://github.com/alexbaiardi/docker-fiware-ext/commit/0a2559dc2485e899dd2c6264ed40528de2bdb59f))
-* **release:** 1.0.0 [skip ci] ([6e9d4b4](https://github.com/alexbaiardi/docker-fiware-ext/commit/6e9d4b43a88f7b51da3aa0eaf8d9774000756e3f)), closes [#1](https://github.com/alexbaiardi/docker-fiware-ext/issues/1)
-* **release:** 1.0.1 [skip ci] ([e74fdb9](https://github.com/alexbaiardi/docker-fiware-ext/commit/e74fdb9b8ebccbcf020bd6a236542a9edbbec758))
-* **release:** 1.0.10 [skip ci] ([46cb250](https://github.com/alexbaiardi/docker-fiware-ext/commit/46cb250a0a83327b7404945becd919e94d1a9f03))
-* **release:** 1.0.11 [skip ci] ([d6dabd8](https://github.com/alexbaiardi/docker-fiware-ext/commit/d6dabd8321bd9b0fd915be09de4ed0dc3f73a964)), closes [#44](https://github.com/alexbaiardi/docker-fiware-ext/issues/44)
-* **release:** 1.0.12 [skip ci] ([4480f2d](https://github.com/alexbaiardi/docker-fiware-ext/commit/4480f2d91863ad73fedb6089ae81319382f1f61c))
-* **release:** 1.0.13 [skip ci] ([8503327](https://github.com/alexbaiardi/docker-fiware-ext/commit/8503327c81897e59a64b651c2a503e41ccc7d942))
-* **release:** 1.0.14 [skip ci] ([abd5729](https://github.com/alexbaiardi/docker-fiware-ext/commit/abd57297e76ad0812cdf11030378bd7c60f73166))
-* **release:** 1.0.15 [skip ci] ([d691b14](https://github.com/alexbaiardi/docker-fiware-ext/commit/d691b141b26bfc6feb1b0dc22adbe725d4d4d6f2))
-* **release:** 1.0.16 [skip ci] ([2404359](https://github.com/alexbaiardi/docker-fiware-ext/commit/240435909db8e157f76bf307fb98b6a040026c9e))
-* **release:** 1.0.17 [skip ci] ([68559cb](https://github.com/alexbaiardi/docker-fiware-ext/commit/68559cb347da47fab67baf4b8afa178372edf8f4))
-* **release:** 1.0.18 [skip ci] ([919bb25](https://github.com/alexbaiardi/docker-fiware-ext/commit/919bb2514ad85c9e7e89e44eeb49071fefd3be58))
-* **release:** 1.0.19 [skip ci] ([ae5beee](https://github.com/alexbaiardi/docker-fiware-ext/commit/ae5beee622a388884b3aad429dc3102e93d1d9d2))
-* **release:** 1.0.2 [skip ci] ([aa8110a](https://github.com/alexbaiardi/docker-fiware-ext/commit/aa8110a4a2f5bb980fd47b2128efd9e88513e59d))
-* **release:** 1.0.20 [skip ci] ([2b4a31c](https://github.com/alexbaiardi/docker-fiware-ext/commit/2b4a31c9e3d705e47e31a2f265ca6229f076dbd2))
-* **release:** 1.0.21 [skip ci] ([a7cd569](https://github.com/alexbaiardi/docker-fiware-ext/commit/a7cd569e39834ecb115c9932a3f7009b96bfbec3))
-* **release:** 1.0.22 [skip ci] ([f6d0087](https://github.com/alexbaiardi/docker-fiware-ext/commit/f6d008790c5ab85ae11b438be8ecd6a0550aeda8))
-* **release:** 1.0.23 [skip ci] ([6286e77](https://github.com/alexbaiardi/docker-fiware-ext/commit/6286e77a925f9ff50352b4ea31dda00a8440c704))
-* **release:** 1.0.24 [skip ci] ([3e70570](https://github.com/alexbaiardi/docker-fiware-ext/commit/3e7057055b3cbe161e4434fa6092163e0dbabab9))
-* **release:** 1.0.25 [skip ci] ([c977367](https://github.com/alexbaiardi/docker-fiware-ext/commit/c977367ff54941faa9eec64f52e4c8054bd5d3be)), closes [#182](https://github.com/alexbaiardi/docker-fiware-ext/issues/182) [#195](https://github.com/alexbaiardi/docker-fiware-ext/issues/195) [#184](https://github.com/alexbaiardi/docker-fiware-ext/issues/184) [#194](https://github.com/alexbaiardi/docker-fiware-ext/issues/194) [#192](https://github.com/alexbaiardi/docker-fiware-ext/issues/192) [#198](https://github.com/alexbaiardi/docker-fiware-ext/issues/198) [#190](https://github.com/alexbaiardi/docker-fiware-ext/issues/190) [#196](https://github.com/alexbaiardi/docker-fiware-ext/issues/196) [#191](https://github.com/alexbaiardi/docker-fiware-ext/issues/191) [#193](https://github.com/alexbaiardi/docker-fiware-ext/issues/193) [#187](https://github.com/alexbaiardi/docker-fiware-ext/issues/187) [#185](https://github.com/alexbaiardi/docker-fiware-ext/issues/185) [#188](https://github.com/alexbaiardi/docker-fiware-ext/issues/188) [#186](https://github.com/alexbaiardi/docker-fiware-ext/issues/186) [#197](https://github.com/alexbaiardi/docker-fiware-ext/issues/197) [#189](https://github.com/alexbaiardi/docker-fiware-ext/issues/189) [#183](https://github.com/alexbaiardi/docker-fiware-ext/issues/183)
-* **release:** 1.0.26 [skip ci] ([2710d48](https://github.com/alexbaiardi/docker-fiware-ext/commit/2710d484fd15310511801b3f7b43dfd4d7258d83)), closes [#199](https://github.com/alexbaiardi/docker-fiware-ext/issues/199)
-* **release:** 1.0.3 [skip ci] ([41b65c6](https://github.com/alexbaiardi/docker-fiware-ext/commit/41b65c6d8eb9e02775f500ab8805e110b6c7691e))
-* **release:** 1.0.4 [skip ci] ([99437df](https://github.com/alexbaiardi/docker-fiware-ext/commit/99437df40f30d50b121e99fb99d632def5fb6087))
-* **release:** 1.0.5 [skip ci] ([fcb3e69](https://github.com/alexbaiardi/docker-fiware-ext/commit/fcb3e695e0cf236a627f47c93f14f6681ea309cb))
-* **release:** 1.0.6 [skip ci] ([69fcb70](https://github.com/alexbaiardi/docker-fiware-ext/commit/69fcb70cb9e1dfdc231bb031da1eefe8ac950f06))
-* **release:** 1.0.7 [skip ci] ([e35622d](https://github.com/alexbaiardi/docker-fiware-ext/commit/e35622d715000e76d74c5efaa3b1182640a61a11))
-* **release:** 1.0.8 [skip ci] ([2039757](https://github.com/alexbaiardi/docker-fiware-ext/commit/2039757869c6a54e388902e41318b46ab05e9c80))
-* **release:** 1.0.9 [skip ci] ([da6a104](https://github.com/alexbaiardi/docker-fiware-ext/commit/da6a10436152eedb0ad1b1b12f67506e8eea5e71))
-* update stack params ([becf748](https://github.com/alexbaiardi/docker-fiware-ext/commit/becf7480c176f30bbf2e410f953c3c0f05425775))
+* **release:** 1.0.27 [skip ci] ([dd6012a](https://github.com/alexbaiardi/docker-fiware-ext/commit/dd6012a937bc53cddd8108b9cb0ff00125e267cf)), closes [#201](https://github.com/alexbaiardi/docker-fiware-ext/issues/201) [#202](https://github.com/alexbaiardi/docker-fiware-ext/issues/202) [#203](https://github.com/alexbaiardi/docker-fiware-ext/issues/203) [#200](https://github.com/alexbaiardi/docker-fiware-ext/issues/200)
+* **release:** 1.0.28 [skip ci] ([aa4746d](https://github.com/alexbaiardi/docker-fiware-ext/commit/aa4746df19a1b84e7f45d56aa35200c7fbce5dca)), closes [#204](https://github.com/alexbaiardi/docker-fiware-ext/issues/204) [#205](https://github.com/alexbaiardi/docker-fiware-ext/issues/205) [#206](https://github.com/alexbaiardi/docker-fiware-ext/issues/206)
+* update stack ([433516f](https://github.com/alexbaiardi/docker-fiware-ext/commit/433516fa78086208ee5bd68539bd82234d07a9af))
 
 ### Refactoring
 
-* extract common logic ([d2a1631](https://github.com/alexbaiardi/docker-fiware-ext/commit/d2a163184fe2e94aa644151f8205272724e0df8e))
-* extract image path naming function and optimize imports ([9a8024b](https://github.com/alexbaiardi/docker-fiware-ext/commit/9a8024bbf417631904a6124c93bda6d36f8c10c2))
-* resolved warnings ([998a82f](https://github.com/alexbaiardi/docker-fiware-ext/commit/998a82f80ae72696f927e76ddad5610c7efabef0))
+* semplified persist image test ([27ffd71](https://github.com/alexbaiardi/docker-fiware-ext/commit/27ffd719f5500e3fee73c8277a5121799d5743fe))
+
+## [1.0.28](https://github.com/w4bo/docker-fiware-ext/compare/1.0.27...1.0.28) (2025-01-08)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.118 ([#204](https://github.com/w4bo/docker-fiware-ext/issues/204)) ([f2c3ce7](https://github.com/w4bo/docker-fiware-ext/commit/f2c3ce7c75a79bc2eefbe9bd3ddd4c1463e79012))
+* **deps:** update node.js to 22.13 ([#205](https://github.com/w4bo/docker-fiware-ext/issues/205)) ([0d32c69](https://github.com/w4bo/docker-fiware-ext/commit/0d32c69f850b9e3bfbb0bc1e45e1c2907f88c5de))
+
+### Bug Fixes
+
+* **deps:** update dependency org.json:json to v20250107 ([#206](https://github.com/w4bo/docker-fiware-ext/issues/206)) ([2d2fbd8](https://github.com/w4bo/docker-fiware-ext/commit/2d2fbd8edcae825d95542fe886a043380365bd3c))
+
+## [1.0.27](https://github.com/w4bo/docker-fiware-ext/compare/1.0.26...1.0.27) (2025-01-02)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.117 ([#201](https://github.com/w4bo/docker-fiware-ext/issues/201)) ([e73b704](https://github.com/w4bo/docker-fiware-ext/commit/e73b70441fb2ec4d5686329e2bd898eef74bc332))
+* **deps:** update dependency urllib3 to v2.3.0 ([#202](https://github.com/w4bo/docker-fiware-ext/issues/202)) ([24068ae](https://github.com/w4bo/docker-fiware-ext/commit/24068aef917645a9919ef4d085246b75f3c51016))
+
+### Bug Fixes
+
+* **deps:** update dependency org.json:json to v20241224 ([#203](https://github.com/w4bo/docker-fiware-ext/issues/203)) ([195b88e](https://github.com/w4bo/docker-fiware-ext/commit/195b88ed35f185435b306e8b070a1037660f4a69))
+
+### Build and continuous integration
+
+* **deps:** update docker/build-push-action digest to 7e09459 ([#200](https://github.com/w4bo/docker-fiware-ext/issues/200)) ([fb71431](https://github.com/w4bo/docker-fiware-ext/commit/fb7143139919352eb27e0c8e3ee725c8b7645f5a))
 
 ## [1.0.26](https://github.com/w4bo/docker-fiware-ext/compare/1.0.25...1.0.26) (2024-12-16)
 
