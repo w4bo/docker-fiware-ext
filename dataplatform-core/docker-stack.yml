@@ -2,7 +2,7 @@ version: "3.9"
 services:
   fiware2kafka:
     init: true
-    image: w4bo/fiware2kafka:1.0.12
+    image: w4bo/fiware2kafka:1.0.30
     environment:
       # Kafka
       - KAFKA_IP=kafka
@@ -17,13 +17,13 @@ services:
     deploy:
       placement:
         constraints:
-          - node.role != manager 
+          - node.role != manager
     networks:
       - BIG-dataplatform-network
 
   kafka2mongo:
     init: true
-    image: w4bo/kafka2mongo:1.0.12
+    image: w4bo/kafka2mongo:1.0.30
     environment:
       # Persistence
       - MONGO_DB_PERS_IP=137.204.74.10
@@ -44,13 +44,13 @@ services:
     deploy:
       placement:
         constraints:
-          - node.role != manager 
+          - node.role != manager
     networks:
       - BIG-dataplatform-network
 
   persistImages:
     init: true
-    image: w4bo/persist-images:1.0.0
+    image: w4bo/persist-images:1.0.30
     environment:
       # KAFKA
       - KAFKA_IP=kafka
