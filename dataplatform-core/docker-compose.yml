@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   fiware2kafka:
     init: true
