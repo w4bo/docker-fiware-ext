@@ -1,9 +1,18 @@
-## [1.1.1](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.1.0...1.1.1) (2025-01-21)
+## [1.0.30](https://github.com/w4bo/docker-fiware-ext/compare/1.0.29...1.0.30) (2025-01-21)
+
+### Dependency updates
+
+* **deps:** update dependency gradle to v8.10.2 ([#215](https://github.com/w4bo/docker-fiware-ext/issues/215)) ([4c23710](https://github.com/w4bo/docker-fiware-ext/commit/4c237105f659513dc8e57b0af25e2dabf431e89e))
 
 ### Bug Fixes
 
-* add file path support as image attribute using the filserver to download  ([#218](https://github.com/alexbaiardi/docker-fiware-ext/issues/218)) ([7c60baa](https://github.com/alexbaiardi/docker-fiware-ext/commit/7c60baaf47676e46620f63ae4c2c2abbb48bf0f1))
-* integrate persist images ([83fae7d](https://github.com/alexbaiardi/docker-fiware-ext/commit/83fae7d5fffd3caee1019b898c43b10dd25e4143))
+* add file path support as image attribute using the filserver to download  ([#218](https://github.com/w4bo/docker-fiware-ext/issues/218)) ([7c60baa](https://github.com/w4bo/docker-fiware-ext/commit/7c60baaf47676e46620f63ae4c2c2abbb48bf0f1))
+* integrate persist images ([83fae7d](https://github.com/w4bo/docker-fiware-ext/commit/83fae7d5fffd3caee1019b898c43b10dd25e4143))
+
+### Build and continuous integration
+
+* **deps:** update docker/build-push-action digest to 67a2d40 ([#213](https://github.com/w4bo/docker-fiware-ext/issues/213)) ([9edd9a3](https://github.com/w4bo/docker-fiware-ext/commit/9edd9a3a23f8d1a4eb4dfe15df87b00234c6e998))
+* update docker local file ([61e9472](https://github.com/w4bo/docker-fiware-ext/commit/61e94728b44c2035cd297f408601ede1fd902e09))
 
 ## [1.1.0](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.3...1.1.0) (2025-01-20)
 
