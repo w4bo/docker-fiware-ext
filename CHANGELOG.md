@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.1.0...1.1.1) (2025-01-21)
+
+### Bug Fixes
+
+* add file path support as image attribute using the filserver to download  ([#218](https://github.com/alexbaiardi/docker-fiware-ext/issues/218)) ([7c60baa](https://github.com/alexbaiardi/docker-fiware-ext/commit/7c60baaf47676e46620f63ae4c2c2abbb48bf0f1))
+* integrate persist images ([83fae7d](https://github.com/alexbaiardi/docker-fiware-ext/commit/83fae7d5fffd3caee1019b898c43b10dd25e4143))
+
 ## [1.1.0](https://github.com/alexbaiardi/docker-fiware-ext/compare/1.0.3...1.1.0) (2025-01-20)
 
 ### Features
