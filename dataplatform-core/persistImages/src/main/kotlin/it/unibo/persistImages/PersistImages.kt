@@ -55,7 +55,7 @@ fun main(){
                 val destinationPath = "/mnt/data"+computeImagePath(data, keyPath, getExt(value as String))
                 val imageUrl = when {
                     value.startsWith("http", ignoreCase = true) -> value
-                    else -> "http://fileserver/${data[DOMAIN]}$value"
+                    else -> "http://fileserver/$value"
                 }
                 downloadImage(imageUrl, destinationPath)
             }
