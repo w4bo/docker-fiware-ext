@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.cdimascio:dotenv-kotlin:6.5.0")
+    implementation("io.github.cdimascio:dotenv-kotlin:6.5.1")
     implementation("org.json:json:20240303")
     implementation(project(":common"))
     testImplementation(kotlin("test"))
