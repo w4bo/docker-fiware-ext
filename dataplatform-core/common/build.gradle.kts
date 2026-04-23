@@ -3,7 +3,7 @@ plugins {
     idea
     checkstyle
     id("com.github.johnrengelman.shadow") version "7.1.2"
-    kotlin("jvm") version "2.1.10"
+    kotlin("jvm") version "2.3.21"
 }
 
 group = "it.unibo"
